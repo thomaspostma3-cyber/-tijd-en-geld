@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2563eb">
+<title>Tijd & Geld — persoonlijke werk- en inkomensplanner</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#142033;--muted:#687386;--line:#dfe5ee;--blue:#2563eb;--blue2:#edf3ff;--green:#079669;--red:#c53b3b;--gold:#a76a00}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.nav{max-width:980px;margin:auto;padding:13px 16px;display:flex;justify-content:space-between;align-items:center}.logo{font-size:21px;font-weight:900}.logo i{font-style:normal;color:var(--blue)}
+.nav button{border:0;background:var(--blue2);color:#1747b7;border-radius:10px;padding:9px 11px;font-weight:800}
+main{max-width:980px;margin:auto;padding:24px 16px 70px}.hero{text-align:center;padding:10px 0 22px}.hero h1{font-size:clamp(34px,7vw,58px);line-height:1.02;margin:0 0 12px}.hero p{color:var(--muted);font-size:17px;max-width:680px;margin:auto}.progress{height:8px;background:#e5eaf2;border-radius:99px;margin:8px 0 22px}.progress div{height:100%;background:var(--blue);border-radius:99px;transition:.2s}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 28px rgba(20,32,51,.06);margin-bottom:16px}.hide{display:none!important}
+h2{font-size:27px;margin:0 0 6px}h3{margin-top:25px}.sub{color:var(--muted);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+label{font-weight:750;display:block;margin-bottom:6px}input,select{width:100%;padding:12px 13px;border:1px solid #d1d8e3;border-radius:11px;background:#fff;font:inherit;color:inherit}input:focus,select:focus{outline:3px solid #dce7ff;border-color:var(--blue)}
+button{font:inherit;cursor:pointer}.primary{border:0;background:var(--blue);color:#fff;border-radius:12px;padding:13px 18px;font-weight:850}.secondary{background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:11px 15px;font-weight:750}.danger{border:0;background:#fff0f0;color:var(--red);border-radius:9px;padding:8px 10px}.actions{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+.goalgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.goal{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px;text-align:left}.goal strong{display:block;font-size:18px}.goal span{display:block;color:var(--muted);font-size:13px;margin-top:3px}.goal.on{border:2px solid var(--blue);background:var(--blue2)}
+.job,.shift{border:1px solid var(--line);border-radius:15px;padding:16px;margin:12px 0}.top{display:flex;justify-content:space-between;align-items:center;gap:10px}.top b{font-size:18px}
+.rule{display:grid;grid-template-columns:1.2fr 1fr 1fr 105px 40px;gap:8px;margin:8px 0;align-items:end}.rule small{display:block;color:var(--muted)}.rule input,.rule select{padding:9px}
+.day{border:1px solid var(--line);border-radius:14px;padding:14px;margin:9px 0}.daytop{display:flex;justify-content:space-between;align-items:center}.daytop b{font-size:16px}.shiftgrid{display:grid;grid-template-columns:1.1fr 1fr 1fr 42px;gap:8px;margin-top:9px}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{background:#f7f9fc;border:1px solid var(--line);border-radius:14px;padding:14px}.metric small{color:var(--muted)}.metric strong{display:block;font-size:25px;margin-top:3px}.green{color:var(--green)}.gold{color:var(--gold)}
+.scenario{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:8px;padding:13px;border:1px solid var(--line);border-radius:12px;margin:8px 0;align-items:center}.note{font-size:13px;color:var(--muted);margin-top:14px}.allowgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.allow{background:#f7f9fc;border:1px solid var(--line);border-radius:14px;padding:13px}.allow small{color:var(--muted)}.allow strong{display:block;font-size:20px;margin-top:2px}.warn{background:#fff8e8;border:1px solid #f1d38a;border-radius:12px;padding:12px}.checkrow{display:flex;gap:10px;align-items:center;padding:10px 0}.checkrow input{width:auto}.tag{display:inline-block;padding:5px 9px;border-radius:99px;background:#eef2f7;color:#536075;font-size:12px;font-weight:800}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}
+@media(max-width:650px){.grid,.grid3,.summary,.allowgrid{grid-template-columns:1fr}.goalgrid{grid-template-columns:1fr}.rule{grid-template-columns:1fr 1fr}.shiftgrid{grid-template-columns:1fr 1fr}.scenario{grid-template-columns:1fr 1fr}.hero h1{font-size:39px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">Tijd<i>&</i>Geld</div><button onclick="save()">Opslaan</button></div></header>
+<main>
+<section class="hero"><h1>Meer geld.<br>Meer vrije tijd.</h1><p>Niet iedereen wil hetzelfde. Kies wat jij belangrijk vindt en laat Tijd & Geld je werkplanning daarop optimaliseren.</p></section>
+<div class="progress"><div id="progress"></div></div>
+
+<section id="step1" class="card">
+<h2>1. Wat wil jij bereiken?</h2><p class="sub">Je kunt één hoofddoel kiezen. De planner houdt daarna rekening met jouw voorkeur.</p>
+<div class="goalgrid">
+<button class="goal on" data-goal="free" onclick="setGoal('free',this)"><strong>⏱️ Zo veel mogelijk vrije tijd</strong><span>Haal je gewenste inkomen met zo weinig mogelijk werkuren.</span></button>
+<button class="goal" data-goal="weekends" onclick="setGoal('weekends',this)"><strong>🌤️ Zo weinig mogelijk weekenden</strong><span>Probeer weekenddiensten te vermijden, maar behoud zoveel mogelijk inkomen.</span></button>
+<button class="goal" data-goal="evenings" onclick="setGoal('evenings',this)"><strong>🌙 Zo weinig mogelijk avonden/nachten</strong><span>Beperk onregelmatige diensten terwijl je inkomen op peil blijft.</span></button>
+<button class="goal" data-goal="money" onclick="setGoal('money',this)"><strong>💰 Zo veel mogelijk netto</strong><span>Maximaliseer je beschikbare inkomen binnen je urenlimiet.</span></button>
+</div>
+<div class="grid" style="margin-top:15px"><div><label>Minimaal gewenst beschikbaar inkomen p/m (€)</label><input id="target" type="number" min="0" step="50" value="2500"></div><div><label>Maximaal werken p/week (optioneel)</label><input id="maxHours" type="number" min="0" step=".5" placeholder="Geen maximum"></div></div>
+<div style="margin-top:14px"><label>Ander doel?</label><select id="customGoal"><option value="">Geen</option><option value="days">Zo weinig mogelijk werkdagen</option><option value="ort">Zo veel mogelijk geld uit ORT halen</option></select></div>
+<div class="actions"><span></span><button class="primary" onclick="next()">Verder →</button></div>
+</section>
+
+<section id="step2" class="card hide">
+<h2>2. Je banen</h2><p class="sub">ORT is niet verplicht. Een gewone baan kan dus heel eenvoudig worden ingevuld.</p><div id="jobs"></div><button class="secondary" onclick="addJob()">＋ Baan toevoegen</button>
+<div class="actions"><button class="secondary" onclick="prev()">← Terug</button><button class="primary" onclick="next()">Verder →</button></div>
+</section>
+
+<section id="step3" class="card hide">
+<h2>3. Je ORT-regels</h2><p class="sub">De app kan ORT automatisch bepalen uit dag en tijd. Jij bepaalt zelf welke percentages bij jouw werkgever gelden.</p>
+<div class="job"><b>Voorbeeld voor jouw situatie</b><p class="note">Maandag t/m vrijdag 20:00–22:00 → bijvoorbeeld 125%. Zaterdag en zondag → 152%. De app kiest automatisch de juiste regel voor iedere dienst.</p></div>
+<p class="note">Een regel werkt op basis van: baan + dagen + begintijd/eindtijd + totaal loonpercentage. Zo is hij bruikbaar voor zorg, horeca, beveiliging, productie, logistiek en andere sectoren.</p>
+<div id="rulesAll"></div>
+<div class="actions"><button class="secondary" onclick="prev()">← Terug</button><button class="primary" onclick="next()">Verder →</button></div>
+</section>
+
+<section id="step4" class="card hide">
+<h2>4. Je agenda</h2><p class="sub">Voer je echte diensten in. De app bepaalt zelf welke ORT-regels van toepassing zijn.</p>
+<div class="grid"><div><label>Maand</label><input id="month" type="month" value="2026-09" onchange="renderAgenda()"></div><div><label>Agenda snel vullen</label><button class="secondary" style="width:100%" onclick="addExampleShifts()">＋ Voorbeeld diensten</button></div></div>
+<div id="agenda" style="margin-top:12px"></div>
+<div class="actions"><button class="secondary" onclick="prev()">← Terug</button><button class="primary" onclick="next()">Verder →</button></div>
+</section>
+
+<section id="step5" class="card hide">
+<h2>5. Je persoonlijke situatie</h2><p class="sub">Hiermee berekent Tijd & Geld welke toeslagen en voordelen bij jouw situatie kunnen passen. Niet van toepassing? Laat het gewoon uit.</p>
+<div class="grid3">
+<div><label>Leeftijd</label><input id="age" type="number" value="28"></div>
+<div><label>Kale huur p/m (€)</label><input id="rent" type="number" value="650"></div>
+<div><label>Vermogen op 1 januari (€)</label><input id="assets" type="number" value="0"></div>
+<div><label>Toeslagpartner?</label><select id="partner"><option value="0">Nee</option><option value="1">Ja</option></select></div>
+<div><label>Partnerinkomen p/m (€)</label><input id="partnerIncome" type="number" value="0"></div>
+<div><label>Aantal kinderen jonger dan 18</label><select id="children"><option value="0">Geen</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4+</option></select></div>
+</div>
+<div class="grid" style="margin-top:12px"><div><label>Leeftijden kinderen</label><input id="childAges" placeholder="bijv. 4, 12, 16"><div class="note">Gebruik leeftijden om verhogingen van het kindgebonden budget mee te nemen.</div></div><div><label>Zelfstandige huurwoning?</label><select id="independent"><option value="1">Ja</option><option value="0">Nee</option></select></div></div>
+<h3>🏠 Huurtoeslag</h3>
+<div class="grid3"><div><label>Huurtoeslag meenemen?</label><select id="rentEligible"><option value="1">Ja, berekenen</option><option value="0">Nee</option></select></div><div><label>Medebewoners</label><input id="roommates" type="number" min="0" value="0"></div><div><label>Vermogen medebewoners p.p. (€)</label><input id="roommateAssets" type="number" min="0" value="0"></div></div>
+<h3>👶 Kinderopvangtoeslag</h3>
+<div class="checkrow"><input id="childcare" type="checkbox"><label for="childcare" style="margin:0">Ik betaal voor geregistreerde kinderopvang</label></div>
+<div id="childcareFields" class="grid3 hide"><div><label>Opvangtype</label><select id="careType"><option value="day">Dagopvang</option><option value="bso">BSO</option><option value="gast">Gastouder</option></select></div><div><label>Uren opvang p/maand per kind</label><input id="careHours" type="number" min="0" max="230" value="80"></div><div><label>Werkelijke opvangprijs p/u (€)</label><input id="careRate" type="number" step=".01" value="11.23"></div></div>
+<div class="note">In 2026 worden zorgtoeslag, huurtoeslag, kindgebonden budget en kinderopvangtoeslag afzonderlijk bekeken. Vermogen telt bij zorg-, huur- en kindgebonden budget mee; bij kinderopvangtoeslag geldt geen vermogensgrens. De uitkomst is een persoonlijke indicatie, geen officiële beschikking.</div>
+<div class="actions"><button class="secondary" onclick="prev()">← Terug</button><button class="primary" onclick="calculate()">🧮 Bereken mijn plan</button></div>
+</section>
+
+<section id="step6" class="card hide">
+<h2>🎯 Jouw plan</h2><p class="sub">De planner zoekt een werkcombinatie die bij jouw gekozen doel past.</p>
+<div class="summary"><div class="metric"><small>Beschikbaar p/m</small><strong id="rnet">€0</strong></div><div class="metric"><small>Werkuren p/week</small><strong id="rhrs">0</strong></div><div class="metric"><small>Weekenden</small><strong id="rweekends">0</strong></div><div class="metric"><small>Netto per uur</small><strong id="rph">€0</strong></div></div>
+<div id="resultMessage" style="margin-top:20px"></div>
+<h3>Wat zit erin?</h3><div id="breakdown"></div>
+<h3>Vergelijking</h3><div id="scenarios"></div>
+<div class="note">De berekening is een planning-/schattingsmodel. Werkelijke loonstroken, aangifte en officiële toeslagbeschikkingen zijn leidend.</div>
+<div class="actions"><button class="secondary" onclick="show(1)">← Opnieuw instellen</button><button class="primary" onclick="window.print()">Print / PDF</button></div>
+</section>
+<footer>Tijd & Geld • 2026 • meer geld, meer vrije tijd</footer>
+</main>
+
+<script>
+let step=1, goalMode='free', jobs=[], shifts=[];
+
+const days=['Zondag','Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag'];
+const $=id=>document.getElementById(id);
+const money=n=>new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n||0);
+function initPersonalUI(){if($('childcare'))$('childcare').addEventListener('change',()=> $('childcareFields').classList.toggle('hide',!$('childcare').checked));}
+
+function show(n){step=n;for(let i=1;i<=6;i++)$('step'+i).classList.toggle('hide',i!==n);$('progress').style.width=(n/6*100)+'%';scrollTo({top:0,behavior:'smooth'})}
+function next(){show(Math.min(6,step+1))}
+function prev(){show(Math.max(1,step-1))}
+function setGoal(g,b){goalMode=g;document.querySelectorAll('.goal').forEach(x=>x.classList.remove('on'));b.classList.add('on')}
+function addJob(j={name:'',rate:'',contract:'',holiday:8,yearend:0,credit:true,rules:[]}){jobs.push(j);renderJobs();renderRules();renderAgenda()}
+function renderJobs(){
+$('jobs').innerHTML=jobs.map((j,i)=>`<div class="job"><div class="top"><b>Baan ${i+1}</b>${jobs.length>1?`<button class="danger" onclick="jobs.splice(${i},1);renderJobs();renderRules();renderAgenda()">Verwijderen</button>`:''}</div>
+<div class="grid3" style="margin-top:12px"><div><label>Werkgever</label><input value="${esc(j.name)}" oninput="jobs[${i}].name=this.value"></div><div><label>Bruto uurloon (€)</label><input type="number" step=".01" value="${j.rate}" oninput="jobs[${i}].rate=+this.value"></div><div><label>Contracturen p/week</label><input type="number" step=".5" value="${j.contract}" oninput="jobs[${i}].contract=+this.value"></div></div>
+<div class="grid3" style="margin-top:12px"><div><label>Vakantiegeld %</label><input type="number" step=".01" value="${j.holiday}" oninput="jobs[${i}].holiday=+this.value"></div><div><label>Eindejaarsuitkering %</label><input type="number" step=".01" value="${j.yearend}" oninput="jobs[${i}].yearend=+this.value"></div><div style="padding-top:25px"><label><input type="checkbox" ${j.credit?'checked':''} onchange="jobs[${i}].credit=this.checked"> Loonheffingskorting</label></div></div></div>`).join('')
+}
+function renderRules(){
+$('rulesAll').innerHTML=jobs.map((j,i)=>`<div class="job"><div class="top"><b>Baan ${i+1}${j.name?' — '+esc(j.name):''}</b><button class="secondary" onclick="jobs[${i}].rules.push({days:'weekend',start:'00:00',end:'23:59',mult:1.52,label:'Weekend'});renderRules()">＋ Regel</button></div>
+${(j.rules||[]).map((r,k)=>`<div class="rule"><div><small>Omschrijving</small><input value="${esc(r.label)}" placeholder="bijv. Weekend" oninput="jobs[${i}].rules[${k}].label=this.value"></div><div><small>Dagen</small><select onchange="jobs[${i}].rules[${k}].days=this.value"><option value="weekdays" ${r.days==='weekdays'?'selected':''}>Ma–vr</option><option value="weekend" ${r.days==='weekend'?'selected':''}>Za–zo</option><option value="all" ${r.days==='all'?'selected':''}>Alle dagen</option><option value="sat" ${r.days==='sat'?'selected':''}>Zaterdag</option><option value="sun" ${r.days==='sun'?'selected':''}>Zondag</option></select></div><div><small>Van / tot</small><input type="time" value="${r.start}" oninput="jobs[${i}].rules[${k}].start=this.value"><input type="time" value="${r.end}" oninput="jobs[${i}].rules[${k}].end=this.value"></div><div><small>Totaal %</small><input type="number" step=".01" value="${r.mult}" placeholder="1.52" oninput="jobs[${i}].rules[${k}].mult=+this.value"></div><button class="danger" onclick="jobs[${i}].rules.splice(${k},1);renderRules()">×</button></div>`).join('')}
+${!j.rules?.length?'<p class="note">Nog geen ORT-regels. Voeg alleen regels toe als deze baan ze heeft.</p>':''}</div>`).join('')
+}
+function daysInMonth(ym){let [y,m]=ym.split('-').map(Number);return new Date(y,m,0).getDate()}
+function renderAgenda(){
+let ym=$('month').value||'2026-09',n=daysInMonth(ym);let keep=shifts;
+$('agenda').innerHTML='';
+for(let d=1;d<=n;d++){let date=ym+'-'+String(d).padStart(2,'0'),dt=new Date(date+'T12:00:00'),dow=dt.getDay(),box=document.createElement('div');box.className='day';box.innerHTML=`<div class="daytop"><b>${d} ${days[dow]}</b><button class="secondary" onclick="addShift('${date}')">＋ Dienst</button></div><div id="date-${date}"></div>`;$('agenda').appendChild(box)}
+shifts=[];keep.filter(s=>s.date.startsWith(ym)).forEach(s=>addShift(s.date,s,false))
+}
+function addShift(date,s=null,render=true){
+let box=$('date-'+date);if(!box)return;let x=document.createElement('div');x.className='shiftgrid';x.innerHTML=`<select><option value="0">Baan 1</option>${jobs.slice(1).map((j,i)=>`<option value="${i+1}">Baan ${i+2}</option>`).join('')}</select><input type="time" value="${s?.start||'09:00'}"><input type="time" value="${s?.end||'17:00'}"><button class="danger">×</button>`;if(s)x.children[0].value=s.job;x.children[3].onclick=()=>x.remove();box.appendChild(x)}
+function readShifts(){let out=[];document.querySelectorAll('#agenda .day').forEach(day=>{let date=day.querySelector('[id^="date-"]').id.slice(5);day.querySelectorAll('.shiftgrid').forEach(x=>out.push({date,job:+x.children[0].value,start:x.children[1].value,end:x.children[2].value}))});return out}
+function addExampleShifts(){let ym=$('month').value||'2026-09';[1,3,5,6,8,10,12,13].forEach((d,i)=>addShift(ym+'-'+String(d).padStart(2,'0'),{job:0,start:i%2?'20:00':'14:30',end:i%2?'22:00':'22:30'}));}
+function mins(t){let [h,m]=t.split(':').map(Number);return h*60+m}
+function duration(a,b){let x=mins(b)-mins(a);return x<0?x+1440:x}
+function ruleApplies(r,date,start,end){
+let dt=new Date(date+'T12:00:00'),dow=dt.getDay(),dayOK=r.days==='all'||(r.days==='weekdays'&&dow>=1&&dow<=5)||(r.days==='weekend'&&(dow===0||dow===6))||(r.days==='sat'&&dow===6)||(r.days==='sun'&&dow===0);
+if(!dayOK)return false;let a=mins(start),b=mins(end),ra=mins(r.start||'00:00'),rb=mins(r.end||'23:59');if(rb<=ra)rb+=1440;if(b<a)b+=1440;return Math.max(a,ra)<Math.min(b,rb)}
+function shiftPay(s){
+let j=jobs[s.job];if(!j||!j.rate)return {gross:0,hours:0,ort:0,weekend:0,evening:0};
+let h=duration(s.start,s.end)/60,base=h*j.rate,mult=1,used=null;for(const r of (j.rules||[]))if(ruleApplies(r,s.date,s.start,s.end)&&(+r.mult||1)>mult){mult=+r.mult||1;used=r}
+let gross=base*mult,dt=new Date(s.date+'T12:00:00'),dow=dt.getDay(),hr=+s.start.split(':')[0];return{gross,hours:h,ort:base*(mult-1),weekend:(dow===0||dow===6)?1:0,evening:hr>=18?1:0,night:hr>=22?1:0,used:used?used.label:''}}
+function annualTax(annual){
+let t=Math.min(annual,38883)*.3575;if(annual>38883)t+=Math.min(annual-38883,39543)*.3756;if(annual>78426)t+=(annual-78426)*.495;
+let g=annual<=29736?3115:annual<=78426?Math.max(0,3115-.06398*(annual-29736)):0;
+let a=annual<=11965?.08324*annual:annual<=25845?996+.31009*(annual-11965):annual<=45592?5300+.0195*(annual-25845):annual<=132920?5685-.0651*(annual-45592):0;return Math.max(0,t-g-Math.max(0,a))}
+function zorgToeslag(inc, partner){
+const single=[[29500,129],[30000,126],[30500,120],[31000,114],[31500,109],[32000,103],[32500,97],[33000,91],[33500,86],[34000,80],[34500,74],[35000,69],[35500,63],[36000,57],[36500,51],[37000,46],[37500,40],[38000,34],[38500,28],[39000,22],[39500,16],[40000,9],[40500,3],[40857,0]];
+const pair=[[29500,246],[30000,243],[30500,238],[31000,232],[31500,226],[32000,221],[32500,215],[33000,209],[33500,203],[34000,198],[34500,192],[35000,186],[35500,180],[36000,175],[36500,169],[37000,163],[37500,158],[38000,152],[38500,146],[39000,140],[39500,135],[40000,129],[40500,123],[41000,118],[41500,112],[42000,106],[42500,100],[43000,95],[43500,89],[44000,83],[44500,78],[45000,72],[45500,66],[46000,60],[46500,55],[47000,49],[47500,43],[48000,37],[48500,32],[49000,26],[49500,20],[50000,15],[50500,9],[51000,3],[51142,0]];
+let a=partner?pair:single;if(inc<=a[0][0])return a[0][1];if(inc>=a[a.length-1][0])return 0;for(let i=1;i<a.length;i++){if(inc<=a[i][0]){let [x0,y0]=a[i-1],[x1,y1]=a[i];return y0+(y1-y0)*(inc-x0)/(x1-x0)}}return 0;
+}
+function kindgebondenBudget(inc, partner, count, ages){
+if(!count)return 0;if((+$('assets').value||0)>(partner?184633:146011))return 0;let base=(partner?2580:5996)+Math.max(0,count-1)*2580;ages.forEach(a=>{if(a>=12&&a<16)base+=724;else if(a>=16&&a<18)base+=964});let threshold=partner?39141:29736;return Math.max(0,(base-Math.max(0,inc-threshold)*.076)/12);
+}
+function childcarePct(inc, childIndex){
+const rows=[[0,96,96],[56413,96,96],[58185,94.8,95.6],[59958,93.9,95.6],[61896,92.4,95.6],[65696,91.6,95.2],[69493,90.5,94.6],[73293,88.2,94.2],[77095,85.9,93.9],[80892,83.7,93.2],[84694,81.2,92.7],[88492,78.9,92.2],[92292,76.7,91.5],[96092,74.3,90.9],[99890,72.1,90.5],[103695,69.6,90.2],[107493,67.3,89.5],[111291,65.1,89.1],[115091,62.7,88.6],[118964,60.6,87.9],[122858,58.5,87.4],[126748,56.4,87],[130639,54.2,86.7],[134528,52.3,86],[138421,50.4,85.4],[142313,48.5,85],[146206,46.5,84.4],[150093,44.5,84],[153983,42.5,83.3],[157878,40.5,82.7],[161767,38.5,81.7],[165658,36.5,81.4],[169548,36.5,80.6],[173441,36.5,79.7],[177336,36.5,79.1],[181224,36.5,78.2],[185115,36.5,77.7],[189003,36.5,76.9],[192897,36.5,76.2],[196790,36.5,75.5],[200682,36.5,74.5],[204572,36.5,74],[208459,36.5,73.3],[212354,36.5,72.5],[216243,36.5,71.8],[220135,36.5,71.2],[224027,36.5,70.4],[227916,36.5,69.6],[231808,36.5,69.1],[235698,36.5,68.2]];
+let pct=rows[0][childIndex+1];for(const r of rows){if(inc>=r[0])pct=r[childIndex+1];else break}return pct/100;
+}
+function huurToeslagIndicatie(inc, partner, age, rent, assets, independent, roommates, roommateAssets){
+if(!independent||age<18||rent<=0)return 0;const limit=partner?76958:38479;if(assets>limit||roommateAssets>38479)return 0;const maxRent=age<21?498.20:932.93,r=Math.min(rent,maxRent),household=1+(partner?1:0)+(roommates||0);const incomeExcess=Math.max(0,inc-(partner?30450:22700));const base=200+Math.min(280,incomeExcess*.006);let h=Math.max(0,r-base);let first=Math.min(h,Math.max(0,477.20-base));let rest=Math.max(0,h-first);let cap=household>=3?731.93:682.96;let mid=Math.min(rest,Math.max(0,cap-477.20));let high=Math.min(Math.max(0,rest-mid),Math.max(0,r-cap));return Math.max(0,first+mid*.65+high*.40);
+}
+function allowance(monthly, grossAnnual){
+const partner=$('partner').value==='1',inc=Math.max(0,grossAnnual+(+$('partnerIncome').value||0)*12),assets=+$('assets').value||0;let zorg=assets<=(partner?184633:146011)?zorgToeslag(inc,partner):0;let count=Math.min(4,+$('children').value||0),ages=($('childAges').value||'').split(',').map(x=>parseInt(x.trim(),10)).filter(Number.isFinite),kgb=kindgebondenBudget(inc,partner,count,ages);let huur=$('rentEligible').value==='1'?huurToeslagIndicatie(inc,partner,+$('age').value||28,+$('rent').value||0,assets,$('independent').value==='1',+$('roommates').value||0,+$('roommateAssets').value||0):0;let opvang=0;if($('childcare').checked&&count>0){let hours=Math.min(230,+$('careHours').value||0),rate=+$('careRate').value||0,max={day:11.23,bso:9.98,gast:8.49}[$('careType').value]||11.23,reimb=Math.min(rate,max);opvang=hours*reimb*childcarePct(inc,0)+(count>1?(count-1)*hours*reimb*childcarePct(inc,1):0)}return{zorg,huur,kgb,opvang,total:zorg+huur+kgb+opvang};
+}
+function evaluate(list){
+let gross=0,hours=0,ort=0,weekends=0,evenings=0,nights=0,daysSet=new Set();list.forEach(s=>{let p=shiftPay(s);gross+=p.gross;hours+=p.hours;ort+=p.ort;weekends+=p.weekend;evenings+=p.evening;nights+=p.night;daysSet.add(s.date)});
+let holiday=0,yearend=0;for(const j of jobs){if(j.rate&&j.contract){let annualBase=j.rate*j.contract*52;holiday+=annualBase*(j.holiday||0)/100/12;yearend+=annualBase*(j.yearend||0)/100/12}}gross+=holiday+yearend;let annualGross=gross*12,tax=annualTax(annualGross),net=(annualGross-tax)/12,al=allowance(net,annualGross);return{gross,net:net+al.total,baseNet:net,allow:al.total,allowDetail:al,hours,ort,weekends,evenings,nights,days:daysSet.size,holiday,yearend}}
+function utility(r){
+let target=+$('target').value||0,max=+$('maxHours').value||Infinity,h=r.hours/4.345;if(r.net<target)return -100000-(target-r.net)*30;
+if(h>max)return -100000-(h-max)*500;
+if(goalMode==='free')return r.net-r.hours*18-r.weekends*15-r.evenings*2;
+if(goalMode==='weekends')return r.net-r.weekends*180-r.hours*3;
+if(goalMode==='evenings')return r.net-r.evenings*90-r.nights*140-r.hours*2;
+if(goalMode==='money')return r.net*2-r.hours;
+if($('customGoal').value==='days')return r.net-r.days*70;
+if($('customGoal').value==='ort')return r.net+r.ort*.5-r.hours;
+return r.net-r.hours*5}
+function optimize(all){
+if(!all.length)return [];
+let candidates=[all.slice()];let current=all.slice().sort((a,b)=>shiftPay(b).gross-shiftPay(a).gross);let guard=0;
+while(current.length&&guard++<all.length){current=current.slice(0,-1);candidates.push(current.slice())}
+for(let i=0;i<all.length;i++){let one=[all[i]];candidates.push(one)}
+for(let pass=0;pass<3;pass++){let best=all.slice();for(const s of all){let test=best.filter(x=>x!==s);if(utility(evaluate(test))>utility(evaluate(best)))best=test}candidates.push(best)}
+let uniq=new Map();candidates.forEach(c=>{let key=c.map(x=>x.date+'|'+x.job+'|'+x.start+'|'+x.end).join(';');uniq.set(key,c)});return [...uniq.values()].map(evaluate).sort((a,b)=>utility(b)-utility(a))}
+function calculate(){
+shifts=readShifts();let results=optimize(shifts),best=results[0]||evaluate([]),target=+$('target').value||0;
+$('rnet').textContent=money(best.net);$('rhrs').textContent=(best.hours/4.345).toFixed(1);$('rweekends').textContent=best.weekends;$('rph').textContent=money(best.hours?best.net/best.hours:0);
+$('resultMessage').innerHTML=best.net>=target?`<p class="green"><b>Doel gehaald.</b> Je doel van ${money(target)} wordt volgens het model gehaald met ongeveer ${(best.hours/4.345).toFixed(1)} uur per week.</p>`:`<p class="gold"><b>Doel nog niet gehaald.</b> Met de ingevoerde agenda komt de beste gevonden combinatie uit op ongeveer ${money(best.net)} per maand.</p>`;
+$('breakdown').innerHTML=`<p>Bruto: <b>${money(best.gross)}</b> p/m · loon na belasting: <b>${money(best.baseNet)}</b> · ORT: <b>${money(best.ort)}</b> · vakantiegeld gemiddeld: <b>${money(best.holiday)}</b> · eindejaarsuitkering gemiddeld: <b>${money(best.yearend)}</b> · werkdagen: <b>${best.days}</b> · avonden: <b>${best.evenings}</b> · nachten: <b>${best.nights}</b>.</p><div class="allowgrid"><div class="allow"><small>Zorgtoeslag</small><strong>${money(best.allowDetail.zorg)}</strong></div><div class="allow"><small>Huurtoeslag</small><strong>${money(best.allowDetail.huur)}</strong></div><div class="allow"><small>Kindgebonden budget</small><strong>${money(best.allowDetail.kgb)}</strong></div><div class="allow"><small>Kinderopvangtoeslag</small><strong>${money(best.allowDetail.opvang)}</strong></div></div><div class="warn"><b>Toeslagen samen: ${money(best.allow)}</b><br><span class="note">Dit zijn 2026-indicaties. De officiële Dienst Toeslagen gebruikt het definitieve toetsingsinkomen en meer huishoudgegevens. Vooral huurtoeslag moet daarom nog via de officiële proefberekening worden gecontroleerd.</span></div>`;
+let top=results.slice(0,6);$('scenarios').innerHTML=top.map((r,i)=>`<div class="scenario"><b>${i===0?'⭐ Beste match':'Optie '+(i+1)}</b><span>${money(r.net)}</span><span>${(r.hours/4.345).toFixed(1)} u/w</span><span>${r.weekends} weekenden</span><span>ORT ${money(r.ort)}</span></div>`).join('');save();show(6)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function save(){localStorage.setItem('tijdgeld-v3',JSON.stringify({jobs,goalMode,target:$('target').value,maxHours:$('maxHours').value,month:$('month').value,shifts:readShifts(),personal:{age:$('age').value,rent:$('rent').value,assets:$('assets').value,partner:$('partner').value,partnerIncome:$('partnerIncome').value,children:$('children').value,childAges:$('childAges').value,independent:$('independent').value,rentEligible:$('rentEligible').value,roommates:$('roommates').value,roommateAssets:$('roommateAssets').value,childcare:$('childcare').checked,careType:$('careType').value,careHours:$('careHours').value,careRate:$('careRate').value}}))}
+function load(){let d=JSON.parse(localStorage.getItem('tijdgeld-v3')||localStorage.getItem('tijdgeld-v2')||'null');if(d){jobs=d.jobs||[];goalMode=d.goalMode||'free';$('target').value=d.target||2500;$('maxHours').value=d.maxHours||'';$('month').value=d.month||'2026-09';shifts=d.shifts||[];let p=d.personal||{};for(const id of ['age','rent','assets','partner','partnerIncome','children','childAges','independent','rentEligible','roommates','roommateAssets','careType','careHours','careRate'])if(p[id]!==undefined&&$(id))$(id).value=p[id];if(p.childcare!==undefined&&$('childcare'))$('childcare').checked=!!p.childcare}if(!jobs.length)jobs=[{name:'',rate:'',contract:'',holiday:8,yearend:0,credit:true,rules:[]}];renderJobs();renderRules();renderAgenda();initPersonalUI();if($('childcare'))$('childcare').dispatchEvent(new Event('change'))}
+load();show(1);
+</script>
+</body>
+</html>
