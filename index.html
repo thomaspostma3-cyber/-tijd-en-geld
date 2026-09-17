@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+<html lang="nl"><head>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport">
+<title>Vooruit — financiële preventie</title>
+<meta name="description" content="Financiële preventie en inzicht voor 2026 op basis van actuele Nederlandse fiscale regels, uitkeringen en toeslagen.">
+<meta property="og:title" content="Vooruit — financiële preventie">
+<meta property="og:description" content="Financiële preventie en inzicht voor 2026 op basis van actuele Nederlandse fiscale regels, uitkeringen en toeslagen.">
+<style>
+:root{--ink:#101828;--muted:#667085;--line:#e4e7ec;--soft:#f6f8fa;--good:#087443;--warn:#b54708;--bad:#b42318;--accent:#1d2939}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#f5f7fa;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden;width:100%}
+.top{height:62px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 18px;padding-top:env(safe-area-inset-top);position:sticky;top:0;z-index:10}
+.brand{font-size:20px;font-weight:800;display:flex;align-items:baseline;gap:6px}
+.brand span{font-weight:500;color:var(--muted);font-size:15px}
+.ver{font-size:11px;font-weight:700;color:#475467;background:#f2f4f7;padding:4px 8px;border-radius:6px}
+.shell{max-width:720px;margin:auto;padding:16px 14px;padding-bottom:calc(120px + env(safe-area-inset-bottom));width:100%}
+.nav{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.back{border:0;background:none;font-size:22px;padding:8px 12px;cursor:pointer;color:var(--ink);min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;border-radius:8px}
+.back:hover{background:#eaecf0}
+.bar{height:6px;background:#e9edf2;border-radius:99px;overflow:hidden;flex:1}
+.bar i{display:block;height:100%;width:0;background:var(--ink);transition:width .25s ease}
+.counter{font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap}
+.page{display:none}
+.page.active{display:block;animation:fade .2s ease}
+@keyframes fade{from{opacity:.2;transform:translateY(4px)}to{opacity:1;transform:none}}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 8px 30px rgba(16,24,40,.04)}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--muted);margin-bottom:9px;text-transform:uppercase}
+h1{font-size:27px;line-height:1.2;letter-spacing:-.5px;margin:0 0 8px}
+h2{font-size:20px;line-height:1.3;margin:22px 0 10px}
+.sub{color:var(--muted);line-height:1.5;margin:0 0 20px;font-size:15px}
+.option{width:100%;display:flex;align-items:center;gap:14px;border:1px solid #d8dee8;background:#fff;border-radius:14px;padding:15px;margin:10px 0;text-align:left;cursor:pointer;font-size:16px;min-height:50px;transition:border-color .15s,background .15s}
+.option:hover,.option.selected{border-color:var(--ink);background:#f8fafc}
+.option.selected{box-shadow:0 0 0 2px var(--ink) inset}
+.ico{width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;color:var(--ink)}
+.uiico{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.option small{display:block;color:var(--muted);font-size:13px;margin-top:3px;font-weight:normal}
+.field{margin:16px 0}
+.field label{display:block;font-weight:700;margin-bottom:7px;font-size:14px}
+.input{width:100%;border:1px solid #cfd6df;border-radius:12px;padding:13px 14px;font-size:16px;background:#fff;outline:none;font-family:inherit;-webkit-appearance:none}
+.input:focus{border-color:var(--ink);box-shadow:0 0 0 3px #eef1f5}
+select.input{padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23667085' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.hint{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.45}
+.error{font-size:13px;color:var(--bad);min-height:18px;margin-top:4px;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:var(--soft);border-radius:14px;padding:14px}
+.stat span{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.stat b{display:block;font-size:21px;margin-top:4px;letter-spacing:-.02em}
+.actions{display:flex;gap:10px;margin-top:24px}
+.btn{flex:1;border:0;border-radius:13px;padding:15px;font-size:16px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;font-family:inherit;text-decoration:none;transition:background .15s}
+.primary{background:var(--ink);color:#fff}
+.primary:hover{background:#1e293b}
+.secondary{background:#eef1f5;color:var(--ink)}
+.secondary:hover{background:#e2e8f0}
+.result{background:var(--ink);color:#fff;border-radius:18px;padding:22px;margin:18px 0}
+.result span,.result small{color:#cbd5e1;display:block}
+.result strong{display:block;font-size:38px;letter-spacing:-.03em;margin:6px 0}
+.notice{padding:14px;border-radius:14px;margin-top:12px;font-size:14px;line-height:1.5}
+.good{background:#ecfdf3;color:#065f46;border:1px solid #d1fadf}
+.warn{background:#fff7ed;color:#9a3412;border:1px solid #ffedd5}
+.bad{background:#fef3f2;color:#912018;border:1px solid #fee4e2}
+.scenario{border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0;background:#fff}
+.scenariohead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.scenario h3{margin:0;font-size:16px}
+.range{width:100%;margin:16px 0;-webkit-appearance:none;height:6px;border-radius:5px;background:#e2e8f0;outline:none}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--ink);cursor:pointer}
+.range::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--ink);cursor:pointer;border:none}
+.rlabels{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:600}
+.delta{font-weight:800;font-size:16px}
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;display:flex;align-items:flex-start}
+.list li:last-child{border-bottom:0}
+.tag{font-size:10px;font-weight:800;background:#eef1f5;border-radius:99px;padding:3px 8px;margin-right:8px;flex-shrink:0;margin-top:2px}
+.toggle{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.toggle input[type="checkbox"]{width:22px;height:22px;cursor:pointer;accent-color:var(--ink)}
+.foot{font-size:12px;color:var(--muted);line-height:1.6;margin-top:24px;text-align:center}
+.linkbtn{border:0;background:none;padding:2px 4px;color:var(--ink);text-decoration:underline;cursor:pointer;font:inherit;font-weight:600}
+.legal-modal{display:none;position:fixed;inset:0;background:rgba(16,24,40,.55);z-index:30;padding:20px;overflow:auto}
+.legal-modal.open{display:flex;align-items:center;justify-content:center}
+.legal-card{position:relative;background:#fff;border-radius:20px;max-width:620px;width:100%;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.25);line-height:1.6;max-height:90vh;overflow-y:auto}
+.legal-card h2{margin-top:0}
+.legal-card h3{margin-bottom:6px}
+.legal-close{position:absolute;right:14px;top:12px;border:0;background:none;font-size:32px;cursor:pointer;color:var(--muted);line-height:1;min-width:44px;min-height:44px}
+.mini-note{margin-top:8px;padding:11px 13px;border-radius:12px;background:#f6f8fa;color:#475467;font-size:13px;line-height:1.45;border:1px solid #eaecf0}
+.benefit-extra{margin-bottom:12px}
+.scenario-result-card{margin-top:16px;padding:20px;border-radius:20px;border:1px solid #e4e7eb;background:#fff}
+.scenario-result-card .hero-number{font-size:32px;font-weight:900;letter-spacing:-.03em;margin:6px 0 2px}
+.scenario-breakdown{display:grid;gap:8px;margin-top:16px}
+.scenario-row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #eef0f3;font-size:14px}
+.scenario-row:last-child{border-bottom:0}
+.scenario-compare{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.scenario-compare .cmp{padding:10px 6px;border-radius:12px;background:#f6f7f9;text-align:center}
+.scenario-compare b{display:block;font-size:14px}
+.scenario-compare span{display:block;font-size:11px;color:#667085;margin-top:3px}
+
+/* V26.8 Final Centrale Financiële Preventie & Werkelijk Voordeel */
+.real-gain{margin-top:18px;padding:22px;border-radius:20px;border:2px solid #101828;background:#fff;box-shadow:0 8px 30px rgba(16,24,40,.06)}
+.real-gain-badge{display:inline-flex;align-items:center;gap:6px;background:#101828;color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:99px;text-transform:uppercase;margin-bottom:10px}
+.real-gain .big{font-size:32px;font-weight:900;letter-spacing:-.03em;margin:6px 0 4px;color:#101828}
+.real-gain .big-sub{font-size:17px;font-weight:700;color:#475467;margin-bottom:10px}
+.real-gain .muted{color:var(--muted);font-size:14px;line-height:1.5}
+.formula-box{margin:14px 0;padding:14px 16px;border-radius:14px;background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;font-size:14px;line-height:1.6}
+.formula-box.negative{background:#fff1f2;border-color:#fecdd3;color:#9f1239}
+.formula-row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;font-weight:600}
+.formula-total{margin-top:6px;padding-top:8px;border-top:1px dashed currentColor;font-size:16px;font-weight:800}
+.difference-callout{margin:14px 0;padding:12px 14px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;font-size:13px;line-height:1.5;color:#334155}
+.difference-callout b{color:#0f172a}
+.real-gain-chain{display:flex;flex-direction:column;gap:10px;margin:18px 0;padding:16px;background:#f8fafc;border-radius:16px;border:1px solid #eaecf0}
+.real-gain-step{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;font-size:14px;line-height:1.45}
+.real-gain-step .step-title{font-weight:700;color:#101828}
+.real-gain-step .step-hint{font-size:12px;color:#667085;margin-top:2px}
+.real-gain-step .step-val{font-weight:800;text-align:right;white-space:nowrap;font-size:15px}
+.real-gain-step.highlight{padding-top:12px;border-top:2px dashed #cbd5e1;font-size:16px}
+.real-gain-step.highlight .step-title{font-size:15px;font-weight:800;color:#101828}
+.real-gain-step.highlight .step-val{font-size:19px}
+.hourly-box{margin-top:14px;padding:16px;border-radius:16px;background:#eff8ff;border:1px solid #b2ddff;color:#175cd3;line-height:1.5}
+.hourly-box h4{margin:0 0 6px;font-size:15px;color:#1849a9;display:flex;align-items:center;gap:6px}
+.hourly-big{font-size:26px;font-weight:900;margin:4px 0;color:#175cd3}
+.prevention-box{margin-top:16px;padding:18px;border-radius:16px;background:#fff9f2;border:1px solid #fedf89;color:#7a2e0e;line-height:1.55}
+.prevention-box h4{margin:0 0 8px;font-size:15px;color:#93370d;display:flex;align-items:center;gap:6px}
+.prevention-box ol{margin:8px 0 0;padding-left:20px}
+.prevention-box li{margin-bottom:6px}
+.quick-chain{margin-top:12px;padding:14px;border-radius:14px;background:#f8fafc;border:1px solid #e2e8f0;font-size:13px;line-height:1.55}
+.quick-chain-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0}
+.quick-chain-row.total{border-top:1px dashed #cbd5e1;padding-top:6px;margin-top:4px;font-weight:800}
+
+/* Vergelijk Uren Component */
+.hours-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:12px;border:1px solid #e4e7ec;border-radius:14px}
+.hours-table{width:100%;border-collapse:collapse;font-size:13px;text-align:left;background:#fff}
+.hours-table th{background:#f8fafc;color:#475467;padding:10px 12px;font-weight:700;font-size:12px;border-bottom:1px solid #e4e7ec;white-space:nowrap}
+.hours-table td{padding:10px 12px;border-bottom:1px solid #f2f4f7;vertical-align:middle;white-space:nowrap}
+.hours-table tr.current-row{background:#f0fdf4;font-weight:700}
+.hours-table tr.current-row td{border-bottom:1px solid #dcfce7}
+.hours-table tr:last-child td{border-bottom:0}
+.hours-badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:700;background:#e0f2fe;color:#0369a1}
+.hours-badge.current{background:#166534;color:#fff}
+.hours-btn-apply{padding:4px 10px;border-radius:6px;background:#101828;color:#fff;font-size:11px;font-weight:700;border:0;cursor:pointer}
+.hours-btn-apply:hover{background:#344054}
+
+@media(max-width:560px){
+ .shell{padding-bottom:calc(135px + env(safe-area-inset-bottom))}
+ .card{padding:18px}
+ h1{font-size:24px}
+ .grid{grid-template-columns:1fr}
+ .actions{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom));z-index:9;padding:6px 0 calc(6px + env(safe-area-inset-bottom));background:rgba(245,247,250,.96);backdrop-filter:blur(10px)}
+ .scenario-compare{grid-template-columns:repeat(2,1fr)}
+}
+@media print{
+ .top,.nav,.actions,.range,.option,.linkbtn{display:none!important}
+ .shell{max-width:none;padding:0}
+ .page{display:none!important}
+ .page.active{display:block!important}
+ .card{box-shadow:none;border:0}
+}
+</style>
+<style>.aistudio-hover-highlight { box-shadow: inset 0 0 0 0.5px white, inset 0 0 0 1.5px rgba(128,128,128,0.6) !important; }.aistudio-active-highlight { outline: 2px solid #87a9ff !important; outline-offset: -2px !important; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(0,0,0,0.3) !important; }.aistudio-generating-blur { filter: blur(5px) grayscale(100%) brightness(28%) !important; transition: filter 0.3s ease; }#aistudio-focus-mode-tag { position: absolute; display: none; align-items: center; gap: 4px; background: #87a9ff; border-radius: 12px; z-index: 10000; padding: 8px; color: #32302c; font-family: Inter, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; line-height: 21px; pointer-events: none; }#aistudio-hover-mode-tag { position: absolute; display: none; align-items: center; gap: 4px; background: rgba(128,128,128,0.6); border-radius: 12px; z-index: 10000; padding: 8px; color: white; font-family: Inter, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; line-height: 21px; pointer-events: none; }.aistudio-img-icon { display: none; vertical-align: middle; pointer-events: auto; cursor: pointer; }.aistudio-img-icon.visible { display: inline-flex; }#aistudio-focus-mode-tag .aistudio-img-icon { position: relative; width: 26px; height: 26px; background: #32302c; border-radius: 6px; margin: -4px -4px -4px 0; }#aistudio-focus-mode-tag .aistudio-img-icon::before { content: ""; position: absolute; top: 4px; left: 4px; width: 18px; height: 18px; background-color: white; -webkit-mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); mask-size: contain; mask-repeat: no-repeat; }#aistudio-hover-mode-tag .aistudio-img-icon { position: relative; width: 18px; height: 18px; margin-left: 4px; }#aistudio-hover-mode-tag .aistudio-img-icon::before { content: ""; position: absolute; top: 0; left: 0; width: 18px; height: 18px; background-color: white; -webkit-mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); mask-size: contain; mask-repeat: no-repeat; }#aistudio-focus-mode-tag .aistudio-img-icon:hover, #aistudio-hover-mode-tag .aistudio-img-icon:hover { background: #424242 !important; }#aistudio-focus-mode-tag .aistudio-img-icon:active, #aistudio-hover-mode-tag .aistudio-img-icon:active { background: #393f51 !important; }</style></head>
+<body>
+<header class="top">
+  <div class="brand">Vooruit <span>• financiële preventie</span></div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <button aria-label="Download app als standalone HTML bestand" class="btn secondary" onclick="downloadAppHtml()" style="padding:6px 10px;font-size:12px;min-height:34px" title="Download deze complete app als zelfstandig HTML-bestand voor offline gebruik">
+      <svg aria-hidden="true" class="uiico" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+      Download app (.html)
+    </button>
+    <div class="ver" id="releaseTag">2026 • V26.8 Final</div>
+  </div>
+</header>
+
+<main class="shell">
+  <div class="nav">
+    <button aria-label="Terug" class="back" id="back" style="visibility: visible;">←</button>
+    <div class="bar"><i id="progress" style="width: 90%;"></i></div>
+    <div class="counter" id="counter">Overzicht</div>
+  </div>
+
+  <!-- Page 0: START -->
+  <section class="page" id="p0">
+    <div class="card">
+      <div class="eyebrow">Start</div>
+      <h1>Waar wil je snel inzicht in?</h1>
+      <p class="sub">Een paar korte vragen. Een schatting is prima.</p>
+      <button class="option selected" data-goal="income" id="btnGoalIncome">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M5 7.5h12.5A2.5 2.5 0 0 1 20 10v7a2.5 2.5 0 0 1-2.5 2.5H6.5A2.5 2.5 0 0 1 4 17V8.5A1.5 1.5 0 0 1 5.5 7H18"></path><path d="M4 10h16"></path><circle cx="16.5" cy="14.5" r="1.5"></circle></svg>
+        </span>
+        <span><b>Mijn geld</b><small>Wat krijg ik en wat houd ik over?</small></span>
+      </button>
+      <button class="option" data-goal="extra" id="btnGoalExtra">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3.5 2"></path></svg>
+        </span>
+        <span><b>Extra werken</b><small>Wat levert meer werken mij echt op?</small></span>
+      </button>
+      <button class="option" data-goal="change" id="btnGoalChange">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M4 8a8 8 0 0 1 13.5-2L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 16a8 8 0 0 1-13.5 2L4 16"></path><path d="M4 20v-4h4"></path></svg>
+        </span>
+        <span><b>Een verandering</b><small>Wat gebeurt er met mijn geld bij een ander inkomen?</small></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Page 1: INKOMEN -->
+  <section class="page" id="p1">
+    <div class="card">
+      <div class="eyebrow">Inkomen</div>
+      <h1>Hoe komt je geld binnen?</h1>
+      <p class="sub">Kies je situatie en vul een indicatie in.</p>
+      <div class="notice" style="margin-bottom:16px">
+        <b>Let op: Vooruit vraagt om bruto bedragen.</b><br>
+        Bruto is wat je verdient vóór belasting en inhoudingen. Netto is wat je uiteindelijk op je bankrekening krijgt. Vooruit berekent het netto bedrag en de toeslagen voor je.
+      </div>
+      <button class="option selected" data-work="employee" id="btnWorkEmployee">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="7"></rect><path d="M8 7V5h8v2M3 12h18M10 12v2h4v-2"></path></svg>
+        </span>
+        <span><b>Ik werk in loondienst</b></span>
+      </button>
+      <button class="option" data-work="benefit" id="btnWorkBenefit">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4V20.5H6z"></path><path d="M14 3.5v4h4M9 12h6M9 15.5h6"></path></svg>
+        </span>
+        <span><b>Ik ontvang vooral een uitkering</b></span>
+      </button>
+      <button class="option" data-work="both" id="btnWorkBoth">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M4 7h9"></path><path d="m10 4 3 3-3 3"></path><path d="M20 17h-9"></path><path d="m14 14-3 3 3 3"></path></svg>
+        </span>
+        <span><b>Ik werk én ontvang een uitkering</b></span>
+      </button>
+      <button class="option" data-work="zzp" id="btnWorkZzp">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect height="14" rx="2" width="20" x="2" y="6"></rect></svg>
+        </span>
+        <span><b>Ik ben zzp'er / zelfstandig ondernemer</b></span>
+      </button>
+
+      <div class="field" id="incomeField">
+        <label for="income" id="incomeLabel">Bruto inkomen per maand</label>
+        <input class="input" id="income" inputmode="decimal" placeholder="bijv. 3.000">
+        <div class="hint" id="incomeHint"><b>Vul je bruto bedrag in</b> — dus vóór belasting en inhoudingen.</div>
+        <div class="error" id="e1"></div>
+      </div>
+
+      <!-- ZZP Extra Inputs -->
+      <div id="zzpBox" style="display:none">
+        <div class="field">
+          <label for="zzpProfit">Verwachte winst uit onderneming per jaar (vóór belasting)</label>
+          <input class="input" id="zzpProfit" inputmode="decimal" placeholder="bijv. 36.000">
+          <div class="hint">Vooruit past automatisch de 2026-zelfstandigenaftrek (€ 1.200) en mkb-winstvrijstelling (12,7%) toe.</div>
+        </div>
+        <div class="toggle">
+          <span>Voldoe je aan het urencriterium (min. 1.225 uur/jaar)?</span>
+          <input checked="" id="zzpHourCheck" type="checkbox">
+        </div>
+      </div>
+
+      <div class="grid" id="incomeAddons">
+        <div class="field">
+          <label for="holidayPct">Vakantiegeld (%)</label>
+          <input class="input" id="holidayPct" inputmode="decimal" placeholder="bijv. 8">
+          <div class="hint">Standaard 8%. Telt mee voor het toetsingsinkomen.</div>
+        </div>
+        <div class="field">
+          <label for="bonusAnnual">13e maand / eindejaarsuitkering (jaar)</label>
+          <input class="input" id="bonusAnnual" inputmode="decimal" placeholder="bijv. 2.500">
+          <div class="hint">Laat leeg als je dit niet krijgt.</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="withheldAnnual">Ingehouden loonheffing dit jaar (optioneel)</label>
+        <input class="input" id="withheldAnnual" inputmode="decimal" placeholder="bijv. 6.000">
+        <div class="hint">Staat op je loonstrook of jaaropgave. Vooruit gebruikt dit om een eventuele nabetaling of teruggave in te schatten.</div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" onclick="go(0)">← Vorige</button>
+        <button class="btn primary" onclick="nextIncome()">Verder →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 2: WERK (Uren & Uurloon) -->
+  <section class="page" id="p2">
+    <div class="card">
+      <div class="eyebrow">Werk</div>
+      <h1>Wil je uren en uurloon meenemen?</h1>
+      <p class="sub">Dit maakt berekeningen voor extra werken veel nauwkeuriger. Je mag dit ook overslaan.</p>
+      <div class="grid">
+        <div class="field">
+          <label for="hours">Uren per week</label>
+          <input class="input" id="hours" inputmode="decimal" placeholder="bijv. 28">
+        </div>
+        <div class="field">
+          <label for="hourly">Bruto uurloon (€)</label>
+          <input class="input" id="hourly" inputmode="decimal" placeholder="bijv. 22,50">
+          <div class="hint"><b>Bruto</b> = vóór belasting en inhoudingen.</div>
+        </div>
+      </div>
+      <div id="calculatedWageBox" class="mini-note" style="display:none;margin-bottom:16px;"></div>
+      <div class="hint" style="margin-top:12px">Heb je een ORT-, weekend-, avond-, nacht-, ploegentoeslag of andere loon-/werktoeslag? Je kunt die hieronder bij <b>Extra werken</b> zelf invoeren. Vooruit vult geen toeslagpercentage voor je in.</div>
+      <div class="actions">
+        <button class="btn secondary" onclick="go(1)">← Vorige</button>
+        <button class="btn primary" onclick="go(3)">Verder →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 3: WONEN -->
+  <section class="page" id="p3">
+    <div class="card">
+      <div class="eyebrow">Wonen</div>
+      <h1>Hoe woon je?</h1>
+      <p class="sub">Dit bepaalt of je in aanmerking komt voor huurtoeslag of de eigenwoningregeling.</p>
+      <button class="option selected" data-house="rent" id="btnHouseRent">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7"></path><path d="M5 10v10h14V10M9 20v-6h6v6"></path></svg>
+        </span>
+        <span><b>Ik huur</b><small>We vragen alleen je kale huur</small></span>
+      </button>
+      <button class="option" data-house="buy" id="btnHouseBuy">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7"></path><path d="M5 10v10h14V10M9 20v-6h6v6"></path></svg>
+        </span>
+        <span><b>Ik heb een koopwoning</b><small>Met hypotheek of afbetaald</small></span>
+      </button>
+      <button class="option" data-house="other" id="btnHouseOther">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M5 20V4h10v16M15 8h4v12M8 7h2M8 11h2M8 15h2M17 11h1M17 15h1"></path></svg>
+        </span>
+        <span><b>Anders</b><small>Inwonend, tijdelijk of kostendeler</small></span>
+      </button>
+
+      <div class="field" id="rentBox" style="display: block;">
+        <label for="rent">Kale huur per maand (€)</label>
+        <input class="input" id="rent" inputmode="decimal" placeholder="bijv. 750">
+        <div class="hint">Exclusief servicekosten. Maximale huurgrens 2026 voor huurtoeslag is € 932,93 (onder 21 jaar € 498,20).</div>
+      </div>
+
+      <div class="field" id="buyBox" style="display:none">
+        <label for="woz">WOZ-waarde woning (optioneel)</label>
+        <input class="input" id="woz" inputmode="decimal" placeholder="bijv. 375.000">
+        <div class="grid">
+          <div class="field">
+            <label for="mortgageInterest">Hypotheekrente per jaar (optioneel)</label>
+            <input class="input" id="mortgageInterest" inputmode="decimal" placeholder="bijv. 6.000">
+          </div>
+          <div class="field">
+            <label for="mortgageDebt">Hypotheekschuld (optioneel)</label>
+            <input class="input" id="mortgageDebt" inputmode="decimal" placeholder="bijv. 250.000">
+          </div>
+        </div>
+        <div class="hint">Vooruit berekent het eigenwoningforfait en de hypotheekrenteaftrek (tarief 2026: 37,56% max) inclusief de Wet Hillen-afbouw.</div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" onclick="go(2)">← Vorige</button>
+        <button class="btn primary" onclick="go(4)">Verder →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 4: HUISHOUDEN / PARTNER -->
+  <section class="page" id="p4">
+    <div class="card">
+      <div class="eyebrow">Huishouden</div>
+      <h1>Heb je een partner?</h1>
+      <p class="sub">Voor toeslagen en de bijstand telt het gezamenlijk inkomen mee.</p>
+      <button class="option" data-partner="yes" id="btnPartnerYes">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"></circle><circle cx="16.5" cy="10" r="2.5"></circle><path d="M3.5 19a5.5 5.5 0 0 1 11 0M14 15.5a4.5 4.5 0 0 1 6.5 3.5"></path></svg>
+        </span>
+        <span><b>Ja</b><small>Getrouwd, geregistreerd partner of fiscaal partner</small></span>
+      </button>
+      <button class="option selected" data-partner="no" id="btnPartnerNo">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"></circle><path d="M5 21a7 7 0 0 1 14 0M12 10v5M9 13l3-3 3 3"></path></svg>
+        </span>
+        <span><b>Nee</b><small>Alleenstaand</small></span>
+      </button>
+
+      <div class="field" id="partnerBox" style="display:none">
+        <label for="partnerIncome">Bruto inkomen partner per maand (€)</label>
+        <input class="input" id="partnerIncome" inputmode="decimal" placeholder="bijv. 2.200">
+        <div class="hint"><b>Vul bruto in</b> — vóór belasting en inhoudingen.</div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" onclick="go(3)">← Vorige</button>
+        <button class="btn primary" onclick="go(5)">Verder →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 5: REGELINGEN, LEEFTIJD, VERMOGEN, KINDEREN -->
+  <section class="page" id="p5">
+    <div class="card">
+      <div class="eyebrow">Regelingen &amp; Gezin</div>
+      <h1>Zijn er dingen die mee kunnen tellen?</h1>
+      <p class="sub">We vragen alleen wat nodig is voor een correcte fiscale en toeslagberekening.</p>
+      <div class="toggle">
+        <span>Ik heb een Nederlandse basiszorgverzekering</span>
+        <input checked="" id="health" type="checkbox">
+      </div>
+      <div class="grid">
+        <div class="field">
+          <label for="age">Leeftijd</label>
+          <input class="input" id="age" inputmode="numeric" placeholder="bijv. 28">
+          <div class="hint">Vanaf 67 jaar (AOW-leeftijd 2026) gelden lagere belastingtarieven en de ouderenkorting.</div>
+        </div>
+        <div class="field">
+          <label for="wealth">Spaargeld en ander vermogen (€)</label>
+          <input class="input" id="wealth" inputmode="decimal" placeholder="bijv. 10.000">
+          <div class="hint">Grenzen 2026: Zorgtoeslag max € 146.011 (partner € 184.633). Huurtoeslag max € 38.479 (partner € 76.958).</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Heb je kinderen jonger dan 18 jaar?</label>
+        <div class="grid">
+          <button class="option" data-kids="yes" id="btnKidsYes"><span><b>Ja</b></span></button>
+          <button class="option selected" data-kids="no" id="btnKidsNo"><span><b>Nee</b></span></button>
+        </div>
+      </div>
+
+      <div class="field" id="childBox" style="display:none">
+        <label for="childCount">Aantal kinderen jonger dan 18</label>
+        <input class="input" id="childCount" inputmode="numeric" placeholder="bijv. 2">
+      </div>
+
+      <div class="field" id="childDetails" style="display:none">
+        <label>Leeftijden van je kinderen</label>
+        <div id="childAges"></div>
+        <div class="hint">Nodig voor het kindgebonden budget 2026 (extra verhogingen bij 12-15 jaar en 16-17 jaar).</div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" onclick="go(4)">← Vorige</button>
+        <button class="btn primary" onclick="go(6)">Verder →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 6: VASTE LASTEN -->
+  <section class="page" id="p6">
+    <div class="card">
+      <div class="eyebrow">Lasten</div>
+      <h1>Wat ben je ongeveer kwijt per maand?</h1>
+      <p class="sub">Alle vaste lasten samen. Een schatting mag.</p>
+      <div class="field">
+        <label for="costs">Vaste lasten per maand (€)</label>
+        <input class="input" id="costs" inputmode="decimal" placeholder="bijv. 1.350">
+        <div class="hint">Huur of hypotheek, energie, water, zorgverzekering, abonnementen en vaste aflossingen.</div>
+        <div class="error" id="e6"></div>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="go(5)">← Vorige</button>
+        <button class="btn primary" id="btnFinish" onclick="handleStep6Next()">Verder →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 7: UITKERINGEN (Step 6A) -->
+  <section class="page" id="p6b">
+    <div class="card">
+      <div class="eyebrow">Uitkering</div>
+      <h1>Welke uitkering ontvang je?</h1>
+      <p class="sub">Vooruit berekent de actuele 2026 verrekenregels en waarschuwt voor mogelijke nabetalingen of terugvorderingen.</p>
+      <div class="field">
+        <label for="benefitType">Type uitkering</label>
+        <select class="input" id="benefitType">
+          <option value="none">Geen uitkering</option>
+          <option value="ww">WW (Werkloosheidswet)</option>
+          <option value="participation">Bijstand / Participatiewet</option>
+          <option value="wia">WIA (WGA / IVA)</option>
+          <option value="wajong">Wajong</option>
+          <option value="wao">WAO</option>
+          <option value="waz">WAZ</option>
+          <option value="zw">Ziektewet</option>
+          <option value="aow">AOW / Pensioen</option>
+          <option value="other">Andere uitkering</option>
+        </select>
+      </div>
+
+      <div id="benefitFields" style="display:none">
+        <div id="benefitExtraFields"></div>
+        <div class="grid">
+          <div class="field">
+            <label for="benefitGross">Bruto uitkering per maand (€)</label>
+            <input class="input" id="benefitGross" inputmode="decimal" placeholder="bijv. 1.850">
+            <div class="hint"><b>Vul bruto in</b> — vóór belasting en inhoudingen.</div>
+          </div>
+          <div class="field">
+            <label for="benefitDuration">Resterende looptijd (maanden)</label>
+            <input class="input" id="benefitDuration" inputmode="numeric" placeholder="bijv. 12">
+          </div>
+        </div>
+        <div class="notice good" id="benefitRuleNotice"></div>
+      </div>
+
+      <div class="error" id="eBenefit"></div>
+
+      <div class="actions">
+        <button class="btn secondary" onclick="go(6)">← Terug naar lasten</button>
+        <button class="btn primary" onclick="finishBenefitStep()">Bekijk overzicht →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 8: OVERZICHT (Jouw Overzicht) -->
+  <section class="page active" id="p7">
+    <div class="card">
+      <div class="eyebrow">Jouw Overzicht • 2026</div>
+      <h1>Zo staat je geld ervoor</h1>
+      <p class="sub">Een centrale indicatie op basis van de 2026 belastingtarieven, uitkeringen en toeslagen.</p>
+
+      <div class="result">
+        <span>Geschat besteedbaar per maand</span>
+        <strong id="disposable">€&nbsp;630</strong>
+        <small id="disposableSub">na geschatte belasting, vaste lasten (€&nbsp;2.095) en toeslagen (€&nbsp;79)</small>
+      </div>
+
+      <div class="grid">
+        <div class="stat">
+          <span>Geschat netto inkomen</span>
+          <b id="net">€&nbsp;2.646</b>
+        </div>
+        <div class="stat">
+          <span>Vaste lasten</span>
+          <b id="costOut">€&nbsp;2.095</b>
+        </div>
+        <div class="stat">
+          <span>Toeslagindicatie</span>
+          <b id="support">€&nbsp;79</b>
+        </div>
+        <div class="stat">
+          <span>Toetsingsinkomen (jaar)</span>
+          <b id="annual">€&nbsp;36.692</b>
+        </div>
+      </div>
+
+      <div class="notice good" id="notice"><b>Stabiele ruimte:</b> Je houdt naar schatting <b>€&nbsp;630 per maand</b> over na alle vaste lasten en toeslagen.</div>
+
+      <!-- Toeslag Specific Breakdown -->
+      <div class="scenario" style="margin-top:16px">
+        <h3>Opbouw toeslagen (per maand)</h3>
+        <div class="scenario-breakdown">
+          <div class="scenario-row"><span>Zorgtoeslag 2026:</span><strong id="tbZorg">€&nbsp;49</strong></div>
+          <div class="scenario-row"><span>Huurtoeslag 2026:</span><strong id="tbHuur">€&nbsp;30</strong></div>
+          <div class="scenario-row"><span>Kindgebonden budget 2026:</span><strong id="tbKgb">€&nbsp;0</strong></div>
+        </div>
+      </div>
+
+      <h2>Kan er later een rekening komen?</h2>
+      <div class="notice" id="yearReconciliation"><div style="display:flex;flex-direction:column;gap:10px;font-size:13px;line-height:1.5"><div><b>A. Directe belasting / loonheffing:</b> Wordt maandelijks direct op je loon ingehouden door je werkgever of uitkeringsinstantie (geschatte jaarbelasting: €&nbsp;4.936).</div><div><b>B. Toetsingsinkomen &amp; toeslagen:</b> Je totale toetsingsinkomen is €&nbsp;36.692 per jaar. Je ontvangt naar schatting €&nbsp;79 per maand aan toeslagen.</div><div style="margin-bottom:8px;color:#475467"><b>C. Mogelijke jaarlijkse belastingverrekening:</b> Dit kunnen we met de huidige gegevens niet betrouwbaar berekenen. Vul eventueel bij stap ‘Inkomen’ je ingehouden loonheffing van je loonstrook in om te zien of je geld terugkrijgt of moet bijbetalen.</div><div><b>D. Mogelijke verrekening / terugvordering van toeslagen:</b> Dienst Toeslagen keert maandelijks voorschotten uit op basis van je geschatte jaarinkomen (€&nbsp;36.692). Verandert je inkomen gedurende het jaar en geef je dit niet direct door op toeslagen.nl? Dan volgt achteraf bij de definitieve vaststelling een verrekening of terugvordering van te veel ontvangen toeslagen.</div></div></div>
+
+      <h2>Financiële risico- en preventiewaarschuwingen</h2>
+      <div class="notice good" id="risk"><b>Geen acute risicosignalen:</b> Je gegevens geven op basis van de 2026-normen geen directe grensoverschrijdingen.</div>
+
+      <h2>Wat als je inkomen verandert?</h2>
+      <div class="scenario">
+        <div class="scenariohead">
+          <h3>Verandering per maand</h3>
+          <span class="delta" id="quickDelta">+ €&nbsp;789</span>
+        </div>
+        <input class="range" id="quickRange" max="1500" min="-1000" step="50" type="range" value="0">
+        <div class="rlabels">
+          <span>− € 1.000</span>
+          <b id="quickValue">+ €&nbsp;1.500</b>
+          <span>+ € 1.500</span>
+        </div>
+        <div id="quickRealGainSummary" style="display: block;"><div class="quick-chain"><div class="quick-chain-row"><span>Extra op je bankrekening:</span><b>+ €&nbsp;10.422 / jaar <small style="font-weight:normal;color:#667085">(+ €&nbsp;868 / mnd)</small></b></div><div class="quick-chain-row" style="color:#b42318"><span>Minder toeslag (mogelijke verrekening):</span><b>− €&nbsp;948 / jaar</b></div><div class="quick-chain-row total" style="color:#087443"><span>Uiteindelijk écht over:</span><b>+ €&nbsp;9.474 / jaar <small style="font-weight:bold">(+ €&nbsp;789 / mnd)</small></b></div></div></div>
+        <p id="quickText" style="color:var(--muted);font-size:13px;line-height:1.5;margin-top:10px"><b>€&nbsp;1.500 bruto extra per maand</b> levert je onderaan de streep naar schatting <b>+ €&nbsp;789</b> per maand op. Klik hieronder voor het complete terugbetalings- en uurvoordeel-inzicht.</p>
+      </div>
+
+      <button class="option" id="scenarioButton" onclick="openFullScenario()">
+        <span class="ico">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"></circle><path d="m15 15 5 5"></path></svg>
+        </span>
+        <span><b>Bekijk wat je écht overhoudt &amp; vergelijk uren</b><small>Netto effect, toeslageneffect, werkelijk uurvoordeel en preventietips</small></span>
+      </button>
+
+      <h2>Wat kun je nu doen?</h2>
+      <ul class="list" id="actions"><li><span class="tag">1</span>Houd je verwachte jaarinkomen actueel bij Dienst Toeslagen (Mijn toeslagen).</li><li><span class="tag">2</span>Controleer of toeslagen niet te hoog staan ingesteld.</li><li><span class="tag">3</span>Gebruik de scenarioknop hieronder om het effect van meer of minder werken door te rekenen.</li></ul>
+
+      <div class="actions" style="flex-wrap:wrap">
+        <button class="btn secondary" onclick="handleEditFromOverview()">← Aanpassen</button>
+        <button class="btn secondary" onclick="exportReportJson()" title="Download je berekening als gestructureerd JSON-bestand">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Exporteer JSON
+        </button>
+        <button class="btn secondary" onclick="exportReportCsv()" title="Download tabel als CSV bestand voor Excel">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" x2="12" y1="18" y2="12"></line><line x1="9" x2="15" y1="15" y2="15"></line></svg>
+          Exporteer CSV
+        </button>
+        <button class="btn primary" onclick="restart()">Opnieuw</button>
+      </div>
+
+      <div class="foot">
+        Vooruit is een indicatieve financiële preventietool. De 2026-regelset gebruikt officiële publicaties van Dienst Toeslagen, Belastingdienst en UWV.<br>
+        <button class="linkbtn" onclick="openLegal('privacy')">Privacy</button> · 
+        <button class="linkbtn" onclick="openLegal('terms')">Voorwaarden</button> · 
+        <button class="linkbtn" onclick="openLegal('sources')">Bronnen 2026</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 9: SCENARIO & JAARBEELD -->
+  <section class="page" id="p8">
+    <div class="card">
+      <div class="eyebrow">Scenario &amp; Jaarbeeld • 2026</div>
+      <h1>Wat verandert er echt?</h1>
+      <p class="sub">Zie direct hoeveel van een verandering in uren of inkomen daadwerkelijk in je portemonnee overblijft na belasting en toeslagen.</p>
+
+      <!-- NIEUWE EENVOUDIGE EXTRA WERKEN CALCULATOR (V26.8 Final) -->
+      <div class="scenario" id="extraWorkSection" style="background:#f8fafc;border:2px solid #0284c7;border-radius:16px;padding:20px;margin-bottom:24px">
+        <div class="eyebrow" style="color:#0284c7;font-weight:800">Eenvoudig extra werken berekenen</div>
+        <h2 style="margin:4px 0 6px;font-size:18px">Als ik extra ga werken, wat houd ik daar écht aan over?</h2>
+        <p class="sub" style="font-size:13px;margin-bottom:14px">Vul je uren en bruto uurloon in. Vooruit rekent meteen de hele keten door.</p>
+
+        <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));gap:12px;margin-bottom:12px">
+          <div class="field">
+            <label for="extraHoursCurrent" style="font-size:12px;font-weight:700">Huidige uren per week</label>
+            <input class="input" id="extraHoursCurrent" type="number" step="0.25" min="0" max="80" placeholder="bijv. 28">
+          </div>
+          <div class="field">
+            <label for="extraHoursNew" style="font-size:12px;font-weight:700">Nieuwe uren per week</label>
+            <input class="input" id="extraHoursNew" type="number" step="0.25" min="0" max="80" placeholder="bijv. 36">
+          </div>
+          <div class="field">
+            <label for="extraHourly" style="font-size:12px;font-weight:700">Bruto uurloon (€)</label>
+            <input class="input" id="extraHourly" type="number" step="0.01" min="0" placeholder="bijv. 22,50">
+          </div>
+        </div>
+
+        <div style="margin-bottom:16px;padding:14px;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px">
+          <div style="font-size:13px;font-weight:800;color:#0f172a;margin-bottom:4px">Loon- of werktoeslag</div>
+          <div style="font-size:12px;color:#64748b;margin-bottom:10px">Heb je een toeslag? Voeg hem zelf toe. Denk bijvoorbeeld aan ORT, weekend, nacht of een persoonlijke toeslag. Er wordt niets automatisch aangenomen.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+            <label style="display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#334155;cursor:pointer">
+              <input type="radio" name="extraAllowanceChoice" id="extraAllowanceNo" value="no" checked> Nee
+            </label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#334155;cursor:pointer">
+              <input type="radio" name="extraAllowanceChoice" id="extraAllowanceYes" value="yes"> Ja
+            </label>
+          </div>
+          <div id="extraAllowancesBox" style="display:none"></div>
+          <button type="button" class="btn secondary" id="addExtraAllowance" style="display:none;margin-top:8px;padding:8px 12px">+ Nog een toeslag toevoegen</button>
+        </div>
+
+        <!-- HET ANTWOORD EERST: DE KRACHTIGE UITKOMSTBOX -->
+        <div id="extraWorkAnswerBox"></div>
+      </div>
+
+      <div class="scenario" id="freeSliderSection">
+        <div class="scenariohead">
+          <h3>Of kies een vast bruto bedrag per maand</h3>
+          <span class="delta" id="changeLabel">€ 0</span>
+        </div>
+        <div class="field" style="margin:10px 0 6px">
+          <label for="scenarioWho">Wie verandert van inkomen?</label>
+          <select class="input" id="scenarioWho">
+            <option value="self">Ikzelf</option>
+            <option value="partner">Mijn partner</option>
+          </select>
+        </div>
+        <input class="range" id="scenarioRange" max="1500" min="-1000" step="50" type="range" value="0">
+        <div class="rlabels">
+          <span>− € 1.000</span>
+          <b id="scenarioValue">€ 0</b>
+          <span>+ € 1.500</span>
+        </div>
+      </div>
+
+      <!-- 1. DE HOOFDUITKOMST: WAT HOUD JE ÉCHT OVER? -->
+      <div class="real-gain" id="realGain"></div>
+
+      <div class="grid" style="margin-top:16px">
+        <div class="stat">
+          <span>Huidig netto op rekening</span>
+          <b id="scBase">€ 0</b>
+        </div>
+        <div class="stat">
+          <span>Nieuw netto op rekening</span>
+          <b id="scNew">€ 0</b>
+        </div>
+        <div class="stat">
+          <span>Besteedbaar per maand</span>
+          <b id="scDelta">€ 0</b>
+        </div>
+        <div class="stat">
+          <span>Besteedbaar per jaar</span>
+          <b id="scYear">€ 0</b>
+        </div>
+      </div>
+
+      <!-- Marginale Druk in begrijpelijke taal -->
+      <div class="result" style="margin-top:16px">
+        <span>Van elke € 100 bruto extra houd je ongeveer over:</span>
+        <strong id="marginalPressure">—</strong>
+        <small id="marginalText">De rest verdwijnt naar belasting en afbouw van toeslagen.</small>
+      </div>
+
+      <div class="notice" id="scNotice"></div>
+
+      <!-- 5. VERGELIJK JE UREN -->
+      <div class="scenario" id="hoursComparisonContainer" style="margin-top:20px">
+        <div class="eyebrow">Urenoverzicht • 2026</div>
+        <h3 style="margin-bottom:4px">Vergelijk je uren</h3>
+        <p class="sub" style="font-size:13px;margin-bottom:12px">Zie direct wat 4 of 8 uur meer of minder werken betekent voor je netto loon, je toeslagen en wat je onderaan de streep écht overhoudt.</p>
+        <div id="hoursComparisonContent"></div>
+      </div>
+
+      <h2>Waar komt het verschil vandaan?</h2>
+      <div class="scenario" id="scenarioBreakdown"></div>
+
+      <h2>Snelvergelijker vaste bedragen</h2>
+      <p class="sub" style="font-size:13px;margin-bottom:10px">Vergelijk in één oogopslag vier verschillende scenario's voor meer of minder inkomen per maand.</p>
+      <div class="scenario" id="scenarioMatrix"></div>
+
+      <h2>Jaaroverzicht</h2>
+      <div class="grid">
+        <div class="stat"><span>Netto inkomen per jaar</span><b id="yearNet">€ 0</b></div>
+        <div class="stat"><span>Vaste lasten per jaar</span><b id="yearCosts">€ 0</b></div>
+        <div class="stat"><span>Toeslagen per jaar</span><b id="yearSupport">€ 0</b></div>
+        <div class="stat"><span>Ruimte per jaar</span><b id="yearLeft">€ 0</b></div>
+      </div>
+
+      <!-- 12 Maanden Prognose -->
+      <div class="scenario" id="monthlyForecastCard" style="margin-top:18px">
+        <div class="eyebrow">Jaarprognose</div>
+        <h3 style="margin-bottom:6px">12 maanden vooruit</h3>
+        <p class="sub" style="font-size:13px;margin-bottom:12px">Indicatie van de cashflow per maand bij gelijkblijvende omstandigheden.</p>
+        <div id="monthlyForecast"></div>
+      </div>
+
+      <h2>Actieplan &amp; Preventietips</h2>
+      <ul class="list" id="scActions"></ul>
+
+      <div class="actions" style="flex-wrap:wrap">
+        <button class="btn secondary" onclick="go(8)">← Terug naar overzicht</button>
+        <button class="btn secondary" onclick="window.print()">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><path d="M7 14h10v6H7z"></path></svg>
+          Print / PDF
+        </button>
+        <button class="btn secondary" onclick="exportReportJson()" title="Download je berekening als gestructureerd JSON-bestand">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Exporteer JSON
+        </button>
+        <button class="btn secondary" onclick="exportReportCsv()" title="Download tabel als CSV bestand voor Excel">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" x2="12" y1="18" y2="12"></line><line x1="9" x2="15" y1="15" y2="15"></line></svg>
+          Exporteer CSV
+        </button>
+        <button class="btn secondary" onclick="clearMyData()">
+          <svg aria-hidden="true" class="uiico" viewBox="0 0 24 24"><path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"></path></svg>
+          Wis data
+        </button>
+        <button class="btn primary" onclick="restart()">Nieuwe berekening</button>
+      </div>
+
+      <div class="foot">
+        Regelset: 2026. Bronbasis: officiële Belastingdienst, Dienst Toeslagen en UWV richtlijnen.
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Legal Modal -->
+<div aria-hidden="true" class="legal-modal" id="legalModal">
+  <div class="legal-card">
+    <button aria-label="Sluiten" class="legal-close" onclick="closeLegal()">×</button>
+    <div id="legalContent"></div>
+  </div>
+</div>
+
+<!-- SINGLE UNIFIED CALCULATION ENGINE & APP CONTROLLER -->
+<script>
+/**
+ * Vooruit V26.8 Final Final — Centrale Financiële Calculation Engine
+ * Volledig geharmoniseerd conform de officiële Nederlandse fiscale regels voor 2026.
+ */
+(function() {
+  "use strict";
+
+  // In-app toast notificatie voor veilige en vriendelijke feedback (iFrame-safe)
+  function showToast(message, type) {
+    let toast = document.getElementById("appToast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "appToast";
+      toast.style.cssText = "position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#101828;color:#fff;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;z-index:9999;box-shadow:0 10px 25px rgba(0,0,0,0.2);display:flex;align-items:center;gap:10px;max-width:90%;transition:opacity 0.25s, transform 0.25s;pointer-events:none;";
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    if (type === "error") toast.style.background = "#b42318";
+    else if (type === "success") toast.style.background = "#087443";
+    else toast.style.background = "#101828";
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(-50%) translateY(0)";
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.style.opacity = "0";
+      toast.style.transform = "translateX(-50%) translateY(10px)";
+    }, 3200);
+  }
+
+  // --- Hulpfuncties voor getalconversie ---
+  function parseVal(v) {
+    if (v === null || v === undefined || v === "") return 0;
+    const s = String(v).trim().replace(/\s/g, "").replace(",", ".");
+    const n = Number(s);
+    return Number.isFinite(n) && n >= 0 ? n : 0;
+  }
+  const $ = id => document.getElementById(id);
+  const num = id => parseVal($(id)?.value);
+  const safeInt = id => Math.max(0, Math.min(20, Math.round(num(id))));
+  const euro = n => new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(Number.isFinite(n) ? n : 0);
+
+  // --- CENTRALE CALCULATION ENGINE (VOORUIT_ENGINE) ---
+  window.VOORUIT_ENGINE = {
+    meta: {
+      version: "26.7",
+      release: "Final",
+      country: "NL",
+      taxYear: 2026,
+      verifiedSources: [
+        "Belastingdienst Box 1 schijventarief 2026",
+        "Belastingdienst Algemene Heffingskorting 2026",
+        "Belastingdienst Arbeidskorting 2026",
+        "Dienst Toeslagen Zorgtoeslagtabel 2026",
+        "Dienst Toeslagen Huurtoeslag Formule 2026 (TG 083-1Z62FD)",
+        "Dienst Toeslagen Kindgebonden Budget 2026",
+        "Zorgverzekeringswet (Zvw) tarief 2026 (4,85% max € 79.409)",
+        "UWV Verrekenregels WW, WIA, Wajong, Bijstand"
+      ]
+    },
+
+    // 1. Box 1 Inkomstenbelasting 2026
+    taxBox1: function(income, aowReached) {
+      const a = Math.max(0, income);
+      if (!aowReached) {
+        if (a <= 38883) return a * 0.3575;
+        if (a <= 78426) return (38883 * 0.3575) + ((a - 38883) * 0.3756);
+        return (38883 * 0.3575) + ((78426 - 38883) * 0.3756) + ((a - 78426) * 0.4950);
+      } else {
+        // AOW-gerechtigden betalen geen AOW-premie (eerste schijf 17,85%)
+        if (a <= 38883) return a * 0.1785;
+        if (a <= 78426) return (38883 * 0.1785) + ((a - 38883) * 0.3756);
+        return (38883 * 0.1785) + ((78426 - 38883) * 0.3756) + ((a - 78426) * 0.4950);
+      }
+    },
+
+    // 2. Algemene Heffingskorting 2026
+    generalCredit: function(income, aowReached) {
+      const a = Math.max(0, income);
+      if (!aowReached) {
+        if (a <= 29736) return 3115;
+        if (a <= 78426) return Math.max(0, 3115 - 0.06398 * (a - 29736));
+        return 0;
+      } else {
+        if (a <= 29736) return 1556;
+        if (a <= 78426) return Math.max(0, 1556 - 0.03195 * (a - 29736));
+        return 0;
+      }
+    },
+
+    // 3. Arbeidskorting 2026
+    employmentCredit: function(workIncome, aowReached) {
+      const a = Math.max(0, workIncome);
+      if (a <= 0) return 0;
+      if (!aowReached) {
+        if (a <= 11965) return 0.08324 * a;
+        if (a <= 25845) return 996 + 0.31009 * (a - 11965);
+        if (a <= 45592) return 5300 + 0.01950 * (a - 25845);
+        if (a <= 132920) return Math.max(0, 5685 - 0.06510 * (a - 45592));
+        return 0;
+      } else {
+        if (a <= 11965) return 0.04156 * a;
+        if (a <= 25845) return 498 + 0.15483 * (a - 11965);
+        if (a <= 45592) return 2647 + 0.00974 * (a - 25845);
+        if (a <= 132920) return Math.max(0, 2840 - 0.03250 * (a - 45592));
+        return 0;
+      }
+    },
+
+    // 4. Inkomensafhankelijke Combinatiekorting (IACK) 2026
+    iack: function(workIncome, hasChildUnder12, singleParent, aowReached) {
+      const a = Math.max(0, workIncome);
+      if (!hasChildUnder12 || !singleParent || a <= 6239) return 0;
+      const rate = aowReached ? 0.0572 : 0.1145;
+      const maxKorting = aowReached ? 1513 : 3032;
+      return Math.min(maxKorting, rate * (a - 6239));
+    },
+
+    // 5. Ouderenkorting 2026
+    elderlyCredit: function(income, aowReached) {
+      if (!aowReached) return 0;
+      const a = Math.max(0, income);
+      if (a <= 46002) return 2067;
+      if (a <= 59782) return Math.max(0, 2067 - 0.15 * (a - 46002));
+      return 0;
+    },
+
+    // 6. Eigenwoningforfait & Aftrek 2026
+    eigenWoningAftrek: function(woz, mortgageInterest) {
+      const w = Math.max(0, woz);
+      const interest = Math.max(0, mortgageInterest);
+      if (w <= 0 && interest <= 0) return 0;
+      let ewf = 0;
+      if (w <= 12500) ewf = 0;
+      else if (w <= 25000) ewf = w * 0.0010;
+      else if (w <= 50000) ewf = w * 0.0020;
+      else if (w <= 75000) ewf = w * 0.0025;
+      else if (w <= 1350000) ewf = w * 0.0035;
+      else ewf = 4725 + (w - 1350000) * 0.0235;
+
+      const balance = ewf - interest;
+      if (balance <= 0) return balance; // Aftrekpost Box 1
+      // Geen of kleine eigenwoningschuld (Wet Hillen 2026: 71,867% vrijstelling van het saldo)
+      return balance * (1 - 0.71867);
+    },
+
+    // 7. ZZP Ondernemersaftrek & MKB-winstvrijstelling 2026
+    zzpTaxDeductions: function(profit, meetsHourCriterion, aowReached) {
+      const p = Math.max(0, profit);
+      if (p <= 0) return { taxableProfit: 0, zelfstandigenaftrek: 0, mkbVrijstelling: 0 };
+      const zelfstandigenaftrek = meetsHourCriterion ? (aowReached ? 600 : 1200) : 0;
+      const afterZA = Math.max(0, p - zelfstandigenaftrek);
+      const mkbVrijstelling = afterZA * 0.127; // 12,7% in 2026
+      const taxableProfit = Math.max(0, afterZA - mkbVrijstelling);
+      return { taxableProfit, zelfstandigenaftrek, mkbVrijstelling };
+    },
+
+    // 8. Inkomensafhankelijke bijdrage Zorgverzekeringswet (Zvw) 2026
+    zvwContribution: function(nonWageIncome, wageIncome) {
+      // 4,85% in 2026 over winst uit onderneming / resultaat / overig inkomen tot max € 79.409
+      const maxBase = 79409;
+      const coveredByWage = Math.min(maxBase, Math.max(0, wageIncome));
+      const remainingBase = Math.max(0, maxBase - coveredByWage);
+      const liable = Math.min(remainingBase, Math.max(0, nonWageIncome));
+      return liable * 0.0485;
+    },
+
+    // 9. Zorgtoeslag 2026 (Officiële tabellen Dienst Toeslagen 2026)
+    zorgtoeslag: function(annualIncome, hasPartner, wealth, isInsured) {
+      if (!isInsured) return 0;
+      const maxWealth = hasPartner ? 184633 : 146011;
+      const maxIncome = hasPartner ? 51142 : 40857;
+      if (wealth > maxWealth || annualIncome > maxIncome) return 0;
+
+      const solo = [
+        [29500,129],[30000,126],[30500,120],[31000,114],[31500,109],[32000,103],[32500,97],
+        [33000,91],[33500,86],[34000,80],[34500,74],[35000,69],[35500,63],[36000,57],
+        [36500,51],[37000,46],[37500,40],[38000,34],[38500,28],[39000,23],[39500,17],
+        [40000,11],[40500,6],[40857,0]
+      ];
+      const duo = [
+        [29500,246],[30000,243],[30500,238],[31000,232],[31500,226],[32000,221],[32500,215],
+        [33000,209],[33500,203],[34000,198],[34500,192],[35000,186],[35500,180],[36000,175],
+        [36500,169],[37000,163],[37500,158],[38000,152],[38500,146],[39000,140],[39500,135],
+        [40000,129],[40500,123],[41000,118],[41500,112],[42000,106],[42500,100],[43000,95],
+        [43500,89],[44000,83],[44500,78],[45000,72],[45500,66],[46000,60],[46500,55],
+        [47000,49],[47500,43],[48000,37],[48500,32],[49000,26],[49500,20],[50000,15],
+        [50500,9],[51000,3],[51142,0]
+      ];
+      const table = hasPartner ? duo : solo;
+      if (annualIncome <= table[0][0]) return table[0][1];
+      if (annualIncome >= maxIncome) return 0;
+      for (let i = 0; i < table.length - 1; i++) {
+        const [x1, y1] = table[i], [x2, y2] = table[i+1];
+        if (annualIncome <= x2) {
+          const y = y1 + (y2 - y1) * ((annualIncome - x1) / (x2 - x1));
+          return Math.max(0, Math.round(y));
+        }
+      }
+      return 0;
+    },
+
+    // 10. Huurtoeslag 2026 (Dienst Toeslagen TG 083-1Z62FD, juni 2026)
+    huurtoeslag: function(annualIncome, rentMonthly, age, householdSize, wealth) {
+      const wealthMax = householdSize >= 2 ? 76958 : 38479;
+      if (rentMonthly <= 0 || wealth > wealthMax || age < 18) return 0;
+      const young = age < 21;
+      const maxRent = young ? 498.20 : 932.93;
+      const rekenhuur = Math.min(Math.max(0, rentMonthly), maxRent);
+      const basishuur = householdSize === 1 ? 202.52 : 200.71;
+      if (rekenhuur <= basishuur) return 0;
+
+      const kwaliteitsgrens = 498.20;
+      const aftoppingsgrens = householdSize <= 2 ? 713.02 : 764.14;
+
+      const partA = Math.max(0, Math.min(rekenhuur, kwaliteitsgrens) - basishuur);
+      let partB = 0, partC = 0;
+      if (!young) {
+        partB = Math.max(0, Math.min(rekenhuur, aftoppingsgrens) - kwaliteitsgrens) * 0.65;
+        partC = Math.max(0, rekenhuur - aftoppingsgrens) * 0.40;
+      }
+      const ijkpunt = householdSize === 1 ? 23425 : 31500;
+      const afbouwFactor = householdSize === 1 ? 0.27 : 0.22;
+      const normhuurStijging = Math.max(0, (annualIncome - ijkpunt) * afbouwFactor / 12);
+      return Math.max(0, Math.floor(partA + partB + partC - normhuurStijging));
+    },
+
+    // 11. Kindgebonden Budget 2026
+    kindgebondenBudget: function(annualIncome, hasPartner, wealth, childAges) {
+      if (!childAges || !childAges.length) return 0;
+      const maxWealth = hasPartner ? 184633 : 146011;
+      if (wealth > maxWealth) return 0;
+
+      const count = childAges.length;
+      let maxAnnual = count === 1 ? 2580 : (count === 2 ? 5160 : 5160 + (count - 2) * 2580);
+      if (!hasPartner) {
+        // Alleenstaande-ouderkop (ALO-kop 2026: € 3.416)
+        maxAnnual += 3416;
+      }
+      // Leeftijdsverhogingen 2026
+      maxAnnual += childAges.filter(a => a >= 12 && a <= 15).length * 724;
+      maxAnnual += childAges.filter(a => a >= 16 && a <= 17).length * 964;
+
+      const threshold = hasPartner ? 39141 : 29736;
+      const reduction = Math.max(0, annualIncome - threshold) * 0.076;
+      return Math.max(0, (maxAnnual - reduction) / 12);
+    },
+
+    // 12. Uitkeringsverrekening UWV / Gemeente (meer én minder werken)
+    benefitEffect: function(benefitType, extraGrossWork, context) {
+      const delta = Number(extraGrossWork) || 0;
+      const t = String(benefitType || "").toLowerCase();
+      const ctx = context || {};
+      if (delta === 0 || t === "none") return { effect: 0, retained: delta, status: "none", label: "" };
+
+      if (t === "ww") {
+        // UWV WW: 70% van inkomen uit werk wordt verrekend, 30% blijft behouden
+        // Bij minder werken vangt het UWV indicatief 70% op door verhoging van de uitkering
+        const reduction = delta * 0.70;
+        let threshold = false;
+        if (delta > 0 && ctx.monthlyWage > 0 && (ctx.currentWage + delta) > ctx.monthlyWage * 0.875) {
+          threshold = true;
+        }
+        return {
+          effect: -reduction,
+          retained: delta * 0.30,
+          status: "estimate",
+          threshold,
+          label: delta > 0
+            ? "WW: UWV verrekent indicatief 70% van je extra bruto loon. 30% houd je extra over. Let op: bij structureel meer dan 87,5% van je WW-maandloon stopt de WW."
+            : "WW: Bij minder werken vangt het UWV indicatief 70% van je inkomensdaling op via een hogere uitkering."
+        };
+      }
+      if (t === "participation" || t === "bijstand" || t === "participatie") {
+        // Bijstand: inkomsten worden in beginsel 100% verrekend (tenzij gemeentelijke vrijlating)
+        return {
+          effect: -delta,
+          retained: 0,
+          status: "estimate",
+          threshold: false,
+          label: delta > 0
+            ? "Bijstand / Participatiewet: inkomen uit werk wordt in beginsel 100% verrekend met de uitkering, behoudens eventuele tijdelijke gemeentelijke vrijlatingen."
+            : "Bijstand / Participatiewet: bij inkomensdaling vult de bijstandsnorm in beginsel aan tot de geldende bijstandsnorm."
+        };
+      }
+      if (t === "wajong") {
+        const rate = ctx.noWorkCapacity ? 0.75 : 0.70;
+        return {
+          effect: -delta * rate,
+          retained: delta * (1 - rate),
+          status: "estimate",
+          threshold: false,
+          label: "Wajong: indicatief wordt " + Math.round(rate * 100) + "% van inkomsten uit werk verrekend. De officiële UWV-vaststelling blijft leidend."
+        };
+      }
+      if (t === "wia") {
+        return {
+          effect: -delta * 0.70,
+          retained: delta * 0.30,
+          status: "estimate",
+          threshold: false,
+          label: "WIA (WGA/IVA): inkomsten uit werk worden doorgaans voor 70% verrekend met de WIA. De UWV-beschikking en restverdiencapaciteit bepalen het definitieve bedrag."
+        };
+      }
+      if (t === "zw" || t === "ziektewet") {
+        return {
+          effect: -delta * 0.70,
+          retained: delta * 0.30,
+          status: "estimate",
+          threshold: false,
+          label: "Ziektewet: inkomen uit werk wordt volgens de UWV-normen verrekend (indicatief 70% verrekening)."
+        };
+      }
+      if (t === "wao" || t === "waz") {
+        return {
+          effect: 0,
+          retained: delta,
+          status: "needsOfficial",
+          threshold: false,
+          label: "Bij " + t.toUpperCase() + " vindt de verrekening vaak achteraf plaats via een herbeoordeling door UWV."
+        };
+      }
+      if (t === "aow") {
+        return {
+          effect: 0,
+          retained: delta,
+          status: "unlimited",
+          threshold: false,
+          label: delta > 0
+            ? "AOW / Pensioen: inkomen uit werk mag onbeperkt worden bijverdiend en wordt niet gekort op je AOW. Wel telt het extra inkomen mee voor de inkomstenbelasting (eerste schijf AOW 2026: 17,85%)."
+            : "AOW / Pensioen: een daling van inkomen uit werk heeft geen invloed op de hoogte van je AOW-uitkering."
+        };
+      }
+      return {
+        effect: 0,
+        retained: delta,
+        status: "needsOfficial",
+        threshold: false,
+        label: "Het effect van extra inkomen op deze regeling kan variëren. Raadpleeg de officiële beschikking van de uitkeringsinstantie."
+      };
+    },
+
+    // 13. Centraal Huishoudmodel (buildHousehold)
+    buildHousehold: function(inputs) {
+      const rawInp = inputs || this.readInputs();
+      const childAgesList = Array.isArray(rawInp.childAges) ? rawInp.childAges : [];
+      const childCount = Number(rawInp.childCount) || childAgesList.length;
+      const holidayPct = rawInp.holidayPct !== undefined ? Number(rawInp.holidayPct) : 8;
+
+      const inp = {
+        ...rawInp,
+        holidayPct,
+        employmentMonthly: Number(rawInp.employmentMonthly) || 0,
+        bonusAnnual: Number(rawInp.bonusAnnual) || 0,
+        withheldAnnual: Number(rawInp.withheldAnnual) || 0,
+        hours: Number(rawInp.hours) || 0,
+        hourly: Number(rawInp.hourly) || 0,
+        zzpProfit: Number(rawInp.zzpProfit) || 0,
+        rent: Number(rawInp.rent) || 0,
+        woz: Number(rawInp.woz) || 0,
+        mortgageInterest: Number(rawInp.mortgageInterest) || 0,
+        mortgageDebt: Number(rawInp.mortgageDebt) || 0,
+        hasPartner: !!rawInp.hasPartner,
+        partnerIncome: Number(rawInp.partnerIncome) || 0,
+        isInsured: rawInp.isInsured !== false,
+        age: Number(rawInp.age) || 30,
+        wealth: Number(rawInp.wealth) || 0,
+        childCount,
+        childAges: childAgesList,
+        costs: Number(rawInp.costs) || 0,
+        benefitGross: Number(rawInp.benefitGross) || 0,
+        benefitDuration: Number(rawInp.benefitDuration) || 0,
+        benefitType: rawInp.benefitType || "none"
+      };
+
+      const aowReached = inp.age >= 67;
+
+      // 1. Inkomenscomponenten
+      const holidayRate = inp.holidayPct / 100;
+      const ownWorkGrossMonthly = inp.employmentMonthly;
+      const ownWorkAnnual = ownWorkGrossMonthly > 0 ? (ownWorkGrossMonthly * 12 * (1 + holidayRate) + inp.bonusAnnual) : 0;
+
+      // ZZP
+      const zzpRawProfit = inp.workType === "zzp" ? inp.zzpProfit : 0;
+      const zzpDeds = this.zzpTaxDeductions(zzpRawProfit, inp.zzpHourCheck, aowReached);
+      const zzpTaxable = zzpDeds.taxableProfit;
+
+      // Uitkering
+      let benefitGrossMonthly = inp.benefitGross;
+      let benefitAnnual = benefitGrossMonthly * 12;
+
+      // Partner
+      const partnerMonthly = inp.hasPartner ? inp.partnerIncome : 0;
+      const partnerAnnual = partnerMonthly > 0 ? partnerMonthly * 12 * (1 + holidayRate) : 0;
+
+      // Totaal Toetsingsinkomen (Box 1 vóór woningaftrek)
+      const ownGrossAnnual = ownWorkAnnual + zzpTaxable + benefitAnnual;
+      const householdGrossAnnual = ownGrossAnnual + partnerAnnual;
+
+      // Woningaftrek (eigenwoningforfait minus renteaftrek)
+      const woningAftrek = inp.house === "buy" ? this.eigenWoningAftrek(inp.woz, inp.mortgageInterest) : 0;
+      const ownTaxableBase = Math.max(0, ownGrossAnnual + woningAftrek);
+
+      // Belasting Box 1 voor hoofdpersoon
+      const baseTax = this.taxBox1(ownTaxableBase, aowReached);
+      const ahk = this.generalCredit(ownTaxableBase, aowReached);
+      const isWorking = (ownWorkAnnual + zzpTaxable) > 0;
+      const ak = isWorking ? this.employmentCredit(ownWorkAnnual + zzpTaxable, aowReached) : 0;
+      const elderly = this.elderlyCredit(ownTaxableBase, aowReached);
+      const hasChildUnder12 = inp.childAges.some(a => a < 12);
+      const iackCredit = this.iack(ownWorkAnnual + zzpTaxable, hasChildUnder12, !inp.hasPartner, aowReached);
+
+      const totalCredits = Math.min(baseTax, ahk + ak + elderly + iackCredit);
+      const ownTaxAnnual = Math.max(0, baseTax - totalCredits);
+
+      // Zvw voor zzp'er
+      const zzpZvw = inp.workType === "zzp" ? this.zvwContribution(zzpRawProfit, ownWorkAnnual) : 0;
+
+      // Netto jaarinkomen hoofdpersoon
+      const ownNetAnnual = Math.max(0, (ownWorkAnnual + zzpRawProfit + benefitAnnual) - ownTaxAnnual - zzpZvw);
+      const ownNetMonthly = ownNetAnnual / 12;
+
+      // Partner netto schatting
+      let partnerNetAnnual = 0;
+      let partnerTaxAnnual = 0;
+      if (inp.hasPartner && partnerAnnual > 0) {
+        const pTax = this.taxBox1(partnerAnnual, false);
+        const pCredits = Math.min(pTax, this.generalCredit(partnerAnnual, false) + this.employmentCredit(partnerAnnual, false));
+        partnerTaxAnnual = Math.max(0, pTax - pCredits);
+        partnerNetAnnual = Math.max(0, partnerAnnual - partnerTaxAnnual);
+      }
+      const partnerNetMonthly = partnerNetAnnual / 12;
+
+      // Toeslagenberekening op basis van gezamenlijk toetsingsinkomen
+      const householdSize = (inp.hasPartner ? 2 : 1) + inp.childCount;
+      const zorgMonthly = (inp.age >= 18 && inp.isInsured) ? this.zorgtoeslag(householdGrossAnnual, inp.hasPartner, inp.wealth, inp.isInsured) : 0;
+      const huurMonthly = inp.house === "rent" ? this.huurtoeslag(householdGrossAnnual, inp.rent, inp.age, householdSize, inp.wealth) : 0;
+      const kgbMonthly = this.kindgebondenBudget(householdGrossAnnual, inp.hasPartner, inp.wealth, inp.childAges);
+      const totalSupportMonthly = zorgMonthly + huurMonthly + kgbMonthly;
+
+      // Besteedbaar inkomen en financiële ruimte
+      const totalNetMonthly = ownNetMonthly + partnerNetMonthly;
+      const disposableMonthly = totalNetMonthly + totalSupportMonthly;
+      const financialRoomMonthly = disposableMonthly - inp.costs;
+
+      // Risico- en preventiewaarschuwingen genereren
+      const warnings = [];
+      const multipleIncome = (benefitGrossMonthly > 0 && ownWorkGrossMonthly > 0) || (inp.hasPartner && ownWorkGrossMonthly > 0 && partnerMonthly > 0);
+      if (multipleIncome) {
+        warnings.push("Meerdere inkomens: controleer dat de loonheffingskorting maar bij ÉÉN werkgever of uitkeringsinstantie aan staat om een hoge belastingnabetaling te voorkomen.");
+      }
+      if (inp.isInsured) {
+        const zorgMax = inp.hasPartner ? 51142 : 40857;
+        if (householdGrossAnnual > zorgMax) {
+          warnings.push("Je gezamenlijk inkomen ligt boven de zorgtoeslaggrens 2026 (€ " + zorgMax.toLocaleString("nl-NL") + "). Er is geen recht op zorgtoeslag.");
+        } else if (zorgMax - householdGrossAnnual < 3500) {
+          warnings.push("Toeslagenval: je inkomen ligt dicht bij de bovengrens voor zorgtoeslag (€ " + zorgMax.toLocaleString("nl-NL") + "). Extra inkomen kan de hele zorgtoeslag doen vervallen.");
+        }
+      }
+      if (inp.house === "rent") {
+        const huurWealthMax = householdSize >= 2 ? 76958 : 38479;
+        if (inp.wealth > huurWealthMax) {
+          warnings.push("Vermogen boven huurtoeslaggrens 2026 (€ " + huurWealthMax.toLocaleString("nl-NL") + "). Geen recht op huurtoeslag.");
+        } else if (huurWealthMax - inp.wealth < 5000 && inp.wealth > 0) {
+          warnings.push("Je vermogen nadert de vermogensgrens voor huurtoeslag (€ " + huurWealthMax.toLocaleString("nl-NL") + ").");
+        }
+      }
+      if (inp.workType === "zzp") {
+        warnings.push("Zzp-reservering: zet maandelijks voldoende opzij voor inkomstenbelasting en de inkomensafhankelijke Zvw-bijdrage (4,85%).");
+      }
+      if (financialRoomMonthly < 0) {
+        warnings.push("Tekort: je vaste lasten zijn hoger dan je geschatte besteedbare inkomen. Neem maatregelen om betalingsachterstanden te voorkomen.");
+      }
+
+      return {
+        inputs: inp,
+        ownWorkAnnual,
+        zzpRawProfit,
+        zzpTaxable,
+        benefitAnnual,
+        partnerAnnual,
+        householdGrossAnnual,
+        ownGrossAnnual,
+        ownTaxAnnual,
+        partnerTaxAnnual,
+        totalTaxAnnual: ownTaxAnnual + partnerTaxAnnual,
+        zzpZvw,
+        ownNetAnnual,
+        ownNetMonthly,
+        partnerNetMonthly,
+        totalNetMonthly,
+        zorgMonthly,
+        huurMonthly,
+        kgbMonthly,
+        totalSupportMonthly,
+        supportMonthly: totalSupportMonthly,
+        disposableMonthly,
+        costs: inp.costs,
+        costsMonthly: inp.costs,
+        financialRoomMonthly,
+        warnings,
+        multipleIncome
+      };
+    },
+
+    // 14. Scenariocalculator (Centrale engine voor sliders & ketenanalyse)
+    scenario: function(baseState, changeAmount, who, options) {
+      const delta = Number(changeAmount) || 0;
+      const clonedInputs = JSON.parse(JSON.stringify(baseState.inputs));
+
+      if (who === "partner") {
+        clonedInputs.partnerIncome = Math.max(0, clonedInputs.partnerIncome + delta);
+      } else {
+        if (clonedInputs.workType === "benefit") {
+          if (clonedInputs.benefitType && clonedInputs.benefitType !== "none" && delta > 0) {
+            // Iemand met een uitkering gaat (meer) werken: delta is loondienst inkomen
+            clonedInputs.employmentMonthly = Math.max(0, (clonedInputs.employmentMonthly || 0) + delta);
+            const impact = this.benefitEffect(clonedInputs.benefitType, delta, {
+              monthlyWage: clonedInputs.benefitMonthlyWage || clonedInputs.benefitGross,
+              currentWage: 0
+            });
+            clonedInputs.benefitGross = Math.max(0, clonedInputs.benefitGross + impact.effect);
+          } else {
+            clonedInputs.benefitGross = Math.max(0, clonedInputs.benefitGross + delta);
+          }
+        } else if (clonedInputs.workType === "zzp") {
+          clonedInputs.zzpProfit = Math.max(0, clonedInputs.zzpProfit + delta * 12);
+        } else if (clonedInputs.workType === "both") {
+          const previousEmploymentMonthly = clonedInputs.employmentMonthly;
+          clonedInputs.employmentMonthly = Math.max(0, previousEmploymentMonthly + delta);
+          // Check uitkeringsverrekening (bij meer én minder werken)
+          if (delta !== 0) {
+            const impact = this.benefitEffect(clonedInputs.benefitType, delta, {
+              monthlyWage: clonedInputs.benefitMonthlyWage || clonedInputs.benefitGross,
+              currentWage: previousEmploymentMonthly
+            });
+            clonedInputs.benefitGross = Math.max(0, clonedInputs.benefitGross + impact.effect);
+          }
+        } else {
+          clonedInputs.employmentMonthly = Math.max(0, clonedInputs.employmentMonthly + delta);
+        }
+      }
+
+      const nextState = this.buildHousehold(clonedInputs);
+
+      const grossChangeMonthly = delta;
+      const grossChangeAnnual = delta * 12;
+      const netWageChangeMonthly = nextState.totalNetMonthly - baseState.totalNetMonthly;
+      const netWageChangeAnnual = netWageChangeMonthly * 12;
+      const supportChangeMonthly = nextState.totalSupportMonthly - baseState.totalSupportMonthly;
+      const supportChangeAnnual = supportChangeMonthly * 12;
+      const supportLossAnnual = Math.max(0, -supportChangeAnnual);
+      const supportGainAnnual = Math.max(0, supportChangeAnnual);
+      const taxChangeAnnual = (nextState.ownTaxAnnual + (nextState.partnerTaxAnnual || 0)) - (baseState.ownTaxAnnual + (baseState.partnerTaxAnnual || 0));
+      const disposableChangeMonthly = nextState.disposableMonthly - baseState.disposableMonthly;
+      const disposableChangeAnnual = disposableChangeMonthly * 12;
+      const yearlyDisposableChange = disposableChangeAnnual;
+
+      let marginalPressure = 0;
+      if (grossChangeMonthly > 0) {
+        marginalPressure = Math.max(0, Math.min(100, 100 - (disposableChangeMonthly / grossChangeMonthly * 100)));
+      }
+
+      // Uurvoordeel en uurefficiëntie
+      const opts = options || {};
+      const inp = baseState.inputs;
+      let hourlyRate = opts.hourlyRate !== undefined && opts.hourlyRate > 0 ? opts.hourlyRate : ((inp.hourly && inp.hourly > 0) ? inp.hourly : 0);
+      if (!hourlyRate && inp.hours > 0 && inp.employmentMonthly > 0) {
+        hourlyRate = inp.employmentMonthly / (inp.hours * (52 / 12));
+      }
+      let extraHoursPerWeek = 0;
+      if (opts.extraHoursPerWeek !== undefined && opts.extraHoursPerWeek !== null) {
+        extraHoursPerWeek = Number(opts.extraHoursPerWeek);
+      } else {
+        extraHoursPerWeek = hourlyRate > 0 ? (grossChangeMonthly / (hourlyRate * (52 / 12))) : 0;
+      }
+      const extraHoursPerYear = extraHoursPerWeek * 52;
+      const extraHoursPerMonth = (extraHoursPerWeek * 52) / 12;
+      const effectiveGainPerHour = (extraHoursPerYear !== 0) ? (disposableChangeAnnual / extraHoursPerYear) : 0;
+
+      return {
+        base: baseState,
+        next: nextState,
+        grossChangeMonthly,
+        grossChangeAnnual,
+        netWageChangeMonthly,
+        netWageChangeAnnual,
+        supportChangeMonthly,
+        supportChangeAnnual,
+        supportLossAnnual,
+        supportGainAnnual,
+        taxChangeAnnual,
+        disposableChangeMonthly,
+        disposableChangeAnnual,
+        yearlyDisposableChange,
+        marginalPressure,
+        hourlyRate,
+        extraHoursPerMonth,
+        extraHoursPerYear,
+        extraHoursPerWeek,
+        effectiveGainPerHour
+      };
+    },
+
+    // Formulier invoer uitlezen
+    readInputs: function() {
+      const workType = window.currentWork || "employee";
+      const houseType = window.currentHouse || "other";
+      const hasPartner = window.currentPartner === "yes";
+      const kidsChoice = window.currentKids === "yes";
+      const childCount = kidsChoice ? safeInt("childCount") : 0;
+      const childAgesList = kidsChoice ? childAges() : [];
+
+      return {
+        workType,
+        employmentMonthly: (workType === "employee" || workType === "both") ? num("income") : 0,
+        zzpProfit: workType === "zzp" ? (num("zzpProfit") || num("income") * 12) : 0,
+        zzpHourCheck: $("zzpHourCheck") ? $("zzpHourCheck").checked : true,
+        holidayPct: num("holidayPct") || 8,
+        bonusAnnual: num("bonusAnnual"),
+        withheldAnnual: num("withheldAnnual"),
+        hours: num("hours"),
+        hourly: num("hourly"),
+        weekend: $("weekend") ? $("weekend").checked : false,
+        evening: $("evening") ? $("evening").checked : false,
+        house: houseType,
+        rent: houseType === "rent" ? num("rent") : 0,
+        woz: houseType === "buy" ? num("woz") : 0,
+        mortgageInterest: houseType === "buy" ? num("mortgageInterest") : 0,
+        mortgageDebt: houseType === "buy" ? num("mortgageDebt") : 0,
+        hasPartner,
+        partnerIncome: hasPartner ? num("partnerIncome") : 0,
+        isInsured: $("health") ? $("health").checked : true,
+        age: num("age") || 30,
+        wealth: num("wealth"),
+        childCount,
+        childAges: childAgesList,
+        costs: num("costs"),
+        benefitType: $("benefitType") ? $("benefitType").value : "none",
+        benefitGross: (workType === "benefit" || workType === "both") ? (num("benefitGross") || (workType === "benefit" ? num("income") : 0)) : 0,
+        benefitDuration: safeInt("benefitDuration")
+      };
+    }
+  };
+
+  // --- APP STATE & ROUTING CONTROLLER ---
+  const PAGES = 10;
+  let page = 0;
+  window.currentGoal = "";
+  window.currentWork = "";
+  window.currentHouse = "";
+  window.currentPartner = "";
+  window.currentKids = "";
+
+  function go(n) {
+    page = Math.max(0, Math.min(PAGES - 1, n));
+    document.querySelectorAll(".page").forEach((p, idx) => p.classList.toggle("active", idx === page));
+    const labels = ["Start", "Inkomen", "Werk", "Wonen", "Huishouden", "Regelingen", "Lasten", "Uitkering", "Overzicht", "Scenario"];
+    $("counter").textContent = labels[page] || "Vooruit";
+    $("progress").style.width = ((page + 1) / PAGES * 100) + "%";
+    $("back").style.visibility = page > 0 ? "visible" : "hidden";
+
+    if (page === 8) renderOverview();
+    if (page === 9) renderScenario();
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    save();
+  }
+  window.go = go;
+
+  // Back Button Navigation
+  $("back").onclick = () => {
+    if (page === 8) {
+      // Vanuit overzicht terug naar laatste stap (Uitkering of Lasten)
+      if (window.currentWork === "benefit" || window.currentWork === "both") return go(7);
+      return go(6);
+    }
+    if (page === 9) return go(8);
+    if (page > 0) go(page - 1);
+  };
+
+  // Page 0: Goal selection
+  document.querySelectorAll("[data-goal]").forEach(btn => {
+    btn.onclick = () => {
+      window.currentGoal = btn.dataset.goal;
+      document.querySelectorAll("[data-goal]").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      go(1);
+    };
+  });
+
+  // Page 1: Work selection
+  document.querySelectorAll("[data-work]").forEach(btn => {
+    btn.onclick = () => {
+      window.currentWork = btn.dataset.work;
+      document.querySelectorAll("[data-work]").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+
+      const isZzp = window.currentWork === "zzp";
+      const isBenefit = window.currentWork === "benefit";
+
+      $("zzpBox").style.display = isZzp ? "block" : "none";
+      if (isZzp) {
+        $("incomeLabel").textContent = "Gemiddelde bruto inkomsten / omzet per maand (€)";
+        $("incomeHint").textContent = "Of vul hieronder je verwachte fiscale jaarwinst in.";
+      } else if (isBenefit) {
+        $("incomeLabel").textContent = "Bruto uitkering per maand (€)";
+        $("incomeHint").textContent = "Het bruto bedrag vóór belasting van je specificatie.";
+      } else {
+        $("incomeLabel").textContent = "Bruto inkomen per maand (€)";
+        $("incomeHint").textContent = "Vul je bruto bedrag in — vóór belasting en inhoudingen.";
+      }
+    };
+  });
+
+  window.nextIncome = function() {
+    const inc = num("income");
+    const zzp = num("zzpProfit");
+    if (!window.currentWork) {
+      $("e1").textContent = "Kies eerst hoe je geld binnenkomt.";
+      return;
+    }
+    if (inc <= 0 && zzp <= 0) {
+      $("e1").textContent = "Vul een bruto inkomen of winst in.";
+      return;
+    }
+    $("e1").textContent = "";
+    go(2);
+  };
+
+  // Page 2: Hourly Wage to Monthly Calculator
+  // Geen vaste ORT/weekend/avond-aannames: toeslagen worden alleen door de gebruiker ingevoerd.
+  function updateHourlyCalculation() {
+    const hrs = num("hours");
+    const hourly = num("hourly");
+    const box = $("calculatedWageBox");
+    if (!box) return;
+    if (hrs > 0 && hourly > 0) {
+      const monthly = (hrs * hourly * 52) / 12;
+      box.style.display = "block";
+      box.innerHTML = "<b>Indicatie op basis van uren:</b> " + hrs + " uur × " + euro(hourly) + "/u = <b>" + euro(monthly) + " bruto per maand</b> (excl. vakantiegeld en eventuele toeslagen).";
+      
+    } else {
+      box.style.display = "none";
+    }
+  }
+  $("hours")?.addEventListener("input", updateHourlyCalculation);
+  $("hourly")?.addEventListener("input", updateHourlyCalculation);
+
+  // Page 3: House selection
+  document.querySelectorAll("[data-house]").forEach(btn => {
+    btn.onclick = () => {
+      window.currentHouse = btn.dataset.house;
+      document.querySelectorAll("[data-house]").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      $("rentBox").style.display = window.currentHouse === "rent" ? "block" : "none";
+      $("buyBox").style.display = window.currentHouse === "buy" ? "block" : "none";
+    };
+  });
+
+  // Page 4: Partner selection
+  document.querySelectorAll("[data-partner]").forEach(btn => {
+    btn.onclick = () => {
+      window.currentPartner = btn.dataset.partner;
+      document.querySelectorAll("[data-partner]").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      $("partnerBox").style.display = window.currentPartner === "yes" ? "block" : "none";
+    };
+  });
+
+  // Page 5: Children & Ages
+  function childAges() {
+    const count = safeInt("childCount");
+    return Array.from(document.querySelectorAll(".childAge"))
+      .map(el => Math.max(0, Math.min(17, parseInt(el.value || "0", 10) || 0)))
+      .slice(0, count);
+  }
+
+  function renderChildInputs() {
+    const count = safeInt("childCount");
+    const box = $("childAges");
+    const wrap = $("childDetails");
+    if (!box || !wrap) return;
+
+    const previousValues = Array.from(box.querySelectorAll(".childAge")).map(x => x.value);
+    wrap.style.display = count > 0 ? "block" : "none";
+    box.innerHTML = "";
+
+    for (let i = 0; i < count; i++) {
+      const div = document.createElement("div");
+      div.style.marginBottom = "8px";
+      div.innerHTML = '<input class="input childAge" inputmode="numeric" min="0" max="17" placeholder="Leeftijd kind ' + (i + 1) + ' (bijv. 8)">';
+      const input = div.querySelector("input");
+      if (previousValues[i] !== undefined) input.value = previousValues[i];
+      box.appendChild(div);
+    }
+  }
+  $("childCount")?.addEventListener("input", renderChildInputs);
+
+  document.querySelectorAll("[data-kids]").forEach(btn => {
+    btn.onclick = () => {
+      window.currentKids = btn.dataset.kids;
+      document.querySelectorAll("[data-kids]").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      const hasKids = window.currentKids === "yes";
+      $("childBox").style.display = hasKids ? "block" : "none";
+      if (!hasKids) {
+        $("childDetails").style.display = "none";
+        $("childCount").value = "";
+      } else {
+        renderChildInputs();
+      }
+    };
+  });
+
+  // Page 6: Lasten -> Proceed to Uitkering (p6b) of direct naar Overzicht (p7)
+  window.handleStep6Next = function() {
+    if (window.currentHouse === "rent" && (num("age") < 18 || num("age") > 110)) {
+      $("e6").textContent = "Vul je leeftijd in voor een juiste huurtoeslagberekening.";
+      return;
+    }
+    if (window.currentPartner === "yes" && num("partnerIncome") < 0) {
+      $("e6").textContent = "Controleer het inkomen van je partner.";
+      return;
+    }
+    const costInputStr = $("costs") ? $("costs").value.trim() : "";
+    if (costInputStr === "" || num("costs") < 0) {
+      $("e6").textContent = "Vul je vaste lasten per maand in (vul 0 in als je geen vaste lasten hebt).";
+      return;
+    }
+    $("e6").textContent = "";
+    save();
+
+    if (window.currentWork === "benefit" || window.currentWork === "both") {
+      go(7); // Naar Step 6A: Uitkering
+    } else {
+      go(8); // Direct naar Overzicht
+    }
+  };
+
+  // Page 7 (Step 6A): Uitkering details
+  function updateBenefitDetailsUI(type) {
+    const host = $("benefitExtraFields");
+    if (!host) return;
+    if (type === "ww") {
+      host.innerHTML = '<div class="benefit-extra">' +
+        '<div class="mini-note">Bij de WW verrekent UWV 70% van inkomen uit werk. 30% houd je zelf over.</div>' +
+        '<div class="field"><label for="benefitMonthlyWage">WW-maandloon / dagloonbasis (optioneel)</label>' +
+        '<input id="benefitMonthlyWage" class="input" inputmode="decimal" placeholder="bijv. 2.900">' +
+        '<div class="hint">Staat in je UWV-beslissingsbrief.</div></div></div>';
+    } else if (type === "wia") {
+      host.innerHTML = '<div class="benefit-extra">' +
+        '<div class="mini-note">Vooruit berekent de 70% verrekening voor WIA (WGA/IVA).</div></div>';
+    } else if (type === "participation") {
+      host.innerHTML = '<div class="benefit-extra">' +
+        '<div class="mini-note">In de bijstand wordt eigen loon uit werk door de gemeente doorgaans 100% verrekend met de uitkering.</div></div>';
+    } else {
+      host.innerHTML = "";
+    }
+    const notice = $("benefitRuleNotice");
+    if (notice) {
+      const impact = window.VOORUIT_ENGINE.benefitEffect(type, 300, {});
+      notice.innerHTML = "<b>Verrekenregel 2026:</b> " + (impact.label || "Raadpleeg je uitkeringsspecificatie.");
+    }
+  }
+
+  $("benefitType")?.addEventListener("change", () => {
+    const t = $("benefitType").value;
+    $("benefitFields").style.display = t !== "none" ? "block" : "none";
+    updateBenefitDetailsUI(t);
+  });
+
+  window.finishBenefitStep = function() {
+    if ($("benefitType").value === "none") {
+      $("eBenefit").textContent = "Kies welk type uitkering je ontvangt.";
+      return;
+    }
+    if (num("benefitGross") <= 0 && window.currentWork === "benefit" && num("income") <= 0) {
+      $("eBenefit").textContent = "Vul het bruto uitkeringsbedrag per maand in.";
+      return;
+    }
+    $("eBenefit").textContent = "";
+    save();
+    go(8); // Naar Overzicht
+  };
+
+  window.handleEditFromOverview = function() {
+    if (window.currentWork === "benefit" || window.currentWork === "both") {
+      go(7);
+    } else {
+      go(6);
+    }
+  };
+
+  // --- RENDERING VAN OVERZICHT (PAGE 8 / #p7) ---
+  function renderOverview() {
+    const E = window.VOORUIT_ENGINE;
+    const inputs = E.readInputs();
+    const h = E.buildHousehold(inputs);
+
+    $("net").textContent = euro(h.totalNetMonthly);
+    $("costOut").textContent = euro(h.costs);
+    $("support").textContent = euro(h.totalSupportMonthly);
+    $("annual").textContent = euro(h.householdGrossAnnual);
+
+    const disp = h.financialRoomMonthly;
+    $("disposable").textContent = (disp < 0 ? "− " : "") + euro(Math.abs(disp));
+    $("disposableSub").textContent = "na geschatte belasting, vaste lasten (" + euro(h.costs) + ") en toeslagen (" + euro(h.totalSupportMonthly) + ")";
+
+    // Toeslagen breakdown
+    $("tbZorg").textContent = euro(h.zorgMonthly);
+    $("tbHuur").textContent = euro(h.huurMonthly);
+    $("tbKgb").textContent = euro(h.kgbMonthly);
+
+    // Status notice
+    const n = $("notice");
+    if (disp < 0) {
+      n.className = "notice bad";
+      n.innerHTML = "<b>Financieel tekort:</b> Je vaste lasten zijn " + euro(Math.abs(disp)) + " per maand hoger dan je berekende inkomen plus toeslagen. Kijk direct welke uitgaven omlaag kunnen of vraag ondersteuning aan.";
+    } else if (disp < 300) {
+      n.className = "notice warn";
+      n.innerHTML = "<b>Kleine buffer:</b> Je houdt naar schatting <b>" + euro(disp) + " per maand</b> over. Een onverwachte uitgave kan snel druk geven.";
+    } else {
+      n.className = "notice good";
+      n.innerHTML = "<b>Stabiele ruimte:</b> Je houdt naar schatting <b>" + euro(disp) + " per maand</b> over na alle vaste lasten en toeslagen.";
+    }
+
+    // Risico & preventie signalen
+    const r = $("risk");
+    if (h.warnings.length > 0) {
+      r.className = "notice warn";
+      r.innerHTML = "<b>Aandachtspunten & preventie:</b><ul style='margin:6px 0 0;padding-left:18px'>" +
+        h.warnings.map(w => "<li>" + w + "</li>").join("") + "</ul>";
+    } else {
+      r.className = "notice good";
+      r.innerHTML = "<b>Geen acute risicosignalen:</b> Je gegevens geven op basis van de 2026-normen geen directe grensoverschrijdingen.";
+    }
+
+    // Jaarbelasting reconciliatie
+    renderYearReconciliation(h);
+
+    // Quick slider
+    updateQuick();
+
+    // Actielijst
+    $("actions").innerHTML =
+      "<li><span class='tag'>1</span>Houd je verwachte jaarinkomen actueel bij Dienst Toeslagen (Mijn toeslagen).</li>" +
+      "<li><span class='tag'>2</span>" + (h.multipleIncome ? "Geef de loonheffingskorting maar aan één uitbetaler door!" : "Controleer of toeslagen niet te hoog staan ingesteld.") + "</li>" +
+      "<li><span class='tag'>3</span>Gebruik de scenarioknop hieronder om het effect van meer of minder werken door te rekenen.</li>";
+  }
+
+  function renderYearReconciliation(household) {
+    const box = $("yearReconciliation");
+    if (!box) return;
+    const withheld = num("withheldAnnual");
+    const estimatedTax = household.ownTaxAnnual;
+    const hasSupport = household.totalSupportMonthly > 0;
+
+    let taxReconciliationHtml = "";
+    if (withheld > 0) {
+      const diff = withheld - estimatedTax;
+      if (diff > 50) {
+        taxReconciliationHtml = '<div style="margin-bottom:8px"><b>C. Mogelijke belastingteruggave van ca. ' + euro(diff) + ':</b> Je ingevulde ingehouden loonheffing (' + euro(withheld) + ') is hoger dan de berekende jaarbelasting (' + euro(estimatedTax) + '). Dit kan leiden tot een teruggave bij de inkomstenbelastingaangifte.</div>';
+      } else if (diff < -50) {
+        taxReconciliationHtml = '<div style="margin-bottom:8px;color:#b42318"><b>C. Let op — mogelijke nabetaling inkomstenbelasting van ca. ' + euro(Math.abs(diff)) + ':</b> De berekende jaarbelasting (' + euro(estimatedTax) + ') ligt hoger dan de tot nu toe ingehouden loonheffing (' + euro(withheld) + ').</div>';
+      } else {
+        taxReconciliationHtml = '<div style="margin-bottom:8px"><b>C. Inkomstenbelasting in balans:</b> De ingehouden loonheffing sluit goed aan op de berekende jaarbelasting 2026.</div>';
+      }
+    } else {
+      taxReconciliationHtml = '<div style="margin-bottom:8px;color:#475467"><b>C. Mogelijke jaarlijkse belastingverrekening:</b> Dit kunnen we met de huidige gegevens niet betrouwbaar berekenen. Vul eventueel bij stap ‘Inkomen’ je ingehouden loonheffing van je loonstrook in om te zien of je geld terugkrijgt of moet bijbetalen.</div>';
+    }
+
+    let supportReconciliationHtml = "";
+    if (hasSupport) {
+      supportReconciliationHtml = '<div><b>D. Mogelijke verrekening / terugvordering van toeslagen:</b> Dienst Toeslagen keert maandelijks voorschotten uit op basis van je geschatte jaarinkomen (' + euro(household.householdGrossAnnual) + '). Verandert je inkomen gedurende het jaar en geef je dit niet direct door op toeslagen.nl? Dan volgt achteraf bij de definitieve vaststelling een verrekening of terugvordering van te veel ontvangen toeslagen.</div>';
+    } else {
+      supportReconciliationHtml = '<div style="color:#475467"><b>D. Geen risico op terugvordering toeslagen:</b> Je hebt bij dit inkomen en vermogen momenteel geen recht op toeslagen, waardoor er ook geen risico op terugvordering is.</div>';
+    }
+
+    box.className = (withheld > 0 && withheld < estimatedTax - 50) ? "notice warn" : "notice";
+    box.innerHTML = '<div style="display:flex;flex-direction:column;gap:10px;font-size:13px;line-height:1.5">' +
+      '<div><b>A. Directe belasting / loonheffing:</b> Wordt maandelijks direct op je loon ingehouden door je werkgever of uitkeringsinstantie (geschatte jaarbelasting: ' + euro(estimatedTax) + ').</div>' +
+      '<div><b>B. Toetsingsinkomen & toeslagen:</b> Je totale toetsingsinkomen is ' + euro(household.householdGrossAnnual) + ' per jaar. Je ontvangt naar schatting ' + euro(household.totalSupportMonthly) + ' per maand aan toeslagen.</div>' +
+      taxReconciliationHtml +
+      supportReconciliationHtml +
+      '</div>';
+  }
+
+  function updateQuick() {
+    const slider = $("quickRange");
+    if (!slider) return;
+    const extra = Number(slider.value) || 0;
+    const E = window.VOORUIT_ENGINE;
+    const base = E.buildHousehold();
+    const sc = E.scenario(base, extra, "self");
+    const d = sc.disposableChangeMonthly;
+    const yearGain = sc.disposableChangeAnnual;
+    const netWageYear = sc.netWageChangeAnnual;
+    const supportLossYear = sc.supportLossAnnual;
+
+    const sign = extra >= 0 ? "+ " : "− ";
+    $("quickValue").textContent = sign + euro(Math.abs(extra));
+    $("quickDelta").textContent = (d >= 0 ? "+ " : "− ") + euro(Math.abs(d));
+
+    const quickBox = $("quickRealGainSummary");
+    if (quickBox) {
+      if (extra !== 0) {
+        quickBox.style.display = "block";
+        if (extra > 0) {
+          quickBox.innerHTML = '<div class="quick-chain">' +
+            '<div class="quick-chain-row"><span>Extra op je bankrekening:</span><b>+ ' + euro(netWageYear) + ' / jaar <small style="font-weight:normal;color:#667085">(+ ' + euro(sc.netWageChangeMonthly) + ' / mnd)</small></b></div>' +
+            (supportLossYear > 0 ? '<div class="quick-chain-row" style="color:#b42318"><span>Minder toeslag (mogelijke verrekening):</span><b>− ' + euro(supportLossYear) + ' / jaar</b></div>' : '') +
+            '<div class="quick-chain-row total" style="color:#087443"><span>Uiteindelijk écht over:</span><b>+ ' + euro(yearGain) + ' / jaar <small style="font-weight:bold">(+ ' + euro(d) + ' / mnd)</small></b></div>' +
+            '</div>';
+        } else {
+          quickBox.innerHTML = '<div class="quick-chain">' +
+            '<div class="quick-chain-row"><span>Minder op je loonstrook:</span><b>− ' + euro(Math.abs(netWageYear)) + ' / jaar <small style="font-weight:normal;color:#667085">(− ' + euro(Math.abs(sc.netWageChangeMonthly)) + ' / mnd)</small></b></div>' +
+            (sc.supportGainAnnual > 0 ? '<div class="quick-chain-row" style="color:#087443"><span>Extra toeslagen compensatie:</span><b>+ ' + euro(sc.supportGainAnnual) + ' / jaar</b></div>' : '') +
+            '<div class="quick-chain-row total" style="color:#b42318"><span>Werkelijk inleveren onder de streep:</span><b>Slechts − ' + euro(Math.abs(yearGain)) + ' / jaar <small style="font-weight:bold">(− ' + euro(Math.abs(d)) + ' / mnd)</small></b></div>' +
+            '</div>';
+        }
+      } else {
+        quickBox.style.display = "none";
+      }
+    }
+
+    $("quickText").innerHTML = extra !== 0
+      ? "<b>" + euro(Math.abs(extra)) + " bruto " + (extra > 0 ? "extra" : "minder") + " per maand</b> levert je onderaan de streep naar schatting <b>" + (d >= 0 ? "+ " : "− ") + euro(Math.abs(d)) + "</b> per maand op. Klik hieronder voor het complete terugbetalings- en uurvoordeel-inzicht."
+      : "Verschuif de regelaar om een snelle indicatie te krijgen.";
+  }
+  $("quickRange")?.addEventListener("input", updateQuick);
+
+  window.openFullScenario = function() {
+    if ($("scenarioRange") && $("quickRange")) {
+      $("scenarioRange").value = $("quickRange").value;
+    }
+    go(9);
+  };
+
+  // --- EXTRA WERKEN CALCULATOR ---
+  // Alle velden starten leeg. Er zijn geen vaste percentages of vaste soorten toeslagen.
+  function extraAllowanceRows() {
+    return Array.from(document.querySelectorAll(".extra-allowance-row"));
+  }
+
+  function addExtraAllowanceRow() {
+    const box = $("extraAllowancesBox");
+    if (!box) return;
+    const row = document.createElement("div");
+    row.className = "extra-allowance-row";
+    row.style.cssText = "display:grid;grid-template-columns:1.2fr .8fr .9fr auto;gap:8px;align-items:end;margin-bottom:8px";
+    row.innerHTML =
+      '<div class="field"><label style="font-size:11px;font-weight:700">Naam toeslag</label><input class="input extra-allowance-name" type="text" placeholder="bijv. ORT"></div>' +
+      '<div class="field"><label style="font-size:11px;font-weight:700">Toeslag (%)</label><input class="input extra-allowance-pct" type="number" step="0.01" min="0" placeholder="bijv. 52"></div>' +
+      '<div class="field"><label style="font-size:11px;font-weight:700">Uren/week waarop deze geldt</label><input class="input extra-allowance-hours" type="number" step="0.25" min="0" placeholder="bijv. 8"></div>' +
+      '<button type="button" class="btn secondary remove-extra-allowance" style="padding:8px 10px;min-height:38px">×</button>';
+    row.querySelector(".remove-extra-allowance").onclick = () => { row.remove(); handleExtraWorkInput(); };
+    box.appendChild(row);
+    handleExtraWorkInput();
+  }
+
+  function toggleExtraAllowances() {
+    const yes = $("extraAllowanceYes")?.checked;
+    const box = $("extraAllowancesBox");
+    const add = $("addExtraAllowance");
+    if (box) box.style.display = yes ? "block" : "none";
+    if (add) add.style.display = yes ? "inline-flex" : "none";
+    if (yes && extraAllowanceRows().length === 0) addExtraAllowanceRow();
+    if (!yes && box) box.innerHTML = "";
+    handleExtraWorkInput();
+  }
+
+  function getExtraAllowances() {
+    if (!$("extraAllowanceYes")?.checked) return [];
+    return extraAllowanceRows().map(row => ({
+      name: row.querySelector(".extra-allowance-name")?.value.trim() || "Toeslag",
+      pct: Math.max(0, Number(row.querySelector(".extra-allowance-pct")?.value) || 0),
+      hours: Math.max(0, Number(row.querySelector(".extra-allowance-hours")?.value) || 0)
+    })).filter(x => x.pct > 0 && x.hours > 0);
+  }
+
+  function renderExtraWorkCalculator(base, who) {
+    const box = $("extraWorkAnswerBox");
+    if (!box) return;
+    const curH = Number($("extraHoursCurrent")?.value) || 0;
+    const newH = Number($("extraHoursNew")?.value) || 0;
+    const hourly = Number($("extraHourly")?.value) || 0;
+    const deltaHours = newH - curH;
+
+    // Niet rekenen zolang de gebruiker de noodzakelijke invoer nog niet compleet heeft ingevuld.
+    if (curH <= 0 || newH <= 0 || hourly <= 0 || deltaHours === 0) {
+      box.innerHTML = '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;text-align:center;color:#64748b">Vul je huidige uren, nieuwe uren en bruto uurloon in. Daarna laat Vooruit zien wat extra werken je netto oplevert, inclusief het effect op toeslagen en een mogelijke jaarlijkse verrekening.</div>';
+      return;
+    }
+
+    const isExtra = deltaHours > 0;
+    const absHours = Math.abs(deltaHours);
+    const allowances = getExtraAllowances();
+
+    // Deze calculator is zelfstandig: de uren/het uurloon hierboven bepalen ook het
+    // huidige bruto inkomen. Zo is een leeg algemeen inkomensveld geen probleem.
+    const extraInputs = { ...(base.inputs || {}) };
+    const currentGrossMonthly = (curH * hourly * 52) / 12;
+    extraInputs.hours = curH;
+    extraInputs.hourly = hourly;
+    extraInputs.employmentMonthly = currentGrossMonthly;
+    // Bij een uitkering + werk rekenen we de huidige arbeid naast de uitkering.
+    if (extraInputs.workType === "benefit") extraInputs.workType = "both";
+    const extraBase = window.VOORUIT_ENGINE.buildHousehold(extraInputs);
+
+    let grossWeekly = deltaHours * hourly;
+    let allowanceWeekly = 0;
+    allowances.forEach(a => {
+      const applicableHours = Math.min(absHours, a.hours);
+      allowanceWeekly += applicableHours * hourly * (a.pct / 100) * (deltaHours >= 0 ? 1 : -1);
+    });
+    const grossMonthlyDelta = Math.round(((grossWeekly + allowanceWeekly) * 52) / 12);
+    const effectiveHourly = hourly + (allowanceWeekly / (absHours || 1));
+
+    const sc = window.VOORUIT_ENGINE.scenario(extraBase, grossMonthlyDelta, who, {
+      hourlyRate: effectiveHourly,
+      extraHoursPerWeek: deltaHours
+    });
+    const netWageMonth = sc.netWageChangeMonthly;
+    const supportLossYear = sc.supportLossAnnual;
+    const realMonth = sc.disposableChangeMonthly;
+    const realYear = sc.disposableChangeAnnual;
+    const gainPerHour = sc.effectiveGainPerHour;
+
+    let html = '<div style="background:#ffffff;border:2px solid ' + (isExtra ? '#16a34a' : '#ea580c') + ';border-radius:14px;padding:18px;margin-top:14px">';
+    html += '<div style="background:' + (isExtra ? '#f0fdf4' : '#fff7ed') + ';border-radius:12px;padding:16px;text-align:center;margin-bottom:16px">';
+    html += '<div style="font-size:12px;font-weight:800;text-transform:uppercase;margin-bottom:4px">' + (isExtra ? 'HET RESULTAAT: ÉCHT OVER PER EXTRA UUR' : 'HET RESULTAAT: ÉCHT INLEVEREN PER UUR MINDER') + '</div>';
+    html += '<div style="font-size:34px;font-weight:800;line-height:1.1">' + (isExtra ? '+ ' : '− ') + euro(Math.abs(gainPerHour)) + ' <span style="font-size:16px">per uur</span></div>';
+    html += '<div style="font-size:13px;color:#334155">Bruto uurloon: <b>' + euro(hourly) + '</b>' + (allowances.length ? ' · effectief incl. ingevoerde toeslagen: <b>' + euro(effectiveHourly) + '</b>' : '') + '</div></div>';
+
+    html += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px">';
+    html += '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px;text-align:center"><div style="font-size:11px;color:#64748b;font-weight:700">PER EXTRA UUR</div><div style="font-size:18px;font-weight:800">' + (isExtra ? '+ ' : '− ') + euro(Math.abs(gainPerHour)) + '</div></div>';
+    html += '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px;text-align:center"><div style="font-size:11px;color:#64748b;font-weight:700">PER MAAND</div><div style="font-size:18px;font-weight:800">' + (realMonth >= 0 ? '+ ' : '− ') + euro(Math.abs(realMonth)) + '</div></div>';
+    html += '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px;text-align:center"><div style="font-size:11px;color:#64748b;font-weight:700">PER JAAR</div><div style="font-size:18px;font-weight:800">' + (realYear >= 0 ? '+ ' : '− ') + euro(Math.abs(realYear)) + '</div></div>';
+    html += '</div>';
+
+    html += '<div style="border-top:1px dashed #cbd5e1;padding-top:12px;font-size:13px;line-height:1.6">';
+    html += '<div style="font-weight:700;margin-bottom:8px">' + absHours + ' uur ' + (isExtra ? 'extra' : 'minder') + ' per week (' + curH + ' → ' + newH + ' uur)</div>';
+    html += '<div style="display:flex;justify-content:space-between;padding:3px 0"><span>Bruto loonverschil:</span><b>' + (grossMonthlyDelta >= 0 ? '+ ' : '− ') + euro(Math.abs(grossMonthlyDelta)) + ' / mnd</b></div>';
+    if (allowances.length) {
+      allowances.forEach(a => {
+        const amount = Math.min(absHours, a.hours) * hourly * (a.pct / 100) * 52 / 12;
+        html += '<div style="display:flex;justify-content:space-between;padding:3px 0;color:#334155"><span>' + a.name + ' (' + a.pct + '% · ' + Math.min(absHours,a.hours) + ' uur/week):</span><b>' + (isExtra ? '+ ' : '− ') + euro(Math.abs(amount)) + ' / mnd</b></div>';
+      });
+    }
+    html += '<div style="display:flex;justify-content:space-between;padding:3px 0;color:#15803d"><span>Extra netto loon op rekening:</span><b>' + (netWageMonth >= 0 ? '+ ' : '− ') + euro(Math.abs(netWageMonth)) + ' / mnd</b></div>';
+    if (supportLossYear > 0) {
+      html += '<div style="display:flex;justify-content:space-between;padding:3px 0;color:#b42318"><span>Minder toeslagen:</span><b>− ' + euro(Math.round(supportLossYear/12)) + ' / mnd</b></div>';
+      html += '<div style="display:flex;justify-content:space-between;padding:3px 0;color:#b42318;font-size:12px"><span>Mogelijke jaarlijkse toeslagenverrekening:</span><b>− ' + euro(supportLossYear) + ' / jaar</b></div>';
+    } else {
+      html += '<div style="display:flex;justify-content:space-between;padding:3px 0;color:#64748b"><span>Toeslageneffect:</span><b>€ 0 / mnd</b></div>';
+    }
+    html += '<div style="margin:10px 0;border-bottom:2px solid #0f172a"></div>';
+    html += '<div style="display:flex;justify-content:space-between;font-size:15px;font-weight:800"><span>UITEINDELIJK ÉCHT OVER:</span><span>' + (realMonth >= 0 ? '+ ' : '− ') + euro(Math.abs(realMonth)) + ' / mnd</span></div>';
+    html += '<div style="margin-top:10px;padding:8px 12px;background:#f8fafc;border-radius:8px;font-size:11px;color:#475467">Werkelijk voordeel per uur = besteedbaar jaarverschil (' + euro(realYear) + ') ÷ ' + (absHours*52) + ' extra gewerkte uren per jaar.</div>';
+    html += '</div></div>';
+    box.innerHTML = html;
+  }
+
+  function handleExtraWorkInput() {
+    renderScenario();
+  }
+
+  // --- RENDERING VAN SCENARIO & JAARBEELD (PAGE 9 / #p8) ---
+  function renderScenario() {
+    const E = window.VOORUIT_ENGINE;
+    const change = Number($("scenarioRange")?.value) || 0;
+    const who = $("scenarioWho")?.value || "self";
+
+    const base = E.buildHousehold();
+    const sc = E.scenario(base, change, who);
+
+    const sign = change >= 0 ? "+ " : "− ";
+    const d = sc.disposableChangeMonthly;
+
+    $("scenarioValue").textContent = sign + euro(Math.abs(change));
+    $("changeLabel").textContent = sign + euro(Math.abs(change));
+
+    $("scBase").textContent = euro(base.totalNetMonthly);
+    $("scNew").textContent = euro(sc.next.totalNetMonthly);
+    $("scDelta").textContent = (d >= 0 ? "+ " : "− ") + euro(Math.abs(d));
+    $("scYear").textContent = (d >= 0 ? "+ " : "− ") + euro(Math.abs(d * 12));
+
+    // Marginale druk
+    if (change > 0) {
+      $("marginalPressure").textContent = Math.round(sc.marginalPressure) + "%";
+      const retainedPct = Math.max(0, 100 - Math.round(sc.marginalPressure));
+      $("marginalText").textContent = "Van elke € 100 bruto extra houd je naar schatting € " + retainedPct + " besteedbaar over na belasting en afbouw van toeslagen.";
+    } else {
+      $("marginalPressure").textContent = "—";
+      $("marginalText").textContent = "Verschuif de regelaar naar rechts voor de berekening van de marginale druk.";
+    }
+
+    // Notice
+    const n = $("scNotice");
+    if (change === 0) {
+      n.className = "notice";
+      n.innerHTML = "<b>Geen verandering:</b> Verschuif de regelaar om direct te zien wat meer of minder werken voor jouw portemonnee betekent.";
+    } else if (d >= 0) {
+      n.className = "notice good";
+      n.innerHTML = "<b>Vooruitgang:</b> Met " + euro(Math.abs(change)) + " bruto per maand ga je er naar schatting <b>" + euro(d) + " per maand</b> (" + euro(sc.disposableChangeAnnual) + " per jaar) op vooruit.";
+    } else {
+      n.className = "notice warn";
+      n.innerHTML = "<b>Inkomensdaling:</b> Met " + euro(Math.abs(change)) + " bruto minder per maand lever je onder de streep naar schatting <b>" + euro(Math.abs(d)) + " per maand</b> (" + euro(Math.abs(sc.disposableChangeAnnual)) + " per jaar) in.";
+    }
+
+    // 0. EENVOUDIG EXTRA WERKEN CALCULATOR (V26.8 Final)
+    renderExtraWorkCalculator(base, who);
+
+    // 1. DE HOOFDUITKOMST: WAT HOUD JE ÉCHT OVER?
+    renderRealGain(sc, change);
+
+    // 5. VERGELIJK JE UREN
+    renderHoursComparison(base, who);
+
+    // Breakdown
+    renderScenarioBreakdown(sc);
+
+    // Matrix
+    renderScenarioMatrix(base, who);
+
+    // Jaaroverzicht
+    $("yearNet").textContent = euro(sc.next.totalNetMonthly * 12);
+    $("yearCosts").textContent = euro(base.costs * 12);
+    $("yearSupport").textContent = euro(sc.next.totalSupportMonthly * 12);
+    $("yearLeft").textContent = euro((sc.next.disposableMonthly - base.costs) * 12);
+
+    // 12 Maanden Prognose
+    renderMonthlyForecast(sc.next);
+
+    // Actieplan
+    renderScenarioActions(sc);
+  }
+  $("scenarioRange")?.addEventListener("input", renderScenario);
+  $("scenarioWho")?.addEventListener("change", renderScenario);
+  $("extraHoursCurrent")?.addEventListener("input", handleExtraWorkInput);
+  $("extraHoursNew")?.addEventListener("input", handleExtraWorkInput);
+  $("extraHourly")?.addEventListener("input", handleExtraWorkInput);
+  $("extraAllowanceYes")?.addEventListener("change", toggleExtraAllowances);
+  $("extraAllowanceNo")?.addEventListener("change", toggleExtraAllowances);
+  $("addExtraAllowance")?.addEventListener("click", addExtraAllowanceRow);
+  $("extraAllowancesBox")?.addEventListener("input", handleExtraWorkInput);
+
+  // V26.2 1. HOOFDUITKOMST: WAT JE ÉCHT OVERHOUDT & DE CENTRALE PREVENTIE KETEN
+  function renderRealGain(sc, change) {
+    const box = $("realGain");
+    if (!box) return;
+
+    const delta = Number(change) || 0;
+    const netWageAnnual = sc.netWageChangeAnnual;
+    const netWageMonthly = sc.netWageChangeMonthly;
+    const supportChangeAnnual = sc.supportChangeAnnual;
+    const supportLossAnnual = sc.supportLossAnnual;
+    const taxChangeAnnual = sc.taxChangeAnnual;
+    const totalExtraAnnual = sc.disposableChangeAnnual;
+    const totalExtraMonthly = sc.disposableChangeMonthly;
+    const hourlyRate = sc.hourlyRate;
+    const hoursPerWeek = sc.extraHoursPerWeek;
+    const hoursPerYear = sc.extraHoursPerYear;
+    const effectiveGainPerHour = sc.effectiveGainPerHour;
+
+    if (delta === 0) {
+      box.innerHTML = '<div class="real-gain-badge">💰 WAT JE ÉCHT EXTRA OVERHOUDT</div>' +
+        '<div class="big" style="color:#475467">Kies een inkomensverandering</div>' +
+        '<div class="muted">Verschuif de regelaar hierboven naar links (minder werken) of rechts (meer werken). Vooruit rekent meteen de hele keten door: loonstrook, toeslagen, belasting en wat je onderaan de streep écht overhoudt.</div>';
+      return;
+    }
+
+    const isMoreWork = delta > 0;
+
+    // 1. Visuele Hoofduitkomst (Hero outcome)
+    let heroHtml = '';
+    if (isMoreWork) {
+      heroHtml = '<div class="real-gain-badge">💰 WAT JE ÉCHT EXTRA OVERHOUDT</div>' +
+        '<div class="big" style="color:#087443">+ ' + euro(totalExtraAnnual) + ' per jaar</div>' +
+        '<div class="big-sub">= ongeveer + ' + euro(totalExtraMonthly) + ' per maand</div>';
+    } else {
+      heroHtml = '<div class="real-gain-badge" style="background:#b42318">📉 WAT MINDER WERKEN JE ÉCHT KOST</div>' +
+        '<div class="big" style="color:#b42318">Slechts − ' + euro(Math.abs(totalExtraAnnual)) + ' per jaar minder</div>' +
+        '<div class="big-sub">= ongeveer − ' + euro(Math.abs(totalExtraMonthly)) + ' per maand</div>';
+    }
+
+    // Rekenkundige eenvoudige formule met daadwerkelijke bedragen
+    let formulaHtml = '';
+    if (isMoreWork) {
+      formulaHtml = '<div class="formula-box">' +
+        '<div class="formula-row"><span>Je krijgt extra netto per jaar op je rekening:</span><b>+ ' + euro(netWageAnnual) + '</b></div>' +
+        (supportLossAnnual > 0 ? '<div class="formula-row" style="color:#b42318"><span>Door het hogere inkomen krijg je naar schatting minder toeslagen:</span><b>− ' + euro(supportLossAnnual) + '</b></div>' : '') +
+        '<div class="formula-row formula-total"><span>' + euro(netWageAnnual) + (supportLossAnnual > 0 ? ' − ' + euro(supportLossAnnual) : '') + ' = WAT JE ÉCHT EXTRA OVERHOUDT:</span><span>+ ' + euro(totalExtraAnnual) + ' per jaar</span></div>' +
+        '</div>';
+    } else {
+      formulaHtml = '<div class="formula-box negative">' +
+        '<div class="formula-row"><span>Je loonstrook daalt netto per jaar:</span><b>− ' + euro(Math.abs(netWageAnnual)) + '</b></div>' +
+        (sc.supportGainAnnual > 0 ? '<div class="formula-row" style="color:#166534"><span>Door het lagere inkomen krijg je naar schatting extra toeslagen:</span><b>+ ' + euro(sc.supportGainAnnual) + '</b></div>' : '') +
+        '<div class="formula-row formula-total"><span>WERKELIJK INLEVEREN ONDERAAN DE STREEP:</span><span>Slechts − ' + euro(Math.abs(totalExtraAnnual)) + ' per jaar</span></div>' +
+        '</div>';
+    }
+
+    // 2. Het verschil tussen "Netto" en "Echt over" in eenvoudige taal
+    const diffExplainer = '<div class="difference-callout">' +
+      '💡 <b>Wat is het verschil tussen “netto” en “écht over”?</b><br>' +
+      '<b>Netto</b> betekent wat je werkgever maandelijks op je bankrekening stort.<br>' +
+      '<b>‘Echt over’</b> betekent wat er uiteindelijk in je portemonnee overblijft nadat het effect op je toeslagen en een eventuele verrekening achteraf is meegerekend.' +
+      '</div>';
+
+    // Ketenspecificatie per stap
+    let chainHtml = '<div class="real-gain-chain">' +
+      '<div class="real-gain-step">' +
+        '<div>' +
+          '<div class="step-title">1. Op je loonstrook (netto bankoverschrijving)</div>' +
+          '<div class="step-hint">Het bedrag dat je maandelijks direct van je werkgever ' + (isMoreWork ? 'extra ontvangt' : 'minder ontvangt') + '</div>' +
+        '</div>' +
+        '<div class="step-val" style="color:' + (netWageAnnual >= 0 ? '#087443' : '#b42318') + '">' +
+          (netWageAnnual >= 0 ? '+ ' : '− ') + euro(Math.abs(netWageAnnual)) + ' / jr ' +
+          '<div style="font-size:12px;font-weight:600;color:#667085">(' + (netWageMonthly >= 0 ? '+ ' : '− ') + euro(Math.abs(netWageMonthly)) + ' / mnd)</div>' +
+        '</div>' +
+      '</div>';
+
+    if (isMoreWork) {
+      if (supportLossAnnual > 0) {
+        chainHtml += '<div class="real-gain-step">' +
+          '<div>' +
+            '<div class="step-title" style="color:#b42318">2. Schatting minder toeslagen (verrekeningsrisico)</div>' +
+            '<div class="step-hint">Je jaarinkomen stijgt, waardoor je recht op zorg-, huurtoeslag of kindgebonden budget daalt</div>' +
+          '</div>' +
+          '<div class="step-val" style="color:#b42318">' +
+            '− ' + euro(supportLossAnnual) + ' / jr ' +
+            '<div style="font-size:12px;font-weight:600;color:#b42318">(− ' + euro(Math.round(supportLossAnnual / 12)) + ' / mnd)</div>' +
+          '</div>' +
+        '</div>';
+      } else {
+        chainHtml += '<div class="real-gain-step">' +
+          '<div>' +
+            '<div class="step-title">2. Effect op toeslagen</div>' +
+            '<div class="step-hint">Geen vermindering van toeslagen in deze inkomenszone</div>' +
+          '</div>' +
+          '<div class="step-val" style="color:#475467">€ 0 / jr</div>' +
+        '</div>';
+      }
+    } else {
+      if (supportChangeAnnual > 0) {
+        chainHtml += '<div class="real-gain-step">' +
+          '<div>' +
+            '<div class="step-title" style="color:#087443">2. Extra toeslagen (opvang inkomensdaling)</div>' +
+            '<div class="step-hint">Je recht op zorg-, huurtoeslag of kindgebonden budget stijgt door het lagere jaarinkomen</div>' +
+          '</div>' +
+          '<div class="step-val" style="color:#087443">' +
+            '+ ' + euro(supportChangeAnnual) + ' / jr ' +
+            '<div style="font-size:12px;font-weight:600;color:#087443">(+ ' + euro(Math.round(supportChangeAnnual / 12)) + ' / mnd)</div>' +
+          '</div>' +
+        '</div>';
+      }
+    }
+
+    if (Math.abs(taxChangeAnnual) > 20) {
+      chainHtml += '<div class="real-gain-step">' +
+        '<div>' +
+          '<div class="step-title">3. Effect belasting & heffingskortingen</div>' +
+          '<div class="step-hint">' + (taxChangeAnnual > 0 ? 'Door het hogere inkomen betaal je meer belasting en bouwen heffingskortingen af' : 'Door het lagere inkomen betaal je minder belasting en stijgen heffingskortingen') + '</div>' +
+        '</div>' +
+        '<div class="step-val" style="color:#475467">' +
+          (taxChangeAnnual >= 0 ? '+ ' : '− ') + euro(Math.abs(taxChangeAnnual)) + ' belasting/jr' +
+        '</div>' +
+      '</div>';
+    }
+
+    chainHtml += '<div class="real-gain-step highlight ' + (totalExtraAnnual < 0 ? 'negative' : '') + '">' +
+      '<div>' +
+        '<div class="step-title">= WAT JE UITEINDELIJK ÉCHT ' + (isMoreWork ? 'OVERHOUDT' : 'INLEVERT') + '</div>' +
+        '<div class="step-hint">Het werkelijke verschil in je portemonnee onderaan de streep</div>' +
+      '</div>' +
+      '<div class="step-val" style="color:' + (totalExtraAnnual >= 0 ? '#087443' : '#b42318') + '">' +
+        (totalExtraAnnual >= 0 ? '+ ' : '− ') + euro(Math.abs(totalExtraAnnual)) + ' / jr' +
+        '<div style="font-size:13px;font-weight:700">(' + (totalExtraMonthly >= 0 ? '+ ' : '− ') + euro(Math.abs(totalExtraMonthly)) + ' / mnd)</div>' +
+      '</div>' +
+    '</div></div>';
+
+    // 6 & 7. Werkelijk voordeel per extra/minder gewerkt uur
+    let hourlyHtml = '';
+    if (hourlyRate > 0 && Math.abs(hoursPerYear) > 0) {
+      const formattedHoursWeek = Math.abs(hoursPerWeek).toFixed(1).replace('.', ',');
+      const formattedHoursYear = Math.round(Math.abs(hoursPerYear));
+      const formattedHourlyGain = euro(Math.abs(effectiveGainPerHour));
+      const formattedBrutoHourly = euro(hourlyRate);
+
+      if (isMoreWork) {
+        hourlyHtml = '<div class="hourly-box">' +
+          '<h4><svg class="uiico" style="width:18px;height:18px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Werkelijk voordeel per extra gewerkt uur</h4>' +
+          '<div class="hourly-big">' + formattedHourlyGain + ' per extra gewerkt uur</div>' +
+          '<p style="margin:4px 0 6px;font-size:14px">' +
+            'Je bruto uurloon is <b>' + formattedBrutoHourly + '</b>.<br>' +
+            'Maar onderaan de streep houd je door deze verandering ongeveer <b>' + formattedHourlyGain + ' per extra gewerkt uur</b> over.<br>' +
+            '<small style="color:#475467">Berekening: ' + euro(totalExtraAnnual) + ' werkelijk extra over ÷ ' + formattedHoursYear + ' extra gewerkte uren per jaar (ongeveer ' + formattedHoursWeek + ' uur per week extra).</small>' +
+          '</p>' +
+          '<div class="hint" style="color:#1e40af">Het verschil tussen je bruto uurloon (' + formattedBrutoHourly + ') en wat je overhoudt (' + formattedHourlyGain + ') gaat naar belasting en lagere toeslagen.</div>' +
+        '</div>';
+      } else {
+        hourlyHtml = '<div class="hourly-box">' +
+          '<h4><svg class="uiico" style="width:18px;height:18px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Wat kost minder werken je écht per uur?</h4>' +
+          '<div class="hourly-big">Slechts ' + formattedHourlyGain + ' per minder gewerkt uur</div>' +
+          '<p style="margin:4px 0 6px;font-size:14px">' +
+            'Je bruto uurloon is <b>' + formattedBrutoHourly + '</b>.<br>' +
+            'Je werkt ongeveer ' + formattedHoursWeek + ' uur per week minder (' + formattedHoursYear + ' uur per jaar).<br>' +
+            'Omdat je minder belasting betaalt en je toeslagen naar schatting stijgen, kost minder werken je onderaan de streep slechts <b>' + formattedHourlyGain + ' per minder gewerkt uur</b>.' +
+          '</p>' +
+          '<div class="hint" style="color:#1e40af">De overheid vangt via lagere belasting en hogere toeslagen een aanzienlijk deel van je inkomensdaling op!</div>' +
+        '</div>';
+      }
+    } else {
+      hourlyHtml = '<div class="hourly-box" style="background:#f8fafc;border-color:#d0d5dd;color:#344054">' +
+        '<h4 style="color:#101828"><svg class="uiico" style="width:18px;height:18px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Wil je je werkelijke voordeel per gewerkt uur zien?</h4>' +
+        '<p style="margin:4px 0 8px;font-size:13px;color:#475467">Vul hieronder je bruto uurloon in om direct te zien hoeveel euro per gewerkt uur je onderaan de streep overhoudt:</p>' +
+        '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">' +
+          '<input class="input" id="scInlineHourly" inputmode="decimal" placeholder="bijv. 22,50" style="width:130px;padding:8px 12px;font-size:14px;min-height:38px">' +
+          '<button class="btn secondary" onclick="applyInlineHourly()" style="padding:8px 14px;font-size:13px;min-height:38px;flex:0 0 auto">Bereken uurvoordeel</button>' +
+        '</div>' +
+      '</div>';
+    }
+
+    // 3 & 4. Voorzichtige Terugbetaling & Duidelijke Preventiebox
+    let preventionHtml = '';
+    if (isMoreWork && supportLossAnnual > 0) {
+      const monthlyReserve = Math.round(supportLossAnnual / 12);
+      preventionHtml = '<div class="prevention-box">' +
+        '<h4><svg class="uiico" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> 🛡️ Voorkom een verrassing achteraf</h4>' +
+        '<p style="margin:4px 0 8px;font-size:14px">' +
+          '<b>Waarom?</b><br>' +
+          'Je jaarinkomen stijgt. Dienst Toeslagen berekent je toeslagen over je inkomen van het <i>hele kalenderjaar</i>. Daardoor kunnen je toeslagen over eerdere maanden met terugwerkende kracht lager worden.<br>' +
+          '<b>Let op het risico:</b> Je loopt naar schatting het risico op ongeveer <b>' + euro(supportLossAnnual) + ' minder toeslag</b> over dit jaar. Als je toeslagvoorschot niet wordt aangepast, kan er later ongeveer <b>' + euro(supportLossAnnual) + '</b> moeten worden verrekend.' +
+        '</p>' +
+        '<div style="background:rgba(255,255,255,0.7);padding:10px 14px;border-radius:12px;margin:8px 0;font-size:13px;font-weight:600">' +
+          'Mogelijk effect: <b>' + euro(supportLossAnnual) + ' per jaar</b> (≈ <b>' + euro(monthlyReserve) + ' per maand</b>).<br>' +
+          '<small style="font-weight:normal;color:#667085">Dit is een indicatie en een voorzichtig reserveringsadvies om verrassingen te voorkomen, geen gegarandeerde rekening.</small>' +
+        '</div>' +
+        '<b style="font-size:14px;display:block;margin-top:8px">Wat kun je doen?</b>' +
+        '<ol style="font-size:14px;margin-top:4px">' +
+          '<li><b>Pas je geschatte jaarinkomen direct aan:</b> Ga naar <i>toeslagen.nl</i> of open de Toeslagen-app en geef je nieuwe verwachte jaarinkomen door.</li>' +
+          '<li><b>Controleer daarna je nieuwe toeslag:</b> Bekijk op je nieuwe voorschotbeschikking hoeveel toeslag je maandelijks gaat ontvangen.</li>' +
+          '<li><b>Houd tijdelijk rekening met het mogelijke verschil:</b> Zolang je voorschot nog niet is aangepast, raden we aan om tijdelijk <b>' + euro(monthlyReserve) + ' per maand apart te zetten</b> op een spaarrekening om een latere verrekening moeiteloos te betalen.</li>' +
+        '</ol>' +
+      '</div>';
+    } else if (!isMoreWork && supportChangeAnnual > 0) {
+      preventionHtml = '<div class="prevention-box" style="background:#f0fdf4;border-color:#bbf7d0;color:#14532d">' +
+        '<h4 style="color:#15803d"><svg class="uiico" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> 🛡️ Preventietip bij minder werken</h4>' +
+        '<p style="margin:4px 0 6px;font-size:14px">' +
+          'Omdat je inkomen daalt, heb je naar schatting recht op <b>' + euro(supportChangeAnnual) + ' extra toeslagen per jaar</b> (' + euro(Math.round(supportChangeAnnual / 12)) + ' per maand).<br>' +
+          '<b>Wat kun je doen?</b> Pas je geschatte jaarinkomen zo snel mogelijk aan op <i>toeslagen.nl</i>. Dan ontvang je het extra bedrag direct maandelijks op je rekening en hoef je er niet tot na afloop van het jaar op te wachten.' +
+        '</p>' +
+      '</div>';
+    } else {
+      preventionHtml = '<div class="prevention-box" style="background:#f8fafc;border-color:#eaecf0;color:#344054">' +
+        '<h4 style="color:#101828"><svg class="uiico" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Financiële tip</h4>' +
+        '<p style="margin:4px 0;font-size:14px">In dit inkomensbereik wijzigen je toeslagen naar schatting niet of nauwelijks. Controleer bij een blijvende inkomensverandering altijd voor de zekerheid je geschatte jaarinkomen op <i>toeslagen.nl</i>.</p>' +
+      '</div>';
+    }
+
+    box.innerHTML = heroHtml + formulaHtml + diffExplainer + chainHtml + hourlyHtml + preventionHtml;
+  }
+
+  // V26.2 5. VERGELIJK JE UREN OVERZICHT
+  function renderHoursComparison(base, who) {
+    const container = $("hoursComparisonContent");
+    if (!container) return;
+
+    const inp = base.inputs;
+    let currentHours = Number(inp.hours) || 0;
+    let hourlyRate = Number(inp.hourly) || 0;
+
+    // Afleiden indien mogelijk
+    if (currentHours <= 0 && hourlyRate > 0 && inp.employmentMonthly > 0) {
+      currentHours = Math.round(inp.employmentMonthly / (hourlyRate * (52 / 12)));
+    }
+    if (hourlyRate <= 0 && currentHours > 0 && inp.employmentMonthly > 0) {
+      hourlyRate = Math.round((inp.employmentMonthly / (currentHours * (52 / 12))) * 100) / 100;
+    }
+
+    if (currentHours <= 0 || hourlyRate <= 0) {
+      container.innerHTML = '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:16px">' +
+        '<p style="margin:0 0 10px;font-size:14px;color:#334155;line-height:1.5">' +
+          '💡 <b>Vul je uren en uurloon in</b> om direct te vergelijken wat 4 of 8 uur meer of minder werken voor je netto salaris, toeslagen en portemonnee betekent:' +
+        '</p>' +
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">' +
+          '<div style="flex:1;min-width:130px">' +
+            '<label style="font-size:12px;font-weight:700;color:#475467;display:block;margin-bottom:4px">Uren per week</label>' +
+            '<input type="number" id="hoursInputQuick" class="input" placeholder="bijv. 32" value="' + (currentHours > 0 ? currentHours : '') + '" style="padding:8px 12px;min-height:38px">' +
+          '</div>' +
+          '<div style="flex:1;min-width:130px">' +
+            '<label style="font-size:12px;font-weight:700;color:#475467;display:block;margin-bottom:4px">Bruto uurloon (€)</label>' +
+            '<input type="number" step="0.5" id="hourlyInputQuick" class="input" placeholder="bijv. 22.50" value="' + (hourlyRate > 0 ? hourlyRate : '') + '" style="padding:8px 12px;min-height:38px">' +
+          '</div>' +
+          '<button class="btn" onclick="saveHoursAndRecalculate()" style="padding:8px 16px;min-height:38px;white-space:nowrap">Toon urenoverzicht</button>' +
+        '</div>' +
+      '</div>';
+      return;
+    }
+
+    // Bepaal realistische urenstappen rond de huidige uren (bijv. -8, -4, 0, +4, +8)
+    const baseHourSteps = [currentHours - 8, currentHours - 4, currentHours, currentHours + 4, currentHours + 8];
+    const steps = baseHourSteps.filter((h, idx, arr) => h >= 8 && h <= 44 && arr.indexOf(h) === idx);
+
+    let rowsHtml = '';
+    steps.forEach(h => {
+      const deltaH = h - currentHours;
+      const deltaGross = Math.round(deltaH * hourlyRate * (52 / 12));
+      const res = window.VOORUIT_ENGINE.scenario(base, deltaGross, who);
+      const isCurrent = (h === currentHours);
+
+      const netMonthly = res.next.totalNetMonthly;
+      const supMonthly = res.next.totalSupportMonthly;
+      const dispMonthly = res.next.disposableMonthly;
+      const dispDiffAnnual = res.disposableChangeAnnual;
+      const hourlyGain = res.effectiveGainPerHour;
+
+      let badgeHtml = '';
+      if (isCurrent) {
+        badgeHtml = ' <span class="hours-badge current">Huidig</span>';
+      } else if (deltaH > 0) {
+        badgeHtml = ' <span class="hours-badge">+' + deltaH + ' uur</span>';
+      } else {
+        badgeHtml = ' <span class="hours-badge" style="background:#fee4e2;color:#b42318">' + deltaH + ' uur</span>';
+      }
+
+      let gainPerHText = '—';
+      if (!isCurrent && Math.abs(res.extraHoursPerYear) > 0) {
+        gainPerHText = euro(Math.abs(hourlyGain)) + ' / u';
+      }
+
+      let actionBtn = '';
+      if (isCurrent) {
+        actionBtn = '<span style="font-size:11px;font-weight:700;color:#087443">Jouw situatie</span>';
+      } else {
+        actionBtn = '<button class="hours-btn-apply" onclick="selectHoursScenario(' + deltaGross + ', ' + h + ')">Bekijk</button>';
+      }
+
+      rowsHtml += '<tr class="' + (isCurrent ? 'current-row' : '') + '">' +
+        '<td><b>' + h + ' uur</b>' + badgeHtml + '</td>' +
+        '<td>' + euro(netMonthly) + '</td>' +
+        '<td>' + euro(supMonthly) + '</td>' +
+        '<td><b>' + euro(dispMonthly) + '</b></td>' +
+        '<td style="color:' + (dispDiffAnnual >= 0 ? (dispDiffAnnual > 0 ? '#087443' : '#475467') : '#b42318') + '">' +
+          (dispDiffAnnual > 0 ? '+ ' : (dispDiffAnnual < 0 ? '− ' : '')) + euro(Math.abs(dispDiffAnnual)) + ' / jr' +
+        '</td>' +
+        '<td style="font-size:12px;color:#1849a9;font-weight:700">' + gainPerHText + '</td>' +
+        '<td>' + actionBtn + '</td>' +
+      '</tr>';
+    });
+
+    container.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">' +
+      '<span style="font-size:13px;color:#475467">Huidig: <b>' + currentHours + ' uur/week</b> • Bruto uurloon: <b>' + euro(hourlyRate) + '</b></span>' +
+      '<button class="btn secondary" onclick="promptEditHours()" style="padding:4px 8px;font-size:11px;min-height:28px">Wijzig uren/uurloon</button>' +
+      '</div>' +
+      '<div class="hours-table-wrap">' +
+      '<table class="hours-table">' +
+        '<thead><tr>' +
+          '<th>Uren per week</th>' +
+          '<th>Netto salaris</th>' +
+          '<th>Toeslagen</th>' +
+          '<th>Echt over</th>' +
+          '<th>Verschil per jaar</th>' +
+          '<th>Werkelijk per uur</th>' +
+          '<th>Actie</th>' +
+        '</tr></thead>' +
+        '<tbody>' + rowsHtml + '</tbody>' +
+      '</table>' +
+      '</div>';
+  }
+
+  window.selectHoursScenario = function(deltaGross, targetHours) {
+    if (targetHours && $("extraHoursNew")) {
+      $("extraHoursNew").value = targetHours;
+      $("extraHoursNew").dataset.touched = "true";
+    }
+    const range = $("scenarioRange");
+    if (range) {
+      range.value = Math.max(-1000, Math.min(1500, deltaGross));
+    }
+    renderScenario();
+    const hero = $("extraWorkSection") || $("realGain");
+    if (hero) hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  window.saveHoursAndRecalculate = function() {
+    const h = Number($("hoursInputQuick")?.value) || 0;
+    const hr = Number($("hourlyInputQuick")?.value) || 0;
+    if (h > 0 && $("hours")) $("hours").value = h;
+    if (hr > 0 && $("hourly")) $("hourly").value = hr;
+    renderScenario();
+  };
+
+  window.promptEditHours = function() {
+    const container = $("hoursComparisonContent");
+    if (!container) return;
+    const curH = num("hours") || 0;
+    const curHr = num("hourly") || 0;
+    container.innerHTML = '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:16px">' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">' +
+        '<div style="flex:1;min-width:130px">' +
+          '<label style="font-size:12px;font-weight:700;color:#475467;display:block;margin-bottom:4px">Uren per week</label>' +
+          '<input type="number" id="hoursInputQuick" class="input" placeholder="bijv. 32" value="' + curH + '" style="padding:8px 12px;min-height:38px">' +
+        '</div>' +
+        '<div style="flex:1;min-width:130px">' +
+          '<label style="font-size:12px;font-weight:700;color:#475467;display:block;margin-bottom:4px">Bruto uurloon (€)</label>' +
+          '<input type="number" step="0.5" id="hourlyInputQuick" class="input" placeholder="bijv. 22.50" value="' + curHr + '" style="padding:8px 12px;min-height:38px">' +
+        '</div>' +
+        '<button class="btn" onclick="saveHoursAndRecalculate()" style="padding:8px 16px;min-height:38px;white-space:nowrap">Opslaan & vergelijken</button>' +
+      '</div>' +
+    '</div>';
+  };
+
+  window.applyInlineHourly = function() {
+    const val = num("scInlineHourly");
+    if (val > 0) {
+      if ($("hourly")) $("hourly").value = val;
+      renderScenario();
+    }
+  };
+
+  function renderScenarioBreakdown(sc) {
+    const box = $("scenarioBreakdown");
+    if (!box) return;
+    const taxDiff = sc.taxChangeAnnual;
+    const supportDiff = sc.supportChangeAnnual;
+
+    box.innerHTML = '<div class="grid">' +
+      '<div class="stat"><span>Bruto looneffect</span><b>' + (sc.grossChangeMonthly >= 0 ? "+ " : "− ") + euro(Math.abs(sc.grossChangeMonthly * 12)) + ' / jr</b></div>' +
+      '<div class="stat"><span>Belastingeffect</span><b>' + (taxDiff >= 0 ? "+ " : "− ") + euro(Math.abs(taxDiff)) + ' / jr</b></div>' +
+      '<div class="stat"><span>Toeslageneffect</span><b>' + (supportDiff >= 0 ? "+ " : "− ") + euro(Math.abs(supportDiff)) + ' / jr</b></div>' +
+      '<div class="stat"><span>Netto besteedbaar effect</span><b>' + (sc.yearlyDisposableChange >= 0 ? "+ " : "− ") + euro(Math.abs(sc.yearlyDisposableChange)) + ' / jr</b></div>' +
+      '</div>';
+  }
+
+  function renderScenarioMatrix(base, who) {
+    const box = $("scenarioMatrix");
+    if (!box) return;
+    const steps = [-200, 100, 250, 500];
+    const rows = steps.map(v => {
+      const res = window.VOORUIT_ENGINE.scenario(base, v, who);
+      const sign = v >= 0 ? "+ " : "− ";
+      const dSign = res.disposableChangeMonthly >= 0 ? "+ " : "− ";
+      let extraNote = '';
+      if (res.hourlyRate > 0 && Math.abs(res.extraHoursPerYear) > 0) {
+        extraNote = '<small style="display:block;font-size:11px;color:#1849a9;font-weight:700">' +
+          euro(Math.abs(res.effectiveGainPerHour)) + ' / uur' +
+          '</small>';
+      }
+      return '<div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:center">' +
+        '<div><b>' + sign + euro(Math.abs(v)) + ' p/m</b>' + (res.extraHoursPerWeek ? '<small style="display:block;font-size:11px;color:#667085">' + (v >= 0 ? '+' : '−') + Math.abs(res.extraHoursPerWeek).toFixed(1) + 'u/wk</small>' : '') + '</div>' +
+        '<span>' + dSign + euro(Math.abs(res.disposableChangeMonthly)) + ' besteedbaar</span>' +
+        '<div><strong>' + (res.disposableChangeAnnual >= 0 ? "+ " : "− ") + euro(Math.abs(res.disposableChangeAnnual)) + ' / jr</strong>' + extraNote + '</div>' +
+        '</div>';
+    }).join("");
+
+    box.innerHTML = '<div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px;font-size:12px;font-weight:700;color:var(--muted);padding-bottom:6px">' +
+      '<span>Bruto verschil</span><span>Netto effect</span><span>Jaar & Uur</span></div>' + rows;
+  }
+
+  function renderMonthlyForecast(state) {
+    const box = $("monthlyForecast");
+    if (!box) return;
+
+    const totalNetYear = state.totalNetMonthly * 12;
+    const baseSupport = state.totalSupportMonthly;
+    const costs = state.costs;
+    const holidayPct = state.inputs.holidayPct || 8;
+
+    // Vakantiegeld valt typisch in mei (maand 5): ~ 8% van jaarloon bruto, minus belasting
+    const grossHoliday = (state.ownGrossAnnual * (holidayPct / 100)) / (1 + (holidayPct / 100));
+    const netHolidayInMay = grossHoliday > 0 ? Math.round(grossHoliday * (1 - 0.3575)) : 0;
+    // Dertiende maand / bonus valt typisch in december (maand 12)
+    const netBonusInDec = state.inputs.bonusAnnual > 0 ? Math.round(state.inputs.bonusAnnual * (1 - 0.3575)) : 0;
+
+    // Regulier maandsalaris zodat de 12 maanden exact optellen tot het berekende jaartotaal
+    const regularNet = Math.max(0, Math.floor((totalNetYear - netHolidayInMay - netBonusInDec) / 12));
+
+    const months = ["Jan", "Feb", "Mrt", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"];
+    let rows = "";
+    let sumNet = 0;
+    let sumSup = 0;
+    let sumLeft = 0;
+
+    for (let i = 0; i < 12; i++) {
+      let mNet = regularNet;
+      let labelExtra = "";
+      if (i === 4 && netHolidayInMay > 0) {
+        mNet += netHolidayInMay;
+        labelExtra = ' <small style="color:#087443;font-size:10px;font-weight:700">+vak.geld</small>';
+      }
+      if (i === 11) {
+        if (netBonusInDec > 0) {
+          mNet += netBonusInDec;
+          labelExtra = ' <small style="color:#087443;font-size:10px;font-weight:700">+bonus</small>';
+        }
+        // Sluitpost voor afronding zodat jaartotaal mathematisch 100% klopt
+        const diff = Math.round(totalNetYear - (sumNet + mNet));
+        mNet += diff;
+      }
+      const mSup = baseSupport;
+      const mLeft = mNet + mSup - costs;
+      sumNet += mNet;
+      sumSup += mSup;
+      sumLeft += mLeft;
+
+      rows += '<div style="display:grid;grid-template-columns:55px 1fr 1fr 1fr;gap:6px;padding:7px 0;border-bottom:1px solid #f0f2f5;font-size:13px">' +
+        '<b>' + months[i] + '</b>' +
+        '<span>' + euro(mNet) + labelExtra + '</span>' +
+        '<span>' + euro(mSup) + '</span>' +
+        '<strong>' + euro(mLeft) + '</strong>' +
+        '</div>';
+    }
+
+    const totalRow = '<div style="display:grid;grid-template-columns:55px 1fr 1fr 1fr;gap:6px;padding:9px 0 4px;border-top:2px solid #101828;font-size:13px;font-weight:800;color:#101828">' +
+      '<span>Totaal</span><span>' + euro(sumNet) + '</span><span>' + euro(sumSup) + '</span><span style="color:#087443">' + euro(sumLeft) + '</span>' +
+      '</div>';
+
+    const hintNote = '<div style="margin-top:10px;padding:10px;border-radius:10px;background:#f8fafc;font-size:12px;color:#475467;line-height:1.45">' +
+      '💡 <b>Let op mei & december:</b> In mei ontvang je vakantiegeld (' + (netHolidayInMay > 0 ? '+ ' + euro(netHolidayInMay) + ' netto' : '8%') + '). ' +
+      'Heb je door meer uren werken kans op een terugbetaling van toeslagen? Dan is de meevaller in mei hét ideale moment om je financiële buffer aan te vullen!' +
+      '</div>';
+
+    box.innerHTML = '<div style="display:grid;grid-template-columns:55px 1fr 1fr 1fr;gap:6px;font-size:11px;font-weight:700;color:#667085;padding-bottom:6px;border-bottom:1px solid #e4e7ec">' +
+      '<span>Maand</span><span>Netto loon</span><span>Toeslagen</span><span>Ruimte</span></div>' + rows + totalRow + hintNote;
+  }
+
+  function renderScenarioActions(sc) {
+    const list = $("scActions");
+    if (!list) return;
+    const actions = [];
+    if (sc.marginalPressure > 60) {
+      actions.push("Hoge marginale druk (" + Math.round(sc.marginalPressure) + "%): meer dan de helft van je extra bruto loon gaat op aan belasting en lagere toeslagen.");
+    }
+    if (sc.supportLossAnnual > 0) {
+      actions.push("Mogelijke terugbetaling van " + euro(sc.supportLossAnnual) + " per jaar: pas direct je verwachte toetsingsinkomen aan bij Dienst Toeslagen om een terugvordering achteraf te voorkomen.");
+    }
+    if (sc.hourlyRate > 0 && sc.effectiveGainPerHour > 0) {
+      actions.push("Werkelijk uurvoordeel: je houdt onder de streep " + euro(sc.effectiveGainPerHour) + " over per extra gewerkt uur (bruto: " + euro(sc.hourlyRate) + ").");
+    }
+    actions.push("Kloppen al je gegevens? Maak via de knop hieronder een print/PDF of export voor je eigen administratie of een gesprek met je financieel coach.");
+
+    list.innerHTML = actions.map((a, i) => '<li><span class="tag">' + (i + 1) + '</span>' + a + '</li>').join("");
+  }
+
+  // --- OPSLAG & RESET (localStorage) ---
+  function save() {
+    try {
+      const data = {
+        version: "26.0",
+        timestamp: new Date().toISOString(),
+        goal: window.currentGoal,
+        work: window.currentWork,
+        house: window.currentHouse,
+        partner: window.currentPartner,
+        kids: window.currentKids,
+        income: num("income"),
+        zzpProfit: num("zzpProfit"),
+        zzpHourCheck: $("zzpHourCheck")?.checked ?? true,
+        holidayPct: num("holidayPct"),
+        bonusAnnual: num("bonusAnnual"),
+        withheldAnnual: num("withheldAnnual"),
+        hours: num("hours"),
+        hourly: num("hourly"),
+        weekend: $("weekend")?.checked ?? false,
+        evening: $("evening")?.checked ?? false,
+        rent: num("rent"),
+        woz: num("woz"),
+        mortgageInterest: num("mortgageInterest"),
+        mortgageDebt: num("mortgageDebt"),
+        partnerIncome: num("partnerIncome"),
+        health: $("health")?.checked ?? true,
+        age: num("age"),
+        wealth: num("wealth"),
+        childCount: safeInt("childCount"),
+        childAges: childAges(),
+        costs: num("costs"),
+        benefitType: $("benefitType")?.value || "none",
+        benefitGross: num("benefitGross"),
+        benefitDuration: safeInt("benefitDuration")
+      };
+      localStorage.setItem("vooruit_financial_profile", JSON.stringify(data));
+    } catch (e) {
+      console.warn("Kon gegevens niet opslaan in localStorage", e);
+    }
+  }
+
+  function loadSaved() {
+    try {
+      const raw = localStorage.getItem("vooruit_financial_profile");
+      if (!raw) return false;
+      const d = JSON.parse(raw);
+      if (!d || typeof d !== "object") return false;
+
+      window.currentGoal = d.goal || "";
+      window.currentWork = d.work || "";
+      window.currentHouse = d.house || "";
+      window.currentPartner = d.partner || "";
+      window.currentKids = d.kids || "";
+
+      const set = (id, v) => {
+        const el = $(id);
+        if (el && v !== undefined && v !== null) el.value = v;
+      };
+
+      set("income", d.income);
+      set("zzpProfit", d.zzpProfit);
+      set("holidayPct", d.holidayPct !== undefined ? d.holidayPct : 8);
+      set("bonusAnnual", d.bonusAnnual);
+      set("withheldAnnual", d.withheldAnnual);
+      set("hours", d.hours);
+      set("hourly", d.hourly);
+      set("rent", d.rent);
+      set("woz", d.woz);
+      set("mortgageInterest", d.mortgageInterest);
+      set("mortgageDebt", d.mortgageDebt);
+      set("partnerIncome", d.partnerIncome);
+      set("age", d.age);
+      set("wealth", d.wealth);
+      set("childCount", d.childCount);
+      set("costs", d.costs);
+      set("benefitType", d.benefitType || "none");
+      set("benefitGross", d.benefitGross);
+      set("benefitDuration", d.benefitDuration);
+
+      if ($("zzpHourCheck")) $("zzpHourCheck").checked = d.zzpHourCheck !== false;
+      if ($("weekend")) $("weekend").checked = !!d.weekend;
+      if ($("evening")) $("evening").checked = !!d.evening;
+      if ($("health")) $("health").checked = d.health !== false;
+
+      // Update selecties in UI
+      if (window.currentGoal) document.querySelector('[data-goal="' + window.currentGoal + '"]')?.classList.add("selected");
+      if (window.currentWork) {
+        document.querySelector('[data-work="' + window.currentWork + '"]')?.classList.add("selected");
+        $("zzpBox").style.display = window.currentWork === "zzp" ? "block" : "none";
+      }
+      if (window.currentHouse) {
+        document.querySelector('[data-house="' + window.currentHouse + '"]')?.classList.add("selected");
+        $("rentBox").style.display = window.currentHouse === "rent" ? "block" : "none";
+        $("buyBox").style.display = window.currentHouse === "buy" ? "block" : "none";
+      }
+      if (window.currentPartner) {
+        document.querySelector('[data-partner="' + window.currentPartner + '"]')?.classList.add("selected");
+        $("partnerBox").style.display = window.currentPartner === "yes" ? "block" : "none";
+      }
+      if (window.currentKids) {
+        document.querySelector('[data-kids="' + window.currentKids + '"]')?.classList.add("selected");
+        $("childBox").style.display = window.currentKids === "yes" ? "block" : "none";
+        renderChildInputs();
+        if (d.childAges && d.childAges.length) {
+          const inputs = document.querySelectorAll(".childAge");
+          d.childAges.forEach((age, idx) => {
+            if (inputs[idx]) inputs[idx].value = age;
+          });
+        }
+      }
+      if (d.benefitType && d.benefitType !== "none") {
+        $("benefitFields").style.display = "block";
+        updateBenefitDetailsUI(d.benefitType);
+      }
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  window.clearMyData = function() {
+    let confirmed = false;
+    try {
+      confirmed = window.confirm("Weet je zeker dat je alle opgeslagen financiële gegevens op dit apparaat wilt wissen?");
+    } catch (e) {
+      confirmed = true;
+    }
+    if (!confirmed) return;
+    try { localStorage.removeItem("vooruit_financial_profile"); } catch (e) {}
+    try { sessionStorage.removeItem("vooruit_financial_profile"); } catch (e) {}
+    showToast("Je gegevens zijn volledig gewist.", "success");
+    setTimeout(() => { window.location.reload(); }, 600);
+  };
+
+  window.restart = function() {
+    try { localStorage.removeItem("vooruit_financial_profile"); } catch (e) {}
+    document.querySelectorAll("input").forEach(el => {
+      if (el.type === "checkbox") el.checked = el.id === "health" || el.id === "zzpHourCheck";
+      else el.value = "";
+    });
+    document.querySelectorAll(".option").forEach(el => el.classList.remove("selected"));
+    $("rentBox").style.display = "none";
+    $("buyBox").style.display = "none";
+    $("partnerBox").style.display = "none";
+    $("childBox").style.display = "none";
+    $("childDetails").style.display = "none";
+    $("zzpBox").style.display = "none";
+    $("benefitFields").style.display = "none";
+    if ($("benefitType")) $("benefitType").value = "none";
+
+    window.currentGoal = "";
+    window.currentWork = "";
+    window.currentHouse = "";
+    window.currentPartner = "";
+    window.currentKids = "";
+
+    go(0);
+  };
+
+  // --- LEGAL MODALS ---
+  window.openLegal = function(type) {
+    const box = $("legalContent");
+    if (!box) return;
+    const contents = {
+      privacy: '<h2>Privacyverklaring</h2>' +
+        '<p>Vooruit verwerkt alle ingevulde financiële gegevens <b>volledig lokaal</b> in jouw browser. Er worden geen gegevens verzonden naar een centrale server of derden.</p>' +
+        '<p>Met de knop <b>Wis data</b> worden alle lokaal bewaarde gegevens direct gewist van dit apparaat.</p>',
+      terms: '<h2>Voorwaarden</h2>' +
+        '<p>Vooruit is een indicatieve financiële preventietool en geeft geen bindend financieel, juridisch of fiscaal advies.</p>' +
+        '<p>De officiële besluiten en toekenningsbeschikkingen van de Belastingdienst, Dienst Toeslagen, UWV of je gemeente zijn te allen tijde leidend.</p>',
+      sources: '<h2>Regelbronnen 2026</h2>' +
+        '<p>De berekeningen in Vooruit V26.8 Final zijn gebaseerd op officiële Nederlandse overheidsbronnen voor 2026:</p>' +
+        '<ul>' +
+        '<li><b>Belastingdienst:</b> Box 1 schijventarief (35,75% tot € 38.883, 37,56% tot € 78.426, 49,50% daarboven), Algemene heffingskorting (max € 3.115, afbouw 6,398%), Arbeidskorting (max € 5.685).</li>' +
+        '<li><b>Ondernemers 2026:</b> Zelfstandigenaftrek € 1.200, MKB-winstvrijstelling 12,7%, Zvw-bijdrage 4,85% over max € 79.409.</li>' +
+        '<li><b>Dienst Toeslagen 2026:</b> Huurtoeslag berekening TG 083-1Z62FD (geen vaste inkomensbovengrens; kwaliteitsgrens € 498,20, aftoppingsgrenzen € 713,02 / € 764,14, max rekenhuur € 932,93), Zorgtoeslagtabel 2026, Kindgebonden budget inclusief ALO-kop (€ 3.416) en leeftijdsverhogingen.</li>' +
+        '<li><b>UWV:</b> Verrekenregels WW (70% verrekening), WIA, Wajong en Ziektewet.</li>' +
+        '</ul>'
+    };
+    box.innerHTML = contents[type] || contents.privacy;
+    $("legalModal").classList.add("open");
+    $("legalModal").setAttribute("aria-hidden", "false");
+  };
+
+  window.closeLegal = function() {
+    $("legalModal").classList.remove("open");
+    $("legalModal").setAttribute("aria-hidden", "true");
+  };
+  $("legalModal")?.addEventListener("click", e => {
+    if (e.target.id === "legalModal") closeLegal();
+  });
+
+  // --- BESTANDSDOWNLOADS & EXPORTFUNCTIES ---
+  window.downloadAppHtml = function() {
+    try {
+      const fullHtml = document.documentElement.outerHTML;
+      const blob = new Blob(["<!DOCTYPE html>\n" + fullHtml], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Vooruit_Financiele_Preventie_2026_V26.8 Final.html";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 300);
+      showToast("App succesvol gedownload als standalone bestand!", "success");
+    } catch (err) {
+      showToast("Fout bij downloaden van bestand: " + err.message, "error");
+    }
+  };
+
+  const readProfile = () => window.VOORUIT_ENGINE.readInputs();
+
+  window.exportReportJson = function() {
+    try {
+      const profile = readProfile();
+      const h = VOORUIT_ENGINE.buildHousehold(profile);
+      const who = $("scenarioWho") ? $("scenarioWho").value : "self";
+      const changeVal = Number($("scenarioRange")?.value) || Number($("quickRange")?.value) || 0;
+      const sc = VOORUIT_ENGINE.scenario(h, changeVal, who);
+
+      const reportData = {
+        app: "Vooruit financiële preventie",
+        versie: "2026 • V26.8 Final Final",
+        exportDatum: new Date().toISOString(),
+        invoerprofiel: profile,
+        huidigeSituatie: {
+          toetsingsinkomenJaar: Math.round(h.householdGrossAnnual),
+          besteedbaarVoorVasteLastenMaand: Math.round(h.disposableMonthly),
+          nettoInkomenMaand: Math.round(h.totalNetMonthly),
+          vasteLastenMaand: Math.round(h.costs),
+          resterendeFinancieleRuimteMaand: Math.round(h.financialRoomMonthly),
+          zorgtoeslagMaand: h.zorgMonthly,
+          huurtoeslagMaand: h.huurMonthly,
+          kindgebondenBudgetMaand: h.kgbMonthly,
+          totaalToeslagenMaand: h.totalSupportMonthly,
+          belastingJaar: Math.round(h.totalTaxAnnual || (h.ownTaxAnnual + (h.partnerTaxAnnual || 0))),
+          risicoWaarschuwingen: h.warnings
+        },
+        scenario: {
+          brutoVeranderingMaand: changeVal,
+          wie: who,
+          nieuwNettoInkomenMaand: Math.round(sc.next.totalNetMonthly),
+          extraNettoOpRekeningMaand: Math.round(sc.netWageChangeMonthly),
+          toeslagenVerschilMaand: Math.round(sc.supportChangeMonthly),
+          mogelijkeVerrekeningToeslagenJaar: Math.round(sc.supportLossAnnual),
+          watJeEchtExtraOverhoudtMaand: Math.round(sc.disposableChangeMonthly),
+          watJeEchtExtraOverhoudtJaar: Math.round(sc.disposableChangeAnnual),
+          marginaleDrukPercentage: Math.round(sc.marginalPressure),
+          werkelijkVoordeelPerUur: sc.effectiveGainPerHour > 0 ? (Math.round(sc.effectiveGainPerHour * 100) / 100) : 0
+        }
+      };
+      const jsonStr = JSON.stringify(reportData, null, 2);
+      const blob = new Blob([jsonStr], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Vooruit_Financieel_Overzicht_2026_V26.8 Final.json";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 300);
+      showToast("JSON rapport succesvol gedownload!", "success");
+    } catch (err) {
+      showToast("Fout bij exporteren naar JSON: " + err.message, "error");
+    }
+  };
+
+  window.exportReportCsv = function() {
+    try {
+      const profile = readProfile();
+      const h = VOORUIT_ENGINE.buildHousehold(profile);
+      const who = $("scenarioWho") ? $("scenarioWho").value : "self";
+      const changeVal = Number($("scenarioRange")?.value) || Number($("quickRange")?.value) || 0;
+      const sc = VOORUIT_ENGINE.scenario(h, changeVal, who);
+
+      const rows = [
+        ["Onderdeel", "Bedrag / Waarde", "Frequentie"],
+        ["Toetsingsinkomen huishouden (jaar)", Math.round(h.householdGrossAnnual), "per jaar"],
+        ["Netto inkomen", Math.round(h.totalNetMonthly), "per maand"],
+        ["Zorgtoeslag", h.zorgMonthly, "per maand"],
+        ["Huurtoeslag", h.huurMonthly, "per maand"],
+        ["Kindgebonden budget", h.kgbMonthly, "per maand"],
+        ["Totaal toeslagen", h.totalSupportMonthly, "per maand"],
+        ["Besteedbaar vóór vaste lasten", Math.round(h.disposableMonthly), "per maand"],
+        ["Vaste lasten", Math.round(h.costs), "per maand"],
+        ["Resterende financiële ruimte", Math.round(h.financialRoomMonthly), "per maand"],
+        ["Geschatte inkomstenbelasting", Math.round(h.totalTaxAnnual || (h.ownTaxAnnual + (h.partnerTaxAnnual || 0))), "per jaar"],
+        ["--- SCENARIO ONDERZOEK ---", "", ""],
+        ["Gekozen bruto verandering", changeVal, "per maand"],
+        ["Extra netto op bankrekening", Math.round(sc.netWageChangeMonthly), "per maand"],
+        ["Toeslageneffect", Math.round(sc.supportChangeMonthly), "per maand"],
+        ["Wat je écht overhoudt (maand)", Math.round(sc.disposableChangeMonthly), "per maand"],
+        ["Wat je écht overhoudt (jaar)", Math.round(sc.disposableChangeAnnual), "per jaar"],
+        ["Marginale druk", Math.round(sc.marginalPressure) + "%", ""],
+        ["Werkelijk voordeel per extra uur", sc.effectiveGainPerHour ? euro(sc.effectiveGainPerHour) : "—", "per gewerkt uur"]
+      ];
+      const csvContent = "\uFEFF" + rows.map(e => e.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(";")).join("\r\n");
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Vooruit_Financieel_Overzicht_2026_V26.8 Final.csv";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 300);
+      showToast("CSV overzicht succesvol gedownload!", "success");
+    } catch (err) {
+      showToast("Fout bij exporteren naar CSV: " + err.message, "error");
+    }
+  };
+
+  // INITIALISATIE: altijd starten met een lege nieuwe berekening.
+  // Opgeslagen gegevens worden niet automatisch geladen.
+  go(0);
+})();
+</script>
+
+
+</body></html>
