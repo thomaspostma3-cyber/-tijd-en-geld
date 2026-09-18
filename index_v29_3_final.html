@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vooruit — Financiële Preventie</title>
+  <meta name="description" content="Financiële preventie en inzicht voor 2026 op basis van actuele Nederlandse fiscale regels, uitkeringen en toeslagen.">
+  <meta property="og:title" content="Vooruit — Financiële Preventie">
+  <meta property="og:description" content="Financiële preventie en inzicht voor 2026 op basis van actuele Nederlandse fiscale regels, uitkeringen en toeslagen.">
+  <style>
+:root{--ink:#0f172a;--ink-secondary:#334155;--muted:#64748b;--line:#e2e8f0;--line-light:#f1f5f9;--soft-bg:#f8fafc;--card-bg:#fff;--primary:#2563eb;--primary-hover:#1d4ed8;--primary-soft:#eff6ff;--good:#059669;--good-soft:#ecfdf5;--good-border:#a7f3d0;--warn:#d97706;--warn-soft:#fffbeb;--warn-border:#fde68a;--bad:#dc2626;--bad-soft:#fef2f2;--bad-border:#fecaca;--radius-sm:10px;--radius-md:16px;--radius-lg:24px}*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{background:var(--soft-bg);color:var(--ink);font-feature-settings:"cv02", "cv03", "cv04", "cv11", "tnum";font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;line-height:1.55}.top-nav{z-index:40;-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);background:#fffffff2;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;display:flex;position:sticky;top:0}.brand-wrap{letter-spacing:-.02em;color:var(--ink);align-items:baseline;gap:6px;font-size:20px;font-weight:800;display:flex}.brand-wrap span{color:var(--muted);font-size:14px;font-weight:500}.top-controls{align-items:center;gap:8px;display:flex}.main-shell{width:100%;max-width:720px;margin:0 auto;padding:20px 16px 120px}.wizard-nav{align-items:center;gap:12px;margin-bottom:20px;display:flex}.btn-back{border:1px solid var(--line);color:var(--ink);border-radius:var(--radius-sm);cursor:pointer;background:#fff;flex-shrink:0;justify-content:center;align-items:center;width:44px;height:44px;font-size:18px;transition:background .15s,border-color .15s;display:flex}.btn-back:hover{background:#f1f5f9;border-color:#cbd5e1}.progress-track{background:var(--line);border-radius:99px;flex:1;height:6px;overflow:hidden}.progress-fill{background:var(--primary);border-radius:99px;width:10%;height:100%;transition:width .25s;display:block}.step-label{color:var(--muted);white-space:nowrap;font-size:13px;font-weight:700}.page-view{display:none}.page-view.active{animation:.2s ease-out fadeIn;display:block}@keyframes fadeIn{0%{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.card{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;padding:28px;box-shadow:0 4px 20px #0f172a0a}.step-eyebrow{text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:8px;font-size:12px;font-weight:800}h1{letter-spacing:-.03em;color:var(--ink);margin:0 0 10px;font-size:28px;font-weight:800;line-height:1.25}h2{letter-spacing:-.02em;color:var(--ink);margin:24px 0 12px;font-size:20px;font-weight:800}.subtitle{color:var(--muted);margin:0 0 22px;font-size:15px;line-height:1.5}.option-btn{border:1.5px solid var(--line);border-radius:var(--radius-md);text-align:left;cursor:pointer;width:100%;min-height:58px;color:var(--ink);background:#fff;align-items:center;gap:14px;margin:10px 0;padding:16px;font-size:15px;transition:border-color .15s,background .15s,box-shadow .15s;display:flex}.option-btn:hover{background:#f8fafc;border-color:#93c5fd}.option-btn.selected{border-color:var(--primary);background:var(--primary-soft);box-shadow:0 0 0 2px var(--primary) inset}.option-icon{width:24px;height:24px;color:var(--primary);flex-shrink:0}.option-btn small{color:var(--muted);margin-top:2px;font-size:13px;font-weight:400;display:block}.form-field{margin:18px 0}.form-field label{color:var(--ink);margin-bottom:8px;font-size:14px;font-weight:700;display:block}.form-input{border:1.5px solid var(--line);border-radius:var(--radius-sm);width:100%;color:var(--ink);background:#fff;outline:none;padding:13px 14px;font-family:inherit;font-size:16px;transition:border-color .15s,box-shadow .15s}.form-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px #2563eb26}select.form-input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-position:right 14px center;background-repeat:no-repeat;padding-right:38px}.field-hint{color:var(--muted);margin-top:6px;font-size:12px;line-height:1.45}.field-error{color:var(--bad);margin-top:6px;font-size:13px;font-weight:600}.form-grid{grid-template-columns:1fr 1fr;gap:12px;display:grid}.toggle-row{border-bottom:1px solid var(--line);color:var(--ink);justify-content:space-between;align-items:center;padding:14px 0;font-size:15px;display:flex}.toggle-row input[type=checkbox]{width:22px;height:22px;accent-color:var(--primary);cursor:pointer}.btn-group{gap:12px;margin-top:26px;display:flex}.btn{border-radius:var(--radius-sm);cursor:pointer;border:0;justify-content:center;align-items:center;gap:8px;min-height:50px;padding:14px 20px;font-family:inherit;font-size:15px;font-weight:700;text-decoration:none;transition:background .15s,transform 50ms;display:inline-flex}.btn:active{transform:scale(.98)}.btn-primary{background:var(--primary);color:#fff;flex:1.4}.btn-primary:hover{background:var(--primary-hover)}.btn-secondary{color:var(--ink);background:#f1f5f9;flex:1}.btn-secondary:hover{background:#e2e8f0}.banner{border-radius:var(--radius-md);margin:14px 0;padding:14px 16px;font-size:14px;line-height:1.5}.banner-good{background:var(--good-soft);color:#065f46;border:1px solid var(--good-border)}.banner-warn{background:var(--warn-soft);color:#92400e;border:1px solid var(--warn-border)}.banner-bad{background:var(--bad-soft);color:#991b1b;border:1px solid var(--bad-border)}.money-overview-card{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;margin:20px 0;padding:24px;box-shadow:0 6px 24px #0f172a0a}.money-hero-box{border:2px solid var(--line);border-radius:var(--radius-md);text-align:center;background:#f8fafc;margin-bottom:20px;padding:22px}.money-hero-title{text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px;font-size:14px;font-weight:700}.money-hero-amount{letter-spacing:-.04em;color:var(--good);margin:4px 0;font-size:46px;font-weight:900;line-height:1.1}.money-hero-amount.deficit{color:var(--bad)}.money-hero-subtitle{color:var(--ink-secondary);font-size:16px;font-weight:700}.money-summary-table{border-collapse:collapse;width:100%;font-size:15px}.money-summary-row{border-bottom:1px solid var(--line-light);justify-content:space-between;align-items:center;padding:13px 0;display:flex}.money-summary-row.total-row{border-top:2px solid var(--ink);border-bottom:0;margin-top:6px;padding-top:16px;font-size:17px;font-weight:800}.money-summary-label{color:var(--ink-secondary);align-items:center;gap:8px;font-weight:600;display:flex}.money-summary-val{color:var(--ink);font-size:16px;font-weight:700}.money-summary-val.pos{color:var(--good)}.money-summary-val.neg{color:#b91c1c}.sub-card{border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;margin:18px 0;padding:20px}.sub-card h3{color:var(--ink);margin:0 0 12px;font-size:17px;font-weight:800}.support-item-row{border-bottom:1px solid var(--line-light);justify-content:space-between;padding:10px 0;font-size:14px;display:flex}.support-item-row:last-child{border-bottom:0}.teaser-box{border-radius:var(--radius-md);background:linear-gradient(135deg,#eff6ff,#f8fbff);border:1.5px solid #bfdbfe;flex-direction:column;gap:12px;margin:22px 0;padding:20px;display:flex}.teaser-title{color:#1e40af;margin:0;font-size:17px;font-weight:800}.teaser-text{color:#334155;margin:0;font-size:14px;line-height:1.5}.work-compare-card{border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;margin:20px 0;padding:24px}.conclusion-card{border-radius:var(--radius-md);text-align:center;background:#f0fdf4;border:2px solid #bbf7d0;margin:18px 0;padding:20px}.conclusion-kicker{text-transform:uppercase;letter-spacing:.08em;color:#15803d;margin-bottom:4px;font-size:12px;font-weight:800}.conclusion-amount{color:#15803d;letter-spacing:-.03em;margin:6px 0;font-size:36px;font-weight:900}.conclusion-sentence{color:#166534;margin:0;font-size:15px;font-weight:700}.compare-table-wrap{-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--radius-md);margin:18px 0;overflow-x:auto}.compare-table{border-collapse:collapse;text-align:left;background:#fff;width:100%;min-width:480px;font-size:14px}.compare-table th{color:var(--muted);text-transform:uppercase;letter-spacing:.05em;border-bottom:1.5px solid var(--line);white-space:nowrap;background:#f8fafc;padding:12px 14px;font-size:12px;font-weight:800}.compare-table td{border-bottom:1px solid var(--line-light);vertical-align:middle;white-space:nowrap;padding:14px}.compare-table tr:last-child td{border-bottom:0}.compare-table tr.current-row{background:#f0fdf4;font-weight:700}.compare-table tr.current-row td:first-child{border-left:3px solid #16a34a}.badge-now{color:#fff;background:#15803d;border-radius:99px;margin-left:6px;padding:2px 7px;font-size:10px;font-weight:800;display:inline-block}.col-gain{color:var(--good);font-size:15px;font-weight:800}.disclaimer-note{color:var(--muted);margin-top:14px;font-size:12px;font-style:italic;line-height:1.5}.details-accordion{border-top:1px solid var(--line);margin-top:24px;padding-top:16px}.details-accordion summary{cursor:pointer;color:var(--ink-secondary);outline:none;font-size:14px;font-weight:700}.details-accordion summary:hover{color:var(--primary)}.details-inner{color:#475467;margin-top:14px;font-size:13px;line-height:1.6}html[dir=rtl] body{text-align:right}html[dir=rtl] .top-nav,html[dir=rtl] .wizard-nav,html[dir=rtl] .option-btn,html[dir=rtl] .money-summary-row,html[dir=rtl] .support-item-row,html[dir=rtl] .compare-table th,html[dir=rtl] .compare-table td{direction:rtl}html[dir=rtl] .badge-now{margin-left:0;margin-right:6px}html[dir=rtl] .btn-back{transform:rotate(180deg)}@media (width<=600px){.card{border-radius:var(--radius-md);padding:20px 16px}h1{font-size:24px}.form-grid{grid-template-columns:1fr}.money-hero-amount{font-size:38px}.btn-group{flex-direction:column}.btn-primary,.btn-secondary{flex:100%;width:100%}.compare-table{min-width:100%}}@media print{.top-nav,.wizard-nav,.btn-group,.details-accordion{display:none!important}.main-shell{max-width:100%;padding:0}.card{box-shadow:none;border:0}}
+  </style>
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="brand-wrap">Vooruit <span data-i18n="brand_sub">• financial prevention</span></div>
+  <div class="top-controls">
+    <button id="btnDownloadHtml" class="btn btn-secondary" style="min-height:38px;padding:6px 12px;font-size:13px;" data-i18n-title="download_btn" title="Download HTML">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+      <span data-i18n="download_btn">Download HTML</span>
+    </button>
+    <select id="languageSelect" class="form-input" style="width:auto;padding:6px 28px 6px 10px;min-height:38px;font-size:13px;font-weight:600;">
+      <option value="nl">Nederlands</option>
+      <option value="en">English</option>
+      <option value="de">Deutsch</option>
+      <option value="pl">Polski</option>
+      <option value="tr">Türkçe</option>
+      <option value="ar">العربية</option>
+      <option value="uk">Українська</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="pt">Português</option>
+      <option value="ro">Română</option>
+      <option value="bg">Български</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
+</header>
+
+<main class="main-shell">
+  <div class="wizard-nav">
+    <button id="btnBack" class="btn-back" aria-label="Back" style="visibility:hidden;">←</button>
+    <div class="progress-track"><div id="progressFill" class="progress-fill" style="width: 10%;"></div></div>
+    <div id="stepCounter" class="step-label">Start</div>
+  </div>
+
+  <!-- Page 0: Start -->
+  <section class="page-view active" id="p0">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p0_eyebrow">Start</div>
+      <h1 data-i18n="p0_title">What would you like quick insight into?</h1>
+      <p class="subtitle" data-i18n="p0_sub">A few short questions. An estimate is fine.</p>
+
+      <button class="option-btn selected" data-goal="income">
+        <svg class="option-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+        <span><b data-i18n="p0_opt_money_t">My money</b><small data-i18n="p0_opt_money_d">How much comes in and what do I have left?</small></span>
+      </button>
+
+      <button class="option-btn" data-goal="extra">
+        <svg class="option-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <span><b data-i18n="p0_opt_extra_t">Extra work</b><small data-i18n="p0_opt_extra_d">What does working more really yield after tax and allowances?</small></span>
+      </button>
+
+      <button class="option-btn" data-goal="change">
+        <svg class="option-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"></path><path d="M4 20L21 3"></path><path d="M21 16v5h-5"></path><path d="M15 15l6 6"></path><path d="M4 4l5 5"></path></svg>
+        <span><b data-i18n="p0_opt_change_t">A change</b><small data-i18n="p0_opt_change_d">What happens to my money with a different income?</small></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Page 1: Inkomen -->
+  <section class="page-view" id="p1">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p1_eyebrow">Income</div>
+      <h1 data-i18n="p1_title">How do you earn your money?</h1>
+      <p class="subtitle" data-i18n="p1_sub">Choose your situation and enter an indication.</p>
+
+      <div class="banner banner-warn" style="margin-bottom:16px;" data-i18n-html="p1_banner"><b>Note: enter your gross amount.</b> Gross is what you earn before tax and deductions. Vooruit calculates the net amount and your allowances automatically.</div>
+
+      <button class="option-btn selected" data-work="employee">
+        <span><b data-i18n="p1_opt_employee">I am employed</b></span>
+      </button>
+      <button class="option-btn" data-work="benefit">
+        <span><b data-i18n="p1_opt_benefit">I mainly receive a benefit</b></span>
+      </button>
+      <button class="option-btn" data-work="both">
+        <span><b data-i18n="p1_opt_both">I work and receive a benefit</b></span>
+      </button>
+      <button class="option-btn" data-work="zzp">
+        <span><b data-i18n="p1_opt_zzp">I am self-employed / freelancer</b></span>
+      </button>
+
+      <div class="form-field">
+        <label for="income" data-i18n="p1_lbl_income">Gross income per month (€)</label>
+        <input id="income" class="form-input" inputmode="decimal" placeholder="e.g. 3,000" data-i18n-ph="p1_ph_income">
+        <div class="field-hint" data-i18n="p1_hint_income">Enter your gross amount (before tax).</div>
+        <div id="e1" class="field-error"></div>
+      </div>
+
+      <div id="zzpBox" style="display:none;">
+        <div class="form-field">
+          <label for="zzpProfit" data-i18n="p1_lbl_zzp">Expected business profit per year (€)</label>
+          <input id="zzpProfit" class="form-input" inputmode="decimal" placeholder="e.g. 36,000" data-i18n-ph="p1_ph_zzp">
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="holidayPct" data-i18n="p1_lbl_holiday">Holiday allowance (%)</label>
+          <input id="holidayPct" class="form-input" inputmode="decimal" value="8" placeholder="8">
+        </div>
+        <div class="form-field">
+          <label for="bonusAnnual" data-i18n="p1_lbl_bonus">13th month / annual bonus</label>
+          <input id="bonusAnnual" class="form-input" inputmode="decimal" placeholder="e.g. 2,500" data-i18n-ph="p1_ph_bonus">
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_prev">← Previous</button>
+        <button id="btnStep1Next" class="btn btn-primary" data-i18n="btn_next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 2: Werk (Uren & Uurloon) -->
+  <section class="page-view" id="p2">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p2_eyebrow">Work</div>
+      <h1 data-i18n="p2_title">Hours and hourly wage</h1>
+      <p class="subtitle" data-i18n="p2_sub">This allows Vooruit to calculate what extra work will bring you.</p>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="hours" data-i18n="p2_lbl_hours">Hours per week</label>
+          <input id="hours" class="form-input" inputmode="decimal" placeholder="e.g. 28" data-i18n-ph="p2_ph_hours">
+        </div>
+        <div class="form-field">
+          <label for="hourly" data-i18n="p2_lbl_hourly">Gross hourly wage (€)</label>
+          <input id="hourly" class="form-input" inputmode="decimal" placeholder="e.g. 22.50" data-i18n-ph="p2_ph_hourly">
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_prev">← Previous</button>
+        <button class="btn btn-primary btn-step-go" data-next-page="3" data-i18n="btn_next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 3: Wonen -->
+  <section class="page-view" id="p3">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p3_eyebrow">Housing</div>
+      <h1 data-i18n="p3_title">What is your housing situation?</h1>
+      <p class="subtitle" data-i18n="p3_sub">Important to determine if you are entitled to rent allowance.</p>
+
+      <button class="option-btn selected" data-house="rent">
+        <span><b data-i18n="p3_opt_rent_t">I rent a home</b><small data-i18n="p3_opt_rent_d">We only ask for your base rent</small></span>
+      </button>
+      <button class="option-btn" data-house="buy">
+        <span><b data-i18n="p3_opt_buy_t">I own a home</b><small data-i18n="p3_opt_buy_d">With mortgage or paid off</small></span>
+      </button>
+      <button class="option-btn" data-house="other">
+        <span><b data-i18n="p3_opt_other_t">Other</b><small data-i18n="p3_opt_other_d">Living with family or temporary</small></span>
+      </button>
+
+      <div id="rentBox" class="form-field">
+        <label for="rent" data-i18n="p3_lbl_rent">Base rent per month (€)</label>
+        <input id="rent" class="form-input" inputmode="decimal" placeholder="e.g. 750" data-i18n-ph="p3_ph_rent">
+        <div class="field-hint" data-i18n="p3_hint_rent">Excluding service charges.</div>
+      </div>
+
+      <div id="buyBox" class="form-field" style="display:none;">
+        <label for="woz" data-i18n="p3_lbl_woz">Property value (WOZ) (€)</label>
+        <input id="woz" class="form-input" inputmode="decimal" placeholder="e.g. 375,000" data-i18n-ph="p3_ph_woz">
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_prev">← Previous</button>
+        <button class="btn btn-primary btn-step-go" data-next-page="4" data-i18n="btn_next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 4: Huishouden -->
+  <section class="page-view" id="p4">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p4_eyebrow">Household</div>
+      <h1 data-i18n="p4_title">Do you have a partner?</h1>
+      <p class="subtitle" data-i18n="p4_sub">A partner's income counts for allowances.</p>
+
+      <button class="option-btn" data-partner="yes">
+        <span><b data-i18n="p4_opt_yes_t">Yes</b><small data-i18n="p4_opt_yes_d">Married or cohabiting fiscal partner</small></span>
+      </button>
+      <button class="option-btn selected" data-partner="no">
+        <span><b data-i18n="p4_opt_no_t">No</b><small data-i18n="p4_opt_no_d">Single</small></span>
+      </button>
+
+      <div id="partnerBox" class="form-field" style="display:none;">
+        <label for="partnerIncome" data-i18n="p4_lbl_partner_income">Gross partner income per month (€)</label>
+        <input id="partnerIncome" class="form-input" inputmode="decimal" placeholder="e.g. 2,200" data-i18n-ph="p4_ph_partner_income">
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_prev">← Previous</button>
+        <button class="btn btn-primary btn-step-go" data-next-page="5" data-i18n="btn_next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 5: Regelingen & Gezin -->
+  <section class="page-view" id="p5">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p5_eyebrow">Family &amp; Schemes</div>
+      <h1 data-i18n="p5_title">Children and age</h1>
+      <p class="subtitle" data-i18n="p5_sub">Needed for proper tax credits and child-related budget.</p>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="age" data-i18n="p5_lbl_age">Your age</label>
+          <input id="age" class="form-input" inputmode="numeric" placeholder="e.g. 32" data-i18n-ph="p5_ph_age">
+        </div>
+        <div class="form-field">
+          <label for="wealth" data-i18n="p5_lbl_wealth">Savings (€)</label>
+          <input id="wealth" class="form-input" inputmode="decimal" placeholder="e.g. 8,000" data-i18n-ph="p5_ph_wealth">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label data-i18n="p5_lbl_kids">Do you have children under 18?</label>
+        <div class="form-grid">
+          <button class="option-btn" data-kids="yes"><span><b data-i18n="p5_opt_kids_yes">Yes</b></span></button>
+          <button class="option-btn selected" data-kids="no"><span><b data-i18n="p5_opt_kids_no">No</b></span></button>
+        </div>
+      </div>
+
+      <div id="childBox" class="form-field" style="display:none;">
+        <label for="childCount" data-i18n="p5_lbl_child_count">Number of children</label>
+        <input id="childCount" class="form-input" inputmode="numeric" placeholder="e.g. 2" data-i18n-ph="p5_ph_child_count">
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_prev">← Previous</button>
+        <button class="btn btn-primary btn-step-go" data-next-page="6" data-i18n="btn_next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 6: Vaste Lasten -->
+  <section class="page-view" id="p6">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p6_eyebrow">Expenses</div>
+      <h1 data-i18n="p6_title">What are your fixed expenses?</h1>
+      <p class="subtitle" data-i18n="p6_sub">Everything you spend each month. An estimate is fine.</p>
+
+      <div class="form-field">
+        <label for="costs" data-i18n="p6_lbl_costs">Fixed expenses per month (€)</label>
+        <input id="costs" class="form-input" inputmode="decimal" placeholder="e.g. 1,850" data-i18n-ph="p6_ph_costs">
+        <div class="field-hint" data-i18n="p6_hint_costs">Rent or mortgage, energy, water, healthcare insurance, and subscriptions.</div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_prev">← Previous</button>
+        <button id="btnStep6Next" class="btn btn-primary" data-i18n="btn_view_overview">View overview →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 7: Uitkering -->
+  <section class="page-view" id="p6b">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p7_eyebrow">Benefits</div>
+      <h1 data-i18n="p7_title">Which benefit do you receive?</h1>
+      <p class="subtitle" data-i18n="p7_sub">Vooruit applies current 2026 offset rules.</p>
+
+      <div class="form-field">
+        <label for="benefitType" data-i18n="p7_lbl_type">Benefit type</label>
+        <select id="benefitType" class="form-input">
+          <option value="none" data-i18n="p7_opt_none">No benefit</option>
+          <option value="ww" data-i18n="p7_opt_ww">WW (Unemployment)</option>
+          <option value="participation" data-i18n="p7_opt_bijstand">Social assistance (Bijstand)</option>
+          <option value="wia" data-i18n="p7_opt_wia">WIA (Disability)</option>
+          <option value="wajong" data-i18n="p7_opt_wajong">Wajong</option>
+          <option value="zw" data-i18n="p7_opt_zw">Sickness benefit (ZW)</option>
+          <option value="aow" data-i18n="p7_opt_aow">AOW / State Pension</option>
+          <option value="other" data-i18n="p7_opt_other">Other benefit</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="benefitGross" data-i18n="p7_lbl_gross">Gross benefit per month (€)</label>
+        <input id="benefitGross" class="form-input" inputmode="decimal" placeholder="e.g. 1,800" data-i18n-ph="p7_ph_gross">
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_prev">← Previous</button>
+        <button id="btnStep7Next" class="btn btn-primary" data-i18n="btn_view_overview">View overview →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 8: HOOFDSCHERM (JOUW OVERZICHT) -->
+  <section class="page-view" id="p7">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p8_eyebrow">Your Result • 2026</div>
+      <h1 data-i18n="p8_title">This is your financial picture</h1>
+      <p class="subtitle" data-i18n="p8_sub">Immediate insight into what comes in, what goes out, and what remains.</p>
+
+      <div class="money-hero-box">
+        <div class="money-hero-title" data-i18n="p8_hero_title">This is your financial picture</div>
+        <div id="heroOverviewAmount" class="money-hero-amount">€ 0</div>
+        <div id="heroOverviewSubtitle" class="money-hero-subtitle" data-i18n="per_month_left">left per month</div>
+      </div>
+
+      <div id="overviewStatusBanner" class="banner banner-good"></div>
+
+      <div class="money-overview-card" style="margin-top:0;">
+        <div class="money-summary-table">
+          <div class="money-summary-row">
+            <span class="money-summary-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span data-i18n="lbl_net_wage">Income (in your bank account after tax)</span>
+            </span>
+            <span id="overviewNetWage" class="money-summary-val pos">+ € 0</span>
+          </div>
+
+          <div class="money-summary-row">
+            <span class="money-summary-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span data-i18n="lbl_support">Benefits / allowances</span>
+            </span>
+            <span id="overviewSupport" class="money-summary-val pos">+ € 0</span>
+          </div>
+
+          <div class="money-summary-row">
+            <span class="money-summary-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M3 10h18M5 10v10h14V10M9 20v-6h6v6"></path></svg>
+              <span data-i18n="lbl_costs">Fixed expenses</span>
+            </span>
+            <span id="overviewCosts" class="money-summary-val neg">− € 0</span>
+          </div>
+
+          <div class="money-summary-row total-row">
+            <span class="money-summary-label" data-i18n="lbl_left_after_costs">Left after fixed expenses</span>
+            <span id="overviewLeftAfterCosts" class="money-summary-val pos">€ 0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card">
+        <h3 data-i18n="support_breakdown_title">Included benefits &amp; allowances</h3>
+        <div class="support-item-row">
+          <span data-i18n="zorgtoeslag">Healthcare allowance</span>
+          <b id="overviewZorgtoeslag">€ 0</b>
+        </div>
+        <div class="support-item-row">
+          <span data-i18n="huurtoeslag">Housing allowance</span>
+          <b id="overviewHuurtoeslag">€ 0</b>
+        </div>
+        <div class="support-item-row">
+          <span data-i18n="kgb">Child-related budget</span>
+          <b id="overviewKgb">€ 0</b>
+        </div>
+      </div>
+
+      <div id="overviewWarningsBox" class="banner banner-warn" style="display:none;"></div>
+
+      <div class="teaser-box">
+        <h3 class="teaser-title" data-i18n="p8_teaser_title">What happens if you work more?</h3>
+        <p class="teaser-text" data-i18n="p8_teaser_text">Vooruit calculates gross wage changes, tax credits, and shifts in allowances to show what truly remains.</p>
+        <button id="btnToScenario" class="btn btn-primary" style="margin-top:6px;" data-i18n="cta_more_work">See what extra work yields →</button>
+      </div>
+
+      <div class="btn-group" style="flex-wrap:wrap;">
+        <button class="btn btn-secondary btn-step-prev" data-i18n="btn_adjust">← Adjust data</button>
+        <button id="btnDownloadFromOverview" class="btn btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          <span data-i18n="download_app_btn">Download app (.html)</span>
+        </button>
+        <button id="btnRestart" class="btn btn-secondary" data-i18n="btn_restart">Start over</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 9: EXTRA WERKEN (TABEL & CONCLUSIE) -->
+  <section class="page-view" id="p8">
+    <div class="card">
+      <div class="step-eyebrow" data-i18n="p9_eyebrow">Work Choices • 2026</div>
+      <h1 data-i18n="p9_title">What happens if you work more?</h1>
+      <p class="subtitle" data-i18n="p9_sub">See directly what working more leaves you with — after taxes and allowances.</p>
+
+      <div id="extraWorkConclusion" class="conclusion-card">
+        <div class="conclusion-kicker" data-i18n="conclusion_kicker">Conclusion</div>
+        <div class="conclusion-amount">+ € 0</div>
+        <p class="conclusion-sentence">1 uur extra werken levert jou ongeveer <b>€ 0 per maand</b> extra op.</p>
+      </div>
+
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th data-i18n="col_hours">Hours per week</th>
+              <th data-i18n="col_extra_income">Extra income</th>
+              <th data-i18n="col_support">Allowances</th>
+              <th data-i18n="col_really_extra">Truly extra left</th>
+            </tr>
+          </thead>
+          <tbody id="extraWorkTableBody">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="disclaimer-note" data-i18n="disclaimer_text">“Vooruit takes tax and benefit changes into account. Your actual final amount may differ slightly in practice.”</div>
+
+      <details class="details-accordion">
+        <summary data-i18n="accordion_summary">Calculation details &amp; background</summary>
+        <div class="details-inner" id="extraWorkTechDetails">
+        </div>
+      </details>
+
+      <div class="btn-group" style="flex-wrap:wrap;margin-top:28px;">
+        <button id="btnBackToOverview" class="btn btn-secondary" data-i18n="btn_back_overview">← Back to overview</button>
+        <button id="btnDownloadFromExtra" class="btn btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          <span data-i18n="download_app_btn">Download app (.html)</span>
+        </button>
+        <button id="btnExportJson" class="btn btn-secondary" data-i18n="btn_export_json">Export JSON</button>
+        <button id="btnExportCsv" class="btn btn-secondary" data-i18n="btn_export_csv">Export CSV</button>
+        <button class="btn btn-secondary" onclick="window.print()" data-i18n="btn_print">Print / PDF</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+var e={meta:{version:`29.3`,release:`Final`,country:`NL`,taxYear:2026,verifiedSources:[`Belastingdienst Box 1 schijventarief 2026`,`Belastingdienst Algemene Heffingskorting 2026`,`Belastingdienst Arbeidskorting 2026`,`Dienst Toeslagen Zorgtoeslagtabel 2026`,`Dienst Toeslagen Huurtoeslag Formule 2026 (TG 083-1Z62FD)`,`Dienst Toeslagen Kindgebonden Budget 2026`,`Zorgverzekeringswet (Zvw) tarief 2026 (4,85% max € 79.409)`,`UWV Verrekenregels WW, WIA, Wajong, Bijstand`]},taxBox1(e,t){let n=Math.max(0,e);return t?n<=38883?n*.1785:n<=78426?6940.6155+(n-38883)*.3756:21792.9663+(n-78426)*.495:n<=38883?n*.3575:n<=78426?38883*.3575+(n-38883)*.3756:28753.0233+(n-78426)*.495},generalCredit(e,t){let n=Math.max(0,e);return t?n<=29736?1556:n<=78426?Math.max(0,1556-.03195*(n-29736)):0:n<=29736?3115:n<=78426?Math.max(0,3115-.06398*(n-29736)):0},employmentCredit(e,t){let n=Math.max(0,e);return n<=0?0:t?n<=11965?.04156*n:n<=25845?498+.15483*(n-11965):n<=45592?2647+.00974*(n-25845):n<=132920?Math.max(0,2840-.0325*(n-45592)):0:n<=11965?.08324*n:n<=25845?996+.31009*(n-11965):n<=45592?5300+.0195*(n-25845):n<=132920?Math.max(0,5685-.0651*(n-45592)):0},iack(e,t,n,r){let i=Math.max(0,e);return!t||!n||i<=6239?0:Math.min(r?1513:3032,(r?.0572:.1145)*(i-6239))},elderlyCredit(e,t){if(!t)return 0;let n=Math.max(0,e);return n<=46002?2067:n<=59782?Math.max(0,2067-.15*(n-46002)):0},eigenWoningAftrek(e,t){let n=Math.max(0,e),r=Math.max(0,t);if(n<=0&&r<=0)return 0;let i=0;i=n<=12500?0:n<=25e3?n*.001:n<=5e4?n*.002:n<=75e3?n*.0025:n<=135e4?n*.0035:4725+(n-135e4)*.0235;let a=i-r;return a<=0?a:a*(1-.71867)},zzpTaxDeductions(e,t,n){let r=Math.max(0,e);if(r<=0)return{taxableProfit:0,zelfstandigenaftrek:0,mkbVrijstelling:0};let i=t?n?600:1200:0,a=Math.max(0,r-i),o=a*.127;return{taxableProfit:Math.max(0,a-o),zelfstandigenaftrek:i,mkbVrijstelling:o}},zvwContribution(e,t){let n=79409,r=Math.max(0,n-Math.min(n,Math.max(0,t)));return Math.min(r,Math.max(0,e))*.0485},zorgtoeslag(e,t,n,r){if(!r)return 0;let i=t?184633:146011,a=t?51142:40857;if(n>i||e>a)return 0;let o=t?[[29500,246],[3e4,243],[30500,238],[31e3,232],[31500,226],[32e3,221],[32500,215],[33e3,209],[33500,203],[34e3,198],[34500,192],[35e3,186],[35500,180],[36e3,175],[36500,169],[37e3,163],[37500,158],[38e3,152],[38500,146],[39e3,140],[39500,135],[4e4,129],[40500,123],[41e3,118],[41500,112],[42e3,106],[42500,100],[43e3,95],[43500,89],[44e3,83],[44500,78],[45e3,72],[45500,66],[46e3,60],[46500,55],[47e3,49],[47500,43],[48e3,37],[48500,32],[49e3,26],[49500,20],[5e4,15],[50500,9],[51e3,3],[51142,0]]:[[29500,129],[3e4,126],[30500,120],[31e3,114],[31500,109],[32e3,103],[32500,97],[33e3,91],[33500,86],[34e3,80],[34500,74],[35e3,69],[35500,63],[36e3,57],[36500,51],[37e3,46],[37500,40],[38e3,34],[38500,28],[39e3,23],[39500,17],[4e4,11],[40500,6],[40857,0]];if(e<=o[0][0])return o[0][1];if(e>=a)return 0;for(let t=0;t<o.length-1;t++){let[n,r]=o[t],[i,a]=o[t+1];if(e<=i){let t=r+(a-r)*((e-n)/(i-n));return Math.max(0,Math.round(t))}}return 0},huurtoeslag(e,t,n,r,i){if(t<=0||i>(r>=2?76958:38479)||n<18)return 0;let a=n<21,o=Math.min(Math.max(0,t),a?498.2:932.93),s=r===1?214.52:212.71;if(o<=s)return 0;let c=498.2,l=r<=2?713.02:764.14,u=Math.max(0,Math.min(o,c)-s),d=0,f=0;a||(d=Math.max(0,Math.min(o,l)-c)*.65,f=Math.max(0,o-l)*.4);let p=r===1?23425:31500,m=r===1?.27:.22,h=Math.max(0,(e-p)*m/12);return Math.max(0,Math.floor(u+d+f-h))},kindgebondenBudget(e,t,n,r){if(!r||!r.length||n>(t?184633:146011))return 0;let i=r.length,a=i===1?2580:i===2?5160:5160+(i-2)*2580;t||(a+=3416),a+=r.filter(e=>e>=12&&e<=15).length*724,a+=r.filter(e=>e>=16&&e<=17).length*964;let o=Math.max(0,e-(t?39141:29736))*.076;return Math.max(0,(a-o)/12)},benefitEffect(e,t,n){let r=Number(t)||0,i=String(e||``).toLowerCase(),a=n||{};if(r===0||i===`none`)return{effect:0,retained:r,status:`none`,label:``};if(i===`ww`){let e=r*.7,t=!1;return r>0&&a.monthlyWage&&a.monthlyWage>0&&(a.currentWage||0)+r>a.monthlyWage*.875&&(t=!0),{effect:-e,retained:r*.3,status:`estimate`,threshold:t,label:r>0?`WW: UWV verrekent indicatief 70% van je extra bruto loon. 30% houd je extra over. Let op: als je 2 maanden achter elkaar meer dan 87,5% van je WW-maandloon verdient, kan je WW stoppen.`:`WW: Bij minder werken vangt het UWV indicatief 70% van je inkomensdaling op via een hogere uitkering.`}}if(i===`participation`||i===`bijstand`||i===`participatie`)return{effect:-r,retained:0,status:`estimate`,threshold:!1,label:r>0?`Bijstand / Participatiewet: inkomen uit werk wordt in beginsel 100% verrekend met de uitkering, behoudens eventuele gemeentelijke vrijlatingen.`:`Bijstand / Participatiewet: bij inkomensdaling vult de bijstandsnorm in beginsel aan tot de geldende bijstandsnorm.`};if(i===`wajong`){let e=a.noWorkCapacity?.75:.7;return{effect:-r*e,retained:r*(1-e),status:`estimate`,threshold:!1,label:`Wajong: indicatief wordt `+Math.round(e*100)+`% van inkomsten uit werk verrekend.`}}return i===`wia`?{effect:-r*.7,retained:r*.3,status:`estimate`,threshold:!1,label:`WIA (WGA/IVA): inkomsten uit werk worden doorgaans voor 70% verrekend met de WIA.`}:i===`zw`||i===`ziektewet`?{effect:-r*.7,retained:r*.3,status:`estimate`,threshold:!1,label:`Ziektewet: inkomen uit werk wordt volgens de UWV-normen verrekend (indicatief 70%).`}:i===`wao`||i===`waz`?{effect:0,retained:r,status:`needsOfficial`,threshold:!1,label:`Bij `+i.toUpperCase()+` vindt de verrekening vaak achteraf plaats via een herbeoordeling door UWV.`}:i===`aow`?{effect:0,retained:r,status:`unlimited`,threshold:!1,label:r>0?`AOW / Pensioen: inkomen uit werk mag onbeperkt worden bijverdiend en wordt niet gekort op je AOW.`:`AOW / Pensioen: een daling van inkomen uit werk heeft geen invloed op je AOW-uitkering.`}:{effect:0,retained:r,status:`needsOfficial`,threshold:!1,label:`Het effect van extra inkomen op deze regeling kan variëren.`}},buildHousehold(e){let t=Array.isArray(e.childAges)?e.childAges:[],n=Number(e.childCount)||t.length,r=e.holidayPct===void 0?8:Number(e.holidayPct),i={...e,holidayPct:r,employmentMonthly:Number(e.employmentMonthly)||0,bonusAnnual:Number(e.bonusAnnual)||0,withheldAnnual:Number(e.withheldAnnual)||0,hours:Number(e.hours)||0,hourly:Number(e.hourly)||0,zzpProfit:Number(e.zzpProfit)||0,rent:Number(e.rent)||0,woz:Number(e.woz)||0,mortgageInterest:Number(e.mortgageInterest)||0,mortgageDebt:Number(e.mortgageDebt)||0,hasPartner:!!e.hasPartner,partnerIncome:Number(e.partnerIncome)||0,isInsured:e.isInsured!==!1,age:Number(e.age)||30,wealth:Number(e.wealth)||0,childCount:n,childAges:t,costs:Number(e.costs)||0,benefitGross:Number(e.benefitGross)||0,benefitDuration:Number(e.benefitDuration)||0,benefitType:e.benefitType||`none`},a=i.age>=67,o=i.holidayPct/100,s=i.employmentMonthly,c=s>0?s*12*(1+o)+i.bonusAnnual:0,l=i.workType===`zzp`?i.zzpProfit:0,u=this.zzpTaxDeductions(l,i.zzpHourCheck,a).taxableProfit,d=i.benefitGross,f=d*12,p=i.hasPartner?i.partnerIncome:0,m=p>0?p*12*(1+o):0,h=c+u+f,g=h+m,_=c+l+f+m,v=i.house===`buy`?this.eigenWoningAftrek(i.woz,i.mortgageInterest):0,y=Math.max(0,h+v),b=y+m,x=g,S=this.taxBox1(y,a),C=this.generalCredit(y,a),w=c+u>0?this.employmentCredit(c+l,a):0,T=this.elderlyCredit(y,a),E=i.childAges.some(e=>e<12),D=this.iack(c+u,E,!i.hasPartner,a),O=Math.min(S,C+w+T+D),k=Math.max(0,S-O),A=i.workType===`zzp`?this.zvwContribution(u,c):0,j=Math.max(0,c+l+f-k-A),M=j/12,N=0,P=0;if(i.hasPartner&&m>0){let e=this.taxBox1(m,!1),t=Math.min(e,this.generalCredit(m,!1)+this.employmentCredit(m,!1));P=Math.max(0,e-t),N=Math.max(0,m-P)}let F=N/12,I=(i.hasPartner?2:1)+i.childCount,L=i.age>=18&&i.isInsured?this.zorgtoeslag(g,i.hasPartner,i.wealth,i.isInsured):0,R=i.house===`rent`?this.huurtoeslag(g,i.rent,i.age,I,i.wealth):0,z=this.kindgebondenBudget(g,i.hasPartner,i.wealth,i.childAges),B=L+R+z,V=M+F,H=V+B,U=H-i.costs,W=[],G=d>0&&s>0;if(G&&W.push(`Je hebt tegelijk loon en een uitkering. Controleer dat de loonheffingskorting maar bij ÉÉN uitbetaler wordt toegepast om een hoge belastingnabetaling te voorkomen.`),i.isInsured){let e=i.hasPartner?51142:40857;g>e?W.push(`Je gezamenlijk inkomen ligt boven de zorgtoeslaggrens 2026 (€ `+e.toLocaleString(`nl-NL`)+`). Er is geen recht op zorgtoeslag.`):e-g<3500&&W.push(`Toeslagenval: je inkomen ligt dicht bij de bovengrens voor zorgtoeslag (€ `+e.toLocaleString(`nl-NL`)+`). Extra inkomen kan de hele zorgtoeslag doen vervallen.`)}if(i.house===`rent`){let e=I>=2?76958:38479;i.wealth>e?W.push(`Vermogen boven huurtoeslaggrens 2026 (€ `+e.toLocaleString(`nl-NL`)+`). Geen recht op huurtoeslag.`):e-i.wealth<5e3&&i.wealth>0&&W.push(`Je vermogen nadert de vermogensgrens voor huurtoeslag (€ `+e.toLocaleString(`nl-NL`)+`).`)}return i.workType===`zzp`&&W.push(`Zzp-reservering: zet maandelijks voldoende opzij voor inkomstenbelasting en de inkomensafhankelijke Zvw-bijdrage (4,85%).`),U<0&&W.push(`Tekort: je vaste lasten zijn hoger dan je geschatte besteedbare inkomen. Neem maatregelen om betalingsachterstanden te voorkomen.`),{inputs:i,grossIncomeAnnual:_,taxableIncomeAnnual:b,toetsingsinkomenAnnual:x,ownWorkAnnual:c,zzpRawProfit:l,zzpTaxable:u,benefitAnnual:f,partnerAnnual:m,householdGrossAnnual:g,ownGrossAnnual:h,ownTaxAnnual:k,partnerTaxAnnual:P,totalTaxAnnual:k+P,zzpZvw:A,ownNetAnnual:j,ownNetMonthly:M,partnerNetMonthly:F,totalNetMonthly:V,zorgMonthly:L,huurMonthly:R,kgbMonthly:z,totalSupportMonthly:B,supportMonthly:B,disposableMonthly:H,costs:i.costs,costsMonthly:i.costs,financialRoomMonthly:U,warnings:W,multipleIncome:G}},scenario(e,t,n,r){let i=Number(t)||0,a=JSON.parse(JSON.stringify(e.inputs));if(n===`partner`)a.partnerIncome=Math.max(0,a.partnerIncome+i);else if(a.workType===`benefit`){if(a.benefitType&&a.benefitType!==`none`&&i>0){a.employmentMonthly=Math.max(0,(a.employmentMonthly||0)+i);let e=this.benefitEffect(a.benefitType,i,{monthlyWage:a.benefitMonthlyWage||a.benefitGross,currentWage:0});a.benefitGross=Math.max(0,a.benefitGross+e.effect)}else a.benefitGross=Math.max(0,a.benefitGross+i)}else if(a.workType===`zzp`)a.zzpProfit=Math.max(0,a.zzpProfit+i*12);else if(a.workType===`both`){let e=a.employmentMonthly;if(a.employmentMonthly=Math.max(0,e+i),i!==0){let t=this.benefitEffect(a.benefitType,i,{monthlyWage:a.benefitMonthlyWage||a.benefitGross,currentWage:e});a.benefitGross=Math.max(0,a.benefitGross+t.effect)}}else a.employmentMonthly=Math.max(0,a.employmentMonthly+i);let o=this.buildHousehold(a),s=i*(1+(Number(a.holidayPct)||0)/100),c=i*12,l=o.totalNetMonthly-e.totalNetMonthly,u=l*12,d=o.totalSupportMonthly-e.totalSupportMonthly,f=d*12,p=Math.max(0,-f),m=Math.max(0,f),h=o.ownTaxAnnual+(o.partnerTaxAnnual||0)-(e.ownTaxAnnual+(e.partnerTaxAnnual||0)),g=o.disposableMonthly-e.disposableMonthly,_=g*12,v=_,y=0;s>0&&(y=Math.max(0,Math.min(100,100-g/s*100)));let b=r||{},x=e.inputs,S=b.hourlyRate!==void 0&&b.hourlyRate>0?b.hourlyRate:x.hourly&&x.hourly>0?x.hourly:0;!S&&x.hours>0&&x.employmentMonthly>0&&(S=x.employmentMonthly/(x.hours*(52/12)));let C=0;C=b.extraHoursPerWeek!==void 0&&b.extraHoursPerWeek!==null?Number(b.extraHoursPerWeek):S>0?s/(52/12*S):0;let w=C*52,T=C*52/12,E=w===0?0:_/w;return{base:e,next:o,grossChangeMonthly:s,grossChangeAnnual:c,netWageChangeMonthly:l,netWageChangeAnnual:u,supportChangeMonthly:d,supportChangeAnnual:f,supportLossAnnual:p,supportGainAnnual:m,taxChangeAnnual:h,disposableChangeMonthly:g,disposableChangeAnnual:_,yearlyDisposableChange:v,marginalPressure:y,hourlyRate:S,extraHoursPerMonth:T,extraHoursPerYear:w,extraHoursPerWeek:C,effectiveGainPerHour:E}}};
+
+var t = new Set(['ar']);
+var n = {"nl": {"app_title": "Vooruit — financiële preventie", "brand_sub": "• financiële preventie", "download_btn": "Download HTML", "download_app_btn": "Download app (.html)", "step_0": "Start", "step_1": "Inkomen", "step_2": "Werk", "step_3": "Wonen", "step_4": "Huishouden", "step_5": "Gezin & Regelingen", "step_6": "Lasten", "step_7": "Uitkering", "step_8": "Overzicht", "step_9": "Extra werken", "btn_prev": "← Vorige", "btn_next": "Verder →", "btn_view_overview": "Bekijk overzicht →", "btn_adjust": "← Aanpassen", "btn_restart": "Opnieuw beginnen", "btn_back_overview": "← Terug naar overzicht", "btn_export_json": "Exporteer JSON", "btn_export_csv": "Exporteer CSV", "btn_print": "Print / PDF", "btn_back_aria": "Terug", "unit_hours": "uur", "badge_now": "Nu", "p0_eyebrow": "Start", "p0_title": "Waar wil je snel inzicht in?", "p0_sub": "Een paar korte vragen. Een schatting is prima.", "p0_opt_money_t": "Mijn geld", "p0_opt_money_d": "Hoeveel komt er binnen en wat houd ik over?", "p0_opt_extra_t": "Extra werken", "p0_opt_extra_d": "Wat levert meer werken mij écht op na belasting en toeslagen?", "p0_opt_change_t": "Een verandering", "p0_opt_change_d": "Wat gebeurt er met mijn geld bij een ander inkomen?", "p1_eyebrow": "Inkomen", "p1_title": "Hoe komt je geld binnen?", "p1_sub": "Kies je situatie en vul een indicatie in.", "p1_banner": "<b>Let op: vul je bruto bedrag in.</b> Bruto is wat je verdient vóór belasting en inhoudingen. Vooruit berekent het netto bedrag en je toeslagen automatisch voor je.", "p1_opt_employee": "Ik werk in loondienst", "p1_opt_benefit": "Ik ontvang vooral een uitkering", "p1_opt_both": "Ik werk én ontvang een uitkering", "p1_opt_zzp": "Ik ben zzp'er / zelfstandig ondernemer", "p1_lbl_income": "Bruto inkomen per maand (€)", "p1_hint_income": "Vul je bruto bedrag in (vóór belasting).", "p1_ph_income": "bijv. 3.000", "p1_lbl_zzp": "Verwachte winst uit onderneming per jaar (€)", "p1_ph_zzp": "bijv. 36.000", "p1_lbl_holiday": "Vakantiegeld (%)", "p1_lbl_bonus": "13e maand / bonus (jaar)", "p1_ph_bonus": "bijv. 2.500", "p1_err_income": "Vul een bruto inkomen of winst in.", "p2_eyebrow": "Werk", "p2_title": "Uren en uurloon", "p2_sub": "Hiermee kan Vooruit direct voorrekenen wat extra werken je oplevert.", "p2_lbl_hours": "Uren per week", "p2_ph_hours": "bijv. 28", "p2_lbl_hourly": "Bruto uurloon (€)", "p2_ph_hourly": "bijv. 22,50", "p3_eyebrow": "Wonen", "p3_title": "Hoe woon je?", "p3_sub": "Belangrijk om te weten of je recht hebt op huurtoeslag.", "p3_opt_rent_t": "Ik huur een woning", "p3_opt_rent_d": "We vragen alleen je kale huur", "p3_opt_buy_t": "Ik heb een koopwoning", "p3_opt_buy_d": "Met hypotheek of afbetaald", "p3_opt_other_t": "Anders", "p3_opt_other_d": "Inwonend of tijdelijk", "p3_lbl_rent": "Kale huur per maand (€)", "p3_hint_rent": "Zonder servicekosten.", "p3_ph_rent": "bijv. 750", "p3_lbl_woz": "WOZ-waarde woning (€)", "p3_ph_woz": "bijv. 375.000", "p4_eyebrow": "Huishouden", "p4_title": "Heb je een partner?", "p4_sub": "Voor toeslagen telt het inkomen van een partner mee.", "p4_opt_yes_t": "Ja", "p4_opt_yes_d": "Getrouwd of samenwonend fiscaal partner", "p4_opt_no_t": "Nee", "p4_opt_no_d": "Alleenstaand", "p4_lbl_partner_income": "Bruto inkomen partner per maand (€)", "p4_ph_partner_income": "bijv. 2.200", "p5_eyebrow": "Gezin & Regelingen", "p5_title": "Kinderen en leeftijd", "p5_sub": "Nodig voor de juiste belastingkortingen en kindgebonden budget.", "p5_lbl_age": "Je leeftijd", "p5_ph_age": "bijv. 32", "p5_lbl_wealth": "Spaargeld (€)", "p5_ph_wealth": "bijv. 8.000", "p5_lbl_kids": "Heb je kinderen jonger dan 18 jaar?", "p5_opt_kids_yes": "Ja", "p5_opt_kids_no": "Nee", "p5_lbl_child_count": "Aantal kinderen", "p5_ph_child_count": "bijv. 2", "p6_eyebrow": "Lasten", "p6_title": "Wat zijn je vaste lasten?", "p6_sub": "Alles wat je iedere maand kwijt bent. Een schatting is prima.", "p6_lbl_costs": "Vaste lasten per maand (€)", "p6_hint_costs": "Huur of hypotheek, energie, water, zorgverzekering en abonnementen.", "p6_ph_costs": "bijv. 1.850", "p7_eyebrow": "Uitkering", "p7_title": "Welke uitkering ontvang je?", "p7_sub": "Vooruit rekent de actuele verrekenregels voor 2026 door.", "p7_lbl_type": "Type uitkering", "p7_opt_none": "Geen uitkering", "p7_opt_ww": "WW (Werkloosheidswet)", "p7_opt_bijstand": "Bijstand / Participatiewet", "p7_opt_wia": "WIA (WGA / IVA)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Ziektewet", "p7_opt_aow": "AOW / Pensioen", "p7_opt_other": "Andere uitkering", "p7_lbl_gross": "Bruto uitkering per maand (€)", "p7_ph_gross": "bijv. 1.800", "p8_eyebrow": "Jouw resultaat • 2026", "p8_title": "Zo staat je geld ervoor", "p8_sub": "Direct inzicht in wat er binnenkomt, wat eruit gaat en wat er overblijft.", "p8_hero_title": "Zo staat je geld ervoor", "per_month_left": "per maand over", "per_month_deficit": "per maand tekort", "lbl_net_wage": "Inkomen (op je rekening na belasting)", "lbl_support": "Toeslagen", "lbl_costs": "Vaste lasten", "lbl_left_after_costs": "Over na vaste lasten", "support_breakdown_title": "Welke toeslagen tellen mee?", "zorgtoeslag": "Zorgtoeslag", "huurtoeslag": "Huurtoeslag", "kgb": "Kindgebonden budget", "p8_teaser_title": "Wat gebeurt er als je meer gaat werken?", "p8_teaser_text": "Vooruit rekent niet alleen je brutoloon om, maar kijkt ook naar heffingskortingen en wat er met je toeslagen gebeurt. Zo zie je precies wat er onder de streep overblijft.", "cta_more_work": "Bekijk wat extra werken oplevert →", "banner_deficit_prefix": "Let op:", "banner_deficit_text": "Je vaste lasten zijn <b>{amount} per maand hoger</b> dan wat er binnenkomt. Bekijk direct of je uitgaven kunt verlagen of aanspraak maakt op extra regelingen.", "banner_warn_prefix": "Kleine buffer:", "banner_warn_text": "Je houdt ongeveer <b>{amount} per maand</b> over. Een onverwachte uitgave kan snel druk geven.", "banner_good_prefix": "Stabiel:", "banner_good_text": "Je houdt naar schatting <b>{amount} per maand</b> over na alle vaste lasten en toeslagen.", "warnings_title": "Aandachtspunten:", "p9_eyebrow": "Werkkeuze • 2026", "p9_title": "Wat gebeurt er als je meer gaat werken?", "p9_sub": "Zie direct wat meer werken je onderaan de streep oplevert — na belasting én toeslagen.", "conclusion_kicker": "Conclusie", "conclusion_sentence": "1 uur extra werken levert jou ongeveer <b>{amount} per maand</b> extra op.", "col_hours": "Uren per week", "col_extra_income": "Extra inkomen", "col_support": "Toeslagen", "col_really_extra": "Echt extra over", "disclaimer_text": "“Vooruit houdt rekening met veranderingen in belasting en toeslagen. Je uiteindelijke bedrag kan in de praktijk iets afwijken.”", "accordion_summary": "Uitleg & achtergrond van de berekening", "p9_details_intro": "Rekenkamer details bij 1 uur extra werk (+ {amount} bruto/mnd):", "p9_details_net": "Extra netto loon van werkgever:", "p9_details_support": "Verandering toeslagen:", "p9_details_tax": "Extra belasting & heffingskortingseffect:", "p9_details_total": "Uiteindelijk echt extra over:", "p9_per_month": "/ mnd", "toast_downloaded": "App gedownload als zelfstandig HTML-bestand!", "toast_json": "JSON rapport succesvol gedownload!", "toast_csv": "CSV overzicht succesvol gedownload!"}, "en": {"app_title": "Vooruit — Financial Prevention", "brand_sub": "• financial prevention", "download_btn": "Download HTML", "download_app_btn": "Download app (.html)", "step_0": "Start", "step_1": "Income", "step_2": "Work", "step_3": "Housing", "step_4": "Household", "step_5": "Family & Schemes", "step_6": "Expenses", "step_7": "Benefits", "step_8": "Overview", "step_9": "Extra work", "btn_prev": "← Previous", "btn_next": "Next →", "btn_view_overview": "View overview →", "btn_adjust": "← Adjust data", "btn_restart": "Start over", "btn_back_overview": "← Back to overview", "btn_export_json": "Export JSON", "btn_export_csv": "Export CSV", "btn_print": "Print / PDF", "btn_back_aria": "Back", "unit_hours": "hrs", "badge_now": "Now", "p0_eyebrow": "Start", "p0_title": "What would you like quick insight into?", "p0_sub": "A few short questions. An estimate is fine.", "p0_opt_money_t": "My money", "p0_opt_money_d": "How much comes in and what do I have left?", "p0_opt_extra_t": "Extra work", "p0_opt_extra_d": "What does working more really yield after tax and allowances?", "p0_opt_change_t": "A change", "p0_opt_change_d": "What happens to my money with a different income?", "p1_eyebrow": "Income", "p1_title": "How do you earn your money?", "p1_sub": "Choose your situation and enter an indication.", "p1_banner": "<b>Note: enter your gross amount.</b> Gross is what you earn before tax and deductions. Vooruit calculates the net amount and your allowances automatically.", "p1_opt_employee": "I am employed", "p1_opt_benefit": "I mainly receive a benefit", "p1_opt_both": "I work and receive a benefit", "p1_opt_zzp": "I am self-employed / freelancer", "p1_lbl_income": "Gross income per month (€)", "p1_hint_income": "Enter your gross amount (before tax).", "p1_ph_income": "e.g. 3,000", "p1_lbl_zzp": "Expected business profit per year (€)", "p1_ph_zzp": "e.g. 36,000", "p1_lbl_holiday": "Holiday allowance (%)", "p1_lbl_bonus": "13th month / annual bonus", "p1_ph_bonus": "e.g. 2,500", "p1_err_income": "Enter a gross income or profit.", "p2_eyebrow": "Work", "p2_title": "Hours and hourly wage", "p2_sub": "This allows Vooruit to calculate what extra work will bring you.", "p2_lbl_hours": "Hours per week", "p2_ph_hours": "e.g. 28", "p2_lbl_hourly": "Gross hourly wage (€)", "p2_ph_hourly": "e.g. 22.50", "p3_eyebrow": "Housing", "p3_title": "What is your housing situation?", "p3_sub": "Important to determine if you are entitled to rent allowance.", "p3_opt_rent_t": "I rent a home", "p3_opt_rent_d": "We only ask for your base rent", "p3_opt_buy_t": "I own a home", "p3_opt_buy_d": "With mortgage or paid off", "p3_opt_other_t": "Other", "p3_opt_other_d": "Living with family or temporary", "p3_lbl_rent": "Base rent per month (€)", "p3_hint_rent": "Excluding service charges.", "p3_ph_rent": "e.g. 750", "p3_lbl_woz": "Property value (WOZ) (€)", "p3_ph_woz": "e.g. 375,000", "p4_eyebrow": "Household", "p4_title": "Do you have a partner?", "p4_sub": "A partner's income counts for allowances.", "p4_opt_yes_t": "Yes", "p4_opt_yes_d": "Married or cohabiting fiscal partner", "p4_opt_no_t": "No", "p4_opt_no_d": "Single", "p4_lbl_partner_income": "Gross partner income per month (€)", "p4_ph_partner_income": "e.g. 2,200", "p5_eyebrow": "Family & Schemes", "p5_title": "Children and age", "p5_sub": "Needed for proper tax credits and child-related budget.", "p5_lbl_age": "Your age", "p5_ph_age": "e.g. 32", "p5_lbl_wealth": "Savings (€)", "p5_ph_wealth": "e.g. 8,000", "p5_lbl_kids": "Do you have children under 18?", "p5_opt_kids_yes": "Yes", "p5_opt_kids_no": "No", "p5_lbl_child_count": "Number of children", "p5_ph_child_count": "e.g. 2", "p6_eyebrow": "Expenses", "p6_title": "What are your fixed expenses?", "p6_sub": "Everything you spend each month. An estimate is fine.", "p6_lbl_costs": "Fixed expenses per month (€)", "p6_hint_costs": "Rent or mortgage, energy, water, healthcare insurance, and subscriptions.", "p6_ph_costs": "e.g. 1,850", "p7_eyebrow": "Benefits", "p7_title": "Which benefit do you receive?", "p7_sub": "Vooruit applies current 2026 offset rules.", "p7_lbl_type": "Benefit type", "p7_opt_none": "No benefit", "p7_opt_ww": "WW (Unemployment)", "p7_opt_bijstand": "Social assistance (Bijstand)", "p7_opt_wia": "WIA (Disability)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Sickness benefit (ZW)", "p7_opt_aow": "AOW / State Pension", "p7_opt_other": "Other benefit", "p7_lbl_gross": "Gross benefit per month (€)", "p7_ph_gross": "e.g. 1,800", "p8_eyebrow": "Your Result • 2026", "p8_title": "This is your financial picture", "p8_sub": "Immediate insight into what comes in, what goes out, and what remains.", "p8_hero_title": "This is your financial picture", "per_month_left": "left per month", "per_month_deficit": "deficit per month", "lbl_net_wage": "Income (in your bank account after tax)", "lbl_support": "Benefits / allowances", "lbl_costs": "Fixed expenses", "lbl_left_after_costs": "Left after fixed expenses", "support_breakdown_title": "Included benefits & allowances", "zorgtoeslag": "Healthcare allowance", "huurtoeslag": "Housing allowance", "kgb": "Child-related budget", "p8_teaser_title": "What happens if you work more?", "p8_teaser_text": "Vooruit calculates gross wage changes, tax credits, and shifts in allowances to show what truly remains.", "cta_more_work": "See what extra work yields →", "banner_deficit_prefix": "Attention:", "banner_deficit_text": "Your fixed expenses are <b>{amount} per month higher</b> than your income. Review if you can reduce expenses or claim extra schemes.", "banner_warn_prefix": "Small buffer:", "banner_warn_text": "You have about <b>{amount} per month</b> left. An unexpected expense could cause strain.", "banner_good_prefix": "Stable:", "banner_good_text": "You have an estimated <b>{amount} per month</b> left after all fixed expenses and allowances.", "warnings_title": "Points of attention:", "p9_eyebrow": "Work Choices • 2026", "p9_title": "What happens if you work more?", "p9_sub": "See directly what working more leaves you with — after taxes and allowances.", "conclusion_kicker": "Conclusion", "conclusion_sentence": "Working 1 extra hour gives you about <b>{amount} per month</b> extra.", "col_hours": "Hours per week", "col_extra_income": "Extra income", "col_support": "Allowances", "col_really_extra": "Truly extra left", "disclaimer_text": "“Vooruit takes tax and benefit changes into account. Your actual final amount may differ slightly in practice.”", "accordion_summary": "Calculation details & background", "p9_details_intro": "Audit details for 1 extra hour of work (+ {amount} gross/month):", "p9_details_net": "Extra net wage from employer:", "p9_details_support": "Change in allowances:", "p9_details_tax": "Extra tax & tax credit impact:", "p9_details_total": "Truly extra left:", "p9_per_month": "/ mo", "toast_downloaded": "App downloaded as standalone HTML file!", "toast_json": "JSON report successfully downloaded!", "toast_csv": "CSV overview successfully downloaded!"}, "de": {"app_title": "Vooruit — Finanzielle Prävention", "brand_sub": "• Finanzielle Prävention", "download_btn": "HTML herunterladen", "download_app_btn": "App herunterladen (.html)", "step_0": "Start", "step_1": "Einkommen", "step_2": "Arbeit", "step_3": "Wohnen", "step_4": "Haushalt", "step_5": "Familie & Hilfen", "step_6": "Fixkosten", "step_7": "Leistungen", "step_8": "Übersicht", "step_9": "Mehrarbeit", "btn_prev": "← Zurück", "btn_next": "Weiter →", "btn_view_overview": "Übersicht ansehen →", "btn_adjust": "← Anpassen", "btn_restart": "Neu starten", "btn_back_overview": "← Zurück zur Übersicht", "btn_export_json": "JSON exportieren", "btn_export_csv": "CSV exportieren", "btn_print": "Drucken / PDF", "btn_back_aria": "Zurück", "unit_hours": "Std", "badge_now": "Jetzt", "p0_eyebrow": "Start", "p0_title": "Worin möchten Sie schnellen Einblick erhalten?", "p0_sub": "Ein paar kurze Fragen. Eine Schätzung genügt.", "p0_opt_money_t": "Mein Geld", "p0_opt_money_d": "Wie viel kommt herein und was bleibt mir übrig?", "p0_opt_extra_t": "Mehrarbeit", "p0_opt_extra_d": "Was bringt Mehrarbeit wirklich nach Steuern und Zulagen?", "p0_opt_change_t": "Eine Veränderung", "p0_opt_change_d": "Was passiert mit meinem Geld bei einem anderen Einkommen?", "p1_eyebrow": "Einkommen", "p1_title": "Wie setzt sich Ihr Einkommen zusammen?", "p1_sub": "Wählen Sie Ihre Situation und geben Sie einen Schätzwert an.", "p1_banner": "<b>Hinweis: Bruttobetrag angeben.</b> Brutto ist der Betrag vor Steuern und Abzügen. Vooruit berechnet das Netto und Zulagen automatisch.", "p1_opt_employee": "Ich bin angestellt", "p1_opt_benefit": "Ich beziehe überwiegend Leistungen", "p1_opt_both": "Ich arbeite und beziehe Leistungen", "p1_opt_zzp": "Ich bin selbstständig / Freiberufler", "p1_lbl_income": "Bruttoeinkommen pro Monat (€)", "p1_hint_income": "Geben Sie Ihr Brutto ein (vor Steuern).", "p1_ph_income": "z.B. 3.000", "p1_lbl_zzp": "Erwarteter Unternehmensgewinn pro Jahr (€)", "p1_ph_zzp": "z.B. 36.000", "p1_lbl_holiday": "Urlaubsgeld (%)", "p1_lbl_bonus": "13. Monatsgehalt / Jahresbonus", "p1_ph_bonus": "z.B. 2.500", "p1_err_income": "Geben Sie ein Bruttoeinkommen oder einen Gewinn ein.", "p2_eyebrow": "Arbeit", "p2_title": "Arbeitsstunden und Stundenlohn", "p2_sub": "Damit berechnet Vooruit sofort den Ertrag von Mehrarbeit.", "p2_lbl_hours": "Stunden pro Woche", "p2_ph_hours": "z.B. 28", "p2_lbl_hourly": "Brutto-Stundenlohn (€)", "p2_ph_hourly": "z.B. 22,50", "p3_eyebrow": "Wohnen", "p3_title": "Wie wohnen Sie?", "p3_sub": "Wichtig zur Prüfung des Wohngeldanspruchs.", "p3_opt_rent_t": "Ich wohne zur Miete", "p3_opt_rent_d": "Wir fragen nur nach der Kaltmiete", "p3_opt_buy_t": "Ich habe Wohneigentum", "p3_opt_buy_d": "Mit Hypothek oder abbezahlt", "p3_opt_other_t": "Sonstiges", "p3_opt_other_d": "Untermiete oder vorübergehend", "p3_lbl_rent": "Kaltmiete pro Monat (€)", "p3_hint_rent": "Ohne Nebenkosten.", "p3_ph_rent": "z.B. 750", "p3_lbl_woz": "Immobilienwert (WOZ) (€)", "p3_ph_woz": "z.B. 375.000", "p4_eyebrow": "Haushalt", "p4_title": "Haben Sie einen Partner?", "p4_sub": "Für Zulagen zählt das Partnereinkommen mit.", "p4_opt_yes_t": "Ja", "p4_opt_yes_d": "Verheiratet oder zusammenlebend", "p4_opt_no_t": "Nein", "p4_opt_no_d": "Alleinstehend", "p4_lbl_partner_income": "Bruttoeinkommen des Partners pro Monat (€)", "p4_ph_partner_income": "z.B. 2.200", "p5_eyebrow": "Familie & Hilfen", "p5_title": "Kinder und Alter", "p5_sub": "Erforderlich für Steuerfreibeträge und Kinderzulage.", "p5_lbl_age": "Ihr Alter", "p5_ph_age": "z.B. 32", "p5_lbl_wealth": "Ersparnisse (€)", "p5_ph_wealth": "z.B. 8.000", "p5_lbl_kids": "Haben Sie Kinder unter 18 Jahren?", "p5_opt_kids_yes": "Ja", "p5_opt_kids_no": "Nein", "p5_lbl_child_count": "Anzahl Kinder", "p5_ph_child_count": "z.B. 2", "p6_eyebrow": "Fixkosten", "p6_title": "Wie hoch sind Ihre Fixkosten?", "p6_sub": "Alles, was monatlich anfällt. Eine Schätzung genügt.", "p6_lbl_costs": "Fixkosten pro Monat (€)", "p6_hint_costs": "Miete/Hypothek, Energie, Wasser, Krankenversicherung und Abos.", "p6_ph_costs": "z.B. 1.850", "p7_eyebrow": "Leistungen", "p7_title": "Welche Leistung beziehen Sie?", "p7_sub": "Vooruit berücksichtigt die aktuellen Regeln für 2026.", "p7_lbl_type": "Art der Leistung", "p7_opt_none": "Keine Leistung", "p7_opt_ww": "WW (Arbeitslosengeld)", "p7_opt_bijstand": "Bijstand (Grundsicherung)", "p7_opt_wia": "WIA (Erwerbsminderung)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Krankengeld (ZW)", "p7_opt_aow": "AOW / Rente", "p7_opt_other": "Andere Leistung", "p7_lbl_gross": "Bruttoleistung pro Monat (€)", "p7_ph_gross": "z.B. 1.800", "p8_eyebrow": "Ihr Ergebnis • 2026", "p8_title": "So steht es um Ihr Geld", "p8_sub": "Direkter Überblick über Einnahmen, Ausgaben und verbleibendes Geld.", "p8_hero_title": "So steht es um Ihr Geld", "per_month_left": "pro Monat übrig", "per_month_deficit": "Defizit pro Monat", "lbl_net_wage": "Netto auf dem Konto nach Steuern", "lbl_support": "Zuschüsse", "lbl_costs": "Fixkosten", "lbl_left_after_costs": "Übrig nach Fixkosten", "support_breakdown_title": "Berücksichtigte Zuschüsse", "zorgtoeslag": "Krankenversicherungszuschuss", "huurtoeslag": "Wohngeld", "kgb": "Kindergebundenes Budget", "p8_teaser_title": "Was passiert, wenn Sie mehr arbeiten?", "p8_teaser_text": "Vooruit berechnet Steuern, Freibeträge und Zulagenänderungen mit ein, um den tatsächlichen Nettozuwachs zu zeigen.", "cta_more_work": "Ergebnis für Mehrarbeit ansehen →", "banner_deficit_prefix": "Achtung:", "banner_deficit_text": "Ihre Fixkosten sind <b>{amount} pro Monat höher</b> als Ihre Einnahmen. Prüfen Sie Ausgaben oder Förderungen.", "banner_warn_prefix": "Kleiner Puffer:", "banner_warn_text": "Sie haben etwa <b>{amount} pro Monat</b> übrig. Unerwartete Ausgaben können belasten.", "banner_good_prefix": "Stabil:", "banner_good_text": "Sie haben geschätzt <b>{amount} pro Monat</b> nach allen Fixkosten und Zulagen übrig.", "warnings_title": "Wichtige Hinweise:", "p9_eyebrow": "Arbeitsentscheidung • 2026", "p9_title": "Was passiert, wenn Sie mehr arbeiten?", "p9_sub": "Sehen Sie sofort, was Ihnen Mehrarbeit unterm Strich nach Steuern und Zulagen bringt.", "conclusion_kicker": "Fazit", "conclusion_sentence": "1 Stunde Mehrarbeit bringt Ihnen etwa <b>{amount} pro Monat</b> zusätzlich.", "col_hours": "Stunden pro Woche", "col_extra_income": "Zusatzeinkommen", "col_support": "Zuschüsse", "col_really_extra": "Tatsächlich mehr übrig", "disclaimer_text": "“Vooruit berücksichtigt Änderungen bei Steuern und Zuschüssen. Der tatsächliche Betrag kann leicht abweichen.”", "accordion_summary": "Berechnungsdetails & Hintergrund", "p9_details_intro": "Berechnungsdetails bei 1 Stunde Mehrarbeit (+ {amount} brutto/Monat):", "p9_details_net": "Zusätzlicher Nettolohn vom Arbeitgeber:", "p9_details_support": "Änderung bei Zuschüssen:", "p9_details_tax": "Steuer- & Freibetragsauswirkung:", "p9_details_total": "Tatsächlich zusätzlich übrig:", "p9_per_month": "/ Monat", "toast_downloaded": "App als eigenständige HTML-Datei heruntergeladen!", "toast_json": "JSON-Bericht erfolgreich heruntergeladen!", "toast_csv": "CSV-Übersicht erfolgreich heruntergeladen!"}, "pl": {"app_title": "Vooruit — profilaktyka finansowa", "brand_sub": "• profilaktyka finansowa", "download_btn": "Pobierz HTML", "download_app_btn": "Pobierz aplikację (.html)", "step_0": "Start", "step_1": "Dochód", "step_2": "Praca", "step_3": "Mieszkanie", "step_4": "Gospodarstwo", "step_5": "Rodzina i świadczenia", "step_6": "Koszty stałe", "step_7": "Zasiłek", "step_8": "Podsumowanie", "step_9": "Dodatkowa praca", "btn_prev": "← Wstecz", "btn_next": "Dalej →", "btn_view_overview": "Zobacz podsumowanie →", "btn_adjust": "← Zmień dane", "btn_restart": "Zacznij od nowa", "btn_back_overview": "← Powrót do podsumowania", "btn_export_json": "Eksportuj JSON", "btn_export_csv": "Eksportuj CSV", "btn_print": "Drukuj / PDF", "btn_back_aria": "Wstecz", "unit_hours": "godz", "badge_now": "Teraz", "p0_eyebrow": "Start", "p0_title": "W czym chcesz szybko uzyskać orientację?", "p0_sub": "Kilka krótkich pytań. Przybliżenie wystarczy.", "p0_opt_money_t": "Moje finanse", "p0_opt_money_d": "Ile wpływa i ile mi zostaje?", "p0_opt_extra_t": "Dodatkowa praca", "p0_opt_extra_d": "Ile naprawdę daje więcej pracy po podatkach i dodatkach?", "p0_opt_change_t": "Zmiana sytuacji", "p0_opt_change_d": "Co stanie się z moimi pieniędzmi przy innym dochodzie?", "p1_eyebrow": "Dochód", "p1_title": "Jak zarabiasz pieniądze?", "p1_sub": "Wybierz swoją sytuację i podaj orientacyjną kwotę.", "p1_banner": "<b>Uwaga: wpisz kwotę brutto.</b> Brutto to zarobek przed opodatkowaniem. Vooruit automatycznie obliczy kwotę netto i przysługujące dodatki.", "p1_opt_employee": "Pracuję na etacie", "p1_opt_benefit": "Otrzymuję głównie zasiłek", "p1_opt_both": "Pracuję i pobieram zasiłek", "p1_opt_zzp": "Jestem samozatrudniony (ZZP) / przedsiębiorca", "p1_lbl_income": "Dochód brutto miesięcznie (€)", "p1_hint_income": "Podaj kwotę brutto (przed podatkiem).", "p1_ph_income": "np. 3.000", "p1_lbl_zzp": "Oczekiwany zysk roczny z firmy (€)", "p1_ph_zzp": "np. 36.000", "p1_lbl_holiday": "Dodatek urlopowy (%)", "p1_lbl_bonus": "13. pensja / premia roczna (€)", "p1_ph_bonus": "np. 2.500", "p1_err_income": "Wpisz dochód brutto lub zysk.", "p2_eyebrow": "Praca", "p2_title": "Godziny i stawka godzinowa", "p2_sub": "Dzięki temu Vooruit natychmiast wyliczy korzyść z dodatkowej pracy.", "p2_lbl_hours": "Godziny tygodniowo", "p2_ph_hours": "np. 28", "p2_lbl_hourly": "Stawka godzinowa brutto (€)", "p2_ph_hourly": "np. 22,50", "p3_eyebrow": "Mieszkanie", "p3_title": "Jak mieszkasz?", "p3_sub": "Ważne do ustalenia prawa do dodatku mieszkaniowego.", "p3_opt_rent_t": "Wynajmuję mieszkanie", "p3_opt_rent_d": "Pytamy tylko o czynsz podstawowy", "p3_opt_buy_t": "Mam mieszkanie własnościowe", "p3_opt_buy_d": "Z kredytem lub spłacone", "p3_opt_other_t": "Inne", "p3_opt_other_d": "U rodziny lub tymczasowo", "p3_lbl_rent": "Czynsz podstawowy miesięcznie (€)", "p3_hint_rent": "Bez opłat eksploatacyjnych.", "p3_ph_rent": "np. 750", "p3_lbl_woz": "Wartość nieruchomości WOZ (€)", "p3_ph_woz": "np. 375.000", "p4_eyebrow": "Gospodarstwo", "p4_title": "Czy masz partnera?", "p4_sub": "Do dodatków wlicza się dochód partnera fiskalnego.", "p4_opt_yes_t": "Tak", "p4_opt_yes_d": "Partner małżeński lub fiskalny", "p4_opt_no_t": "Nie", "p4_opt_no_d": "Osoba samotna", "p4_lbl_partner_income": "Dochód brutto partnera miesięcznie (€)", "p4_ph_partner_income": "np. 2.200", "p5_eyebrow": "Rodzina i świadczenia", "p5_title": "Dzieci i wiek", "p5_sub": "Niezbędne do ulg podatkowych i budżetu na dzieci.", "p5_lbl_age": "Twój wiek", "p5_ph_age": "np. 32", "p5_lbl_wealth": "Oszczędności (€)", "p5_ph_wealth": "np. 8.000", "p5_lbl_kids": "Czy masz dzieci poniżej 18 lat?", "p5_opt_kids_yes": "Tak", "p5_opt_kids_no": "Nie", "p5_lbl_child_count": "Liczba dzieci", "p5_ph_child_count": "np. 2", "p6_eyebrow": "Koszty stałe", "p6_title": "Jakie masz koszty stałe?", "p6_sub": "Wszystko, co wydajesz każdego miesiąca. Wystarczy szacunek.", "p6_lbl_costs": "Koszty stałe miesięcznie (€)", "p6_hint_costs": "Czynsz/kredyt, media, ubezpieczenie zdrowotne i subskrypcje.", "p6_ph_costs": "np. 1.850", "p7_eyebrow": "Zasiłek", "p7_title": "Jaki zasiłek pobierasz?", "p7_sub": "Vooruit uwzględnia aktualne holenderskie zasady na 2026 r.", "p7_lbl_type": "Rodzaj zasiłku", "p7_opt_none": "Brak zasiłku", "p7_opt_ww": "WW (dla bezrobotnych)", "p7_opt_bijstand": "Bijstand (socjalny)", "p7_opt_wia": "WIA (renta)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Zasiłek chorobowy (ZW)", "p7_opt_aow": "AOW / Emerytura", "p7_opt_other": "Inny zasiłek", "p7_lbl_gross": "Zasiłek brutto miesięcznie (€)", "p7_ph_gross": "np. 1.800", "p8_eyebrow": "Twój wynik • 2026", "p8_title": "Oto stan Twoich finansów", "p8_sub": "Szybki wgląd w to, co wpływa, co wydajesz i co zostaje.", "p8_hero_title": "Oto stan Twoich finansów", "per_month_left": "zostaje miesięcznie", "per_month_deficit": "deficytu miesięcznie", "lbl_net_wage": "Na koncie po odliczeniu podatku", "lbl_support": "Dodatki / zasiłki", "lbl_costs": "Koszty stałe", "lbl_left_after_costs": "Zostaje po kosztach stałych", "support_breakdown_title": "Uwzględnione dodatki", "zorgtoeslag": "Dodatek do ubezpieczenia zdrowotnego", "huurtoeslag": "Dodatek mieszkaniowy", "kgb": "Budżet na dziecko", "p8_teaser_title": "Co się stanie, jeśli będziesz pracować więcej?", "p8_teaser_text": "Vooruit przelicza podatek, ulgi oraz zmiany w dodatkach, pokazując zysk na czysto.", "cta_more_work": "Zobacz co daje dodatkowa praca →", "banner_deficit_prefix": "Uwaga:", "banner_deficit_text": "Koszty stałe są o <b>{amount} miesięcznie wyższe</b> niż dochody. Sprawdź możliwość ograniczenia wydatków.", "banner_warn_prefix": "Mały bufor:", "banner_warn_text": "Zostaje Ci około <b>{amount} miesięcznie</b>. Nieprzewidziany wydatek może być obciążeniem.", "banner_good_prefix": "Stabilnie:", "banner_good_text": "Po opłaceniu kosztów stałych i dodatkach zostaje szacunkowo <b>{amount} miesięcznie</b>.", "warnings_title": "Ważne uwagi:", "p9_eyebrow": "Wybór zawodowy • 2026", "p9_title": "Co się stanie, jeśli będziesz pracować więcej?", "p9_sub": "Zobacz bezpośrednio, ile zyskasz na czysto po podatkach i zmianie dodatków.", "conclusion_kicker": "Wniosek", "conclusion_sentence": "1 dodatkowa godzina pracy daje Ci około <b>{amount} miesięcznie</b> więcej.", "col_hours": "Godziny w tygodniu", "col_extra_income": "Dodatkowy dochód", "col_support": "Dodatki", "col_really_extra": "Naprawdę zostaje na czysto", "disclaimer_text": "“Vooruit uwzględnia zmiany w podatkach i dodatkach. Ostateczna kwota może się nieznacznie różnić w praktyce.”", "accordion_summary": "Szczegóły wyliczeń i podstawa", "p9_details_intro": "Szczegóły kalkulacji przy 1 dodatkowej godzinie pracy (+ {amount} brutto/mies.):", "p9_details_net": "Dodatkowe wynagrodzenie netto od pracodawcy:", "p9_details_support": "Zmiana w dodatkach:", "p9_details_tax": "Wpływ podatków i ulg:", "p9_details_total": "Ostatecznie na czysto zostaje:", "p9_per_month": "/ mies.", "toast_downloaded": "Aplikacja pobrana jako samodzielny plik HTML!", "toast_json": "Raport JSON pobrany pomyślnie!", "toast_csv": "Zestawienie CSV pobrane pomyślnie!"}, "tr": {"app_title": "Vooruit — Finansal Önleme", "brand_sub": "• finansal önleme", "download_btn": "HTML İndir", "download_app_btn": "Uygulamayı indir (.html)", "step_0": "Başlangıç", "step_1": "Gelir", "step_2": "İş", "step_3": "Konut", "step_4": "Hane", "step_5": "Aile ve Yardımlar", "step_6": "Giderler", "step_7": "Ödenek", "step_8": "Genel Bakış", "step_9": "Ekstra çalışma", "btn_prev": "← Geri", "btn_next": "İleri →", "btn_view_overview": "Genel bakışı gör →", "btn_adjust": "← Düzenle", "btn_restart": "Yeniden başla", "btn_back_overview": "← Genel bakışa dön", "btn_export_json": "JSON Dışa Aktar", "btn_export_csv": "CSV Dışa Aktar", "btn_print": "Yazdır / PDF", "btn_back_aria": "Geri", "unit_hours": "saat", "badge_now": "Şimdi", "p0_eyebrow": "Başlangıç", "p0_title": "Hangi konuda hızlı bilgi almak istersiniz?", "p0_sub": "Birkaç kısa soru. Tahmini bir değer yeterlidir.", "p0_opt_money_t": "Param", "p0_opt_money_d": "Ne kadar giriyor ve elime ne kalıyor?", "p0_opt_extra_t": "Ekstra çalışma", "p0_opt_extra_d": "Vergi ve ödeneklerden sonra fazla çalışmak gerçekten ne kazandırır?", "p0_opt_change_t": "Bir değişiklik", "p0_opt_change_d": "Farklı bir gelirde paramın durumu ne olur?", "p1_eyebrow": "Gelir", "p1_title": "Gelirinizi nasıl elde ediyorsunuz?", "p1_sub": "Durumunuzu seçin ve tahmini bir miktar girin.", "p1_banner": "<b>Not: brüt tutarı girin.</b> Brüt, vergi ve kesintilerden önceki kazancınızdır. Vooruit net tutarı ve yardımları otomatik hesaplar.", "p1_opt_employee": "Maaşlı çalışıyorum", "p1_opt_benefit": "Ağırlıklı olarak ödenek alıyorum", "p1_opt_both": "Hem çalışıyorum hem ödenek alıyorum", "p1_opt_zzp": "Serbest meslek sahibiyim / girişimciyim (ZZP)", "p1_lbl_income": "Aylık brüt gelir (€)", "p1_hint_income": "Brüt tutarınızı girin (vergi öncesi).", "p1_ph_income": "örn. 3.000", "p1_lbl_zzp": "Yıllık beklenen ticari kâr (€)", "p1_ph_zzp": "örn. 36.000", "p1_lbl_holiday": "Tatil parası (%)", "p1_lbl_bonus": "13. maaş / yıllık ikramiye", "p1_ph_bonus": "örn. 2.500", "p1_err_income": "Lütfen brüt gelir veya kâr girin.", "p2_eyebrow": "İş", "p2_title": "Çalışma saati ve saat ücreti", "p2_sub": "Böylece Vooruit fazla çalışmanın size ne getireceğini hesaplar.", "p2_lbl_hours": "Haftalık çalışma saati", "p2_ph_hours": "örn. 28", "p2_lbl_hourly": "Brüt saatlik ücret (€)", "p2_ph_hourly": "örn. 22,50", "p3_eyebrow": "Konut", "p3_title": "Nasıl bir konutta yaşıyorsunuz?", "p3_sub": "Kira yardımı hakkını belirlemek için önemlidir.", "p3_opt_rent_t": "Kirada oturuyorum", "p3_opt_rent_d": "Yalnızca çıplak kiranızı soruyoruz", "p3_opt_buy_t": "Kendi evim var", "p3_opt_buy_d": "İpotekli veya borcu bitmiş", "p3_opt_other_t": "Diğer", "p3_opt_other_d": "Aile yanında veya geçici", "p3_lbl_rent": "Aylık çıplak kira (€)", "p3_hint_rent": "Hizmet bedelleri hariç.", "p3_ph_rent": "örn. 750", "p3_lbl_woz": "WOZ konut değeri (€)", "p3_ph_woz": "örn. 375.000", "p4_eyebrow": "Hane", "p4_title": "Eşiniz / partneriniz var mı?", "p4_sub": "Sosyal yardımlar için partnerin geliri hesaba katılır.", "p4_opt_yes_t": "Evet", "p4_opt_yes_d": "Evli veya birlikte yaşayan mali partner", "p4_opt_no_t": "Hayır", "p4_opt_no_d": "Bekar", "p4_lbl_partner_income": "Partnerin aylık brüt geliri (€)", "p4_ph_partner_income": "örn. 2.200", "p5_eyebrow": "Aile ve Yardımlar", "p5_title": "Çocuklar ve yaş", "p5_sub": "Doğru vergi indirimleri ve çocuk ödeneği için gereklidir.", "p5_lbl_age": "Yaşınız", "p5_ph_age": "örn. 32", "p5_lbl_wealth": "Tasarruf (€)", "p5_ph_wealth": "örn. 8.000", "p5_lbl_kids": "18 yaşından küçük çocuğunuz var mı?", "p5_opt_kids_yes": "Evet", "p5_opt_kids_no": "Hayır", "p5_lbl_child_count": "Çocuk sayısı", "p5_ph_child_count": "örn. 2", "p6_eyebrow": "Giderler", "p6_title": "Sabit giderleriniz ne kadar?", "p6_sub": "Her ay yaptığınız harcamalar. Tahmini bir değer yeterlidir.", "p6_lbl_costs": "Aylık sabit giderler (€)", "p6_hint_costs": "Kira/ipotek, enerji, su, sağlık sigortası ve abonelikler.", "p6_ph_costs": "örn. 1.850", "p7_eyebrow": "Ödenek", "p7_title": "Hangi ödeneği alıyorsunuz?", "p7_sub": "Vooruit 2026 yılı güncel mahsup kurallarını uygular.", "p7_lbl_type": "Ödenek türü", "p7_opt_none": "Ödenek yok", "p7_opt_ww": "WW (İşsizlik ödeneği)", "p7_opt_bijstand": "Bijstand (Sosyal yardım)", "p7_opt_wia": "WIA (Malullük ödeneği)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Hastalık ödeneği (ZW)", "p7_opt_aow": "AOW / Emeklilik", "p7_opt_other": "Diğer ödenek", "p7_lbl_gross": "Aylık brüt ödenek (€)", "p7_ph_gross": "örn. 1.800", "p8_eyebrow": "Sonucunuz • 2026", "p8_title": "Paranızın durumu böyle", "p8_sub": "Giren, çıkan ve kalan paraya hızlı genel bakış.", "p8_hero_title": "Paranızın durumu böyle", "per_month_left": "aylık kalan", "per_month_deficit": "aylık açık", "lbl_net_wage": "Vergi sonrası hesabınıza yatan", "lbl_support": "Ödenekler ve yardımlar", "lbl_costs": "Sabit giderler", "lbl_left_after_costs": "Sabit giderlerden sonra kalan", "support_breakdown_title": "Dahil edilen ödenekler", "zorgtoeslag": "Sağlık sigortası yardımı", "huurtoeslag": "Kira yardımı", "kgb": "Çocuk ödeneği", "p8_teaser_title": "Daha fazla çalışırsanız ne olur?", "p8_teaser_text": "Vooruit vergi, indirimler ve yardım değişikliklerini hesaba katarak elinize ne kaldığını gösterir.", "cta_more_work": "Fazla çalışmanın getirisini gör →", "banner_deficit_prefix": "Dikkat:", "banner_deficit_text": "Sabit giderleriniz gelirinizden <b>aylık {amount} daha fazla</b>. Giderleri azaltmayı veya ek yardımları inceleyin.", "banner_warn_prefix": "Küçük tampon:", "banner_warn_text": "Aylık yaklaşık <b>{amount}</b> kalıyor. Beklenmedik bir harcama zorlayabilir.", "banner_good_prefix": "Dengeli:", "banner_good_text": "Tüm sabit giderler ve yardımlardan sonra tahmini <b>aylık {amount}</b> kalıyor.", "warnings_title": "Dikkat edilecek noktalar:", "p9_eyebrow": "İş Seçimi • 2026", "p9_title": "Daha fazla çalışırsanız ne olur?", "p9_sub": "Vergi ve yardımlardan sonra fazla çalışmanın size ne kazandırdığını görün.", "conclusion_kicker": "Sonuç", "conclusion_sentence": "Haftada 1 saat fazla çalışmak size yaklaşık <b>aylık {amount}</b> net ek kazanç sağlar.", "col_hours": "Haftalık saat", "col_extra_income": "Ek gelir", "col_support": "Ödenekler", "col_really_extra": "Gerçekten ekstra kalan", "disclaimer_text": "“Vooruit vergi ve yardım değişikliklerini dikkate alır. Gerçek miktar pratikte biraz farklılık gösterebilir.”", "accordion_summary": "Hesaplama detayları ve arka plan", "p9_details_intro": "Haftada 1 saat fazla çalışma için hesaplama (+ aylık {amount} brüt):", "p9_details_net": "İşverenden ek net maaş:", "p9_details_support": "Yardımlardaki değişim:", "p9_details_tax": "Vergi ve indirim etkisi:", "p9_details_total": "Gerçekte ek kalan miktar:", "p9_per_month": "/ ay", "toast_downloaded": "Uygulama bağımsız HTML olarak indirildi!", "toast_json": "JSON raporu başarıyla indirildi!", "toast_csv": "CSV genel bakış başarıyla indirildi!"}, "ar": {"app_title": "Vooruit — الوقاية المالية", "brand_sub": "• الوقاية المالية", "download_btn": "تنزيل HTML", "download_app_btn": "تنزيل التطبيق (.html)", "step_0": "البداية", "step_1": "الدخل", "step_2": "العمل", "step_3": "السكن", "step_4": "الأسرة", "step_5": "الأسرة والمساعدات", "step_6": "المصاريف", "step_7": "الإعانة", "step_8": "نظرة عامة", "step_9": "العمل الإضافي", "btn_prev": "← السابق", "btn_next": "التالي →", "btn_view_overview": "عرض النظرة العامة →", "btn_adjust": "← تعديل البيانات", "btn_restart": "البدء من جديد", "btn_back_overview": "← العودة إلى النظرة العامة", "btn_export_json": "تصدير JSON", "btn_export_csv": "تصدير CSV", "btn_print": "طباعة / PDF", "btn_back_aria": "رجوع", "unit_hours": "ساعة", "badge_now": "الآن", "p0_eyebrow": "البداية", "p0_title": "ما الذي ترغب في الحصول على نظرة سريعة بشأنه؟", "p0_sub": "بضعة أسئلة قصيرة. التقدير التقريبي كافٍ.", "p0_opt_money_t": "أموالي", "p0_opt_money_d": "كم يدخل من المال وكم يتبقى لدي؟", "p0_opt_extra_t": "العمل الإضافي", "p0_opt_extra_d": "ما العائد الفعلي للعمل الإضافي بعد الضرائب والمساعدات؟", "p0_opt_change_t": "تغيير في الوضع", "p0_opt_change_d": "ماذا يحدث لأموالي مع دخل مختلف؟", "p1_eyebrow": "الدخل", "p1_title": "كيف تحصل على دخلك؟", "p1_sub": "اختر وضعك وأدخل قيمة تقديرية.", "p1_banner": "<b>ملاحظة: أدخل المبلغ الإجمالي (Bruto).</b> الإجمالي هو ما تكسبه قبل الضرائب والخصومات. يحسب تطبيق Vooruit الصافي والمعونات تلقائياً.", "p1_opt_employee": "أعمل كموظف بأجر", "p1_opt_benefit": "أحصل بشكل أساسي على إعانة حكومية", "p1_opt_both": "أعمل وأحصل على إعانة في نفس الوقت", "p1_opt_zzp": "أعمل لحسابي الخاص / رائد أعمال (ZZP)", "p1_lbl_income": "الدخل الإجمالي شهرياً (€)", "p1_hint_income": "أدخل المبلغ الإجمالي (قبل خصم الضرائب).", "p1_ph_income": "مثال: 3,000", "p1_lbl_zzp": "الربح السنوي المتوقع من العمل التجاري (€)", "p1_ph_zzp": "مثال: 36,000", "p1_lbl_holiday": "بدل العطلة (%)", "p1_lbl_bonus": "الشهر الثالث عشر / مكافأة سنوية", "p1_ph_bonus": "مثال: 2,500", "p1_err_income": "يرجى إدخال الدخل الإجمالي أو الأرباح.", "p2_eyebrow": "العمل", "p2_title": "ساعات العمل والأجر في الساعة", "p2_sub": "يتيح هذا لتطبيق Vooruit احتساب عائد العمل الإضافي بدقة.", "p2_lbl_hours": "ساعات العمل أسبوعياً", "p2_ph_hours": "مثال: 28", "p2_lbl_hourly": "الأجر الإجمالي في الساعة (€)", "p2_ph_hourly": "مثال: 22.50", "p3_eyebrow": "السكن", "p3_title": "ما هو وضع سكنك؟", "p3_sub": "مهم لمعرفة مدى استحقاقك لبدل الإيجار الحكومي.", "p3_opt_rent_t": "أستأجر منزلاً", "p3_opt_rent_d": "نسأل فقط عن الإيجار الأساسي بدون خدمات", "p3_opt_buy_t": "أملك منزلاً", "p3_opt_buy_d": "مع رهن عقاري أو مدفوع بالكامل", "p3_opt_other_t": "وضع آخر", "p3_opt_other_d": "مع العائلة أو سكن مؤقت", "p3_lbl_rent": "الإيجار الأساسي شهرياً (€)", "p3_hint_rent": "بدون رسوم الخدمات.", "p3_ph_rent": "مثال: 750", "p3_lbl_woz": "قيمة العقار حسب تقييم البلدية WOZ (€)", "p3_ph_woz": "مثال: 375,000", "p4_eyebrow": "الأسرة", "p4_title": "هل لديك شريك حياة؟", "p4_sub": "يؤخذ دخل الشريك بالحسبان لحساب المعونات الحكومية.", "p4_opt_yes_t": "نعم", "p4_opt_yes_d": "متزوج أو شريك ضريبي متعايش", "p4_opt_no_t": "لا", "p4_opt_no_d": "أعزب / منفرد", "p4_lbl_partner_income": "الدخل الإجمالي للشريك شهرياً (€)", "p4_ph_partner_income": "مثال: 2,200", "p5_eyebrow": "الأسرة والمساعدات", "p5_title": "الأطفال والعمر", "p5_sub": "مطلوب لتحديد الخصومات الضريبية وميزانية الأطفال.", "p5_lbl_age": "عمرك", "p5_ph_age": "مثال: 32", "p5_lbl_wealth": "المدخرات المالية (€)", "p5_ph_wealth": "مثال: 8,000", "p5_lbl_kids": "هل لديك أطفال أقل من 18 عاماً؟", "p5_opt_kids_yes": "نعم", "p5_opt_kids_no": "لا", "p5_lbl_child_count": "عدد الأطفال", "p5_ph_child_count": "مثال: 2", "p6_eyebrow": "المصاريف", "p6_title": "ما هي مصاريفك الثابتة؟", "p6_sub": "كل ما تنفقه شهرياً. تقدير تقريبي يفي بالغرض.", "p6_lbl_costs": "المصاريف الثابتة شهرياً (€)", "p6_hint_costs": "الإيجار أو الرهن، الطاقة، الماء، التأمين الصحي والاشتراكات.", "p6_ph_costs": "مثال: 1,850", "p7_eyebrow": "الإعانة", "p7_title": "ما نوع الإعانة التي تتلقاها؟", "p7_sub": "يطبق التطبيق القواعد الرسمية لعام 2026 في هولندا.", "p7_lbl_type": "نوع الإعانة", "p7_opt_none": "لا أتلقى إعانة", "p7_opt_ww": "WW (إعانة البطالة)", "p7_opt_bijstand": "Bijstand (المساعدة الاجتماعية)", "p7_opt_wia": "WIA (إعانة العجز)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "إعانة المرض (ZW)", "p7_opt_aow": "AOW / التقاعد الحكومي", "p7_opt_other": "إعانة أخرى", "p7_lbl_gross": "المبلغ الإجمالي للإعانة شهرياً (€)", "p7_ph_gross": "مثال: 1,800", "p8_eyebrow": "نتيجتك • 2026", "p8_title": "هذا هو وضعك المالي", "p8_sub": "نظرة فورية على ما يدخل وما يخرج وما يتبقى لديك.", "p8_hero_title": "هذا هو وضعك المالي", "per_month_left": "يتبقى شهرياً", "per_month_deficit": "عجز شهري", "lbl_net_wage": "في حسابك بعد الضرائب", "lbl_support": "المعونات والدعم", "lbl_costs": "المصاريف الثابتة", "lbl_left_after_costs": "المتبقي بعد المصاريف الثابتة", "support_breakdown_title": "المعونات المشمولة", "zorgtoeslag": "بدل الرعاية الصحية", "huurtoeslag": "بدل الإيجار", "kgb": "ميزانية الطفل الحكومية", "p8_teaser_title": "ماذا يحدث إذا عملت أكثر؟", "p8_teaser_text": "يحسب التطبيق الضرائب، الخصومات والتغيرات في المعونات الحكومية ليظهر لك الصافي الفعلي.", "cta_more_work": "عرض نتيجة العمل الإضافي →", "banner_deficit_prefix": "تنبيه:", "banner_deficit_text": "مصاريفك الثابتة تزيد بمقدار <b>{amount} شهرياً</b> عن دخلك. راجع النفقات أو تحقق من المساعدات الإضافية.", "banner_warn_prefix": "فائض بسيط:", "banner_warn_text": "يتبقى لديك حوالي <b>{amount} شهرياً</b>. أي نفقة طارئة قد تسبب ضغطاً مالياً.", "banner_good_prefix": "وضع مستقر:", "banner_good_text": "يتبقى لديك تقديرياً <b>{amount} شهرياً</b> بعد كافة المصاريف الثابتة والمعونات.", "warnings_title": "نقاط هامة:", "p9_eyebrow": "خيارات العمل • 2026", "p9_title": "ماذا يحدث إذا عملت أكثر؟", "p9_sub": "اكتشف ما تكسبه فعلياً بعد اقتطاع الضرائب وتعديل المساعدات.", "conclusion_kicker": "الخلاصة", "conclusion_sentence": "العمل لساعة إضافية يمنحك فعلياً حوالي <b>{amount} شهرياً</b> إضافية.", "col_hours": "ساعات أسبوعياً", "col_extra_income": "دخل إضافي", "col_support": "المعونات", "col_really_extra": "المتبقي الفعلي الصافي", "disclaimer_text": "“يأخذ تطبيق Vooruit الضرائب وتغير المعونات بالحسبان. قد يختلف المبلغ النهائي قليلاً في الواقع.”", "accordion_summary": "تفاصيل وأسس الحساب المالي", "p9_details_intro": "تفاصيل الحساب عند عمل ساعة إضافية (+ {amount} إجمالي/شهر):", "p9_details_net": "راتب صافٍ إضافي من صاحب العمل:", "p9_details_support": "تغير المعونات الحكومية:", "p9_details_tax": "أثر الضرائب والخصومات:", "p9_details_total": "المتبقي الإضافي الصافي فعلياً:", "p9_per_month": "/ شهر", "toast_downloaded": "تم تنزيل التطبيق كملف HTML مستقل!", "toast_json": "تم تنزيل تقرير JSON بنجاح!", "toast_csv": "تم تنزيل جدول CSV بنجاح!"}, "uk": {"app_title": "Vooruit — фінансова профілактика", "brand_sub": "• фінансова профілактика", "download_btn": "Завантажити HTML", "download_app_btn": "Завантажити додаток (.html)", "step_0": "Початок", "step_1": "Дохід", "step_2": "Робота", "step_3": "Житло", "step_4": "Домогосподарство", "step_5": "Сім'я та виплати", "step_6": "Витрати", "step_7": "Виплати", "step_8": "Огляд", "step_9": "Додаткова робота", "btn_prev": "← Назад", "btn_next": "Далі →", "btn_view_overview": "Переглянути огляд →", "btn_adjust": "← Змінити дані", "btn_restart": "Почати спочатку", "btn_back_overview": "← Повернутися до огляду", "btn_export_json": "Експорт JSON", "btn_export_csv": "Експорт CSV", "btn_print": "Друк / PDF", "btn_back_aria": "Назад", "unit_hours": "год", "badge_now": "Зараз", "p0_eyebrow": "Початок", "p0_title": "В чому ви хочете швидко розібратися?", "p0_sub": "Кілька коротких запитань. Приблизної оцінки достатньо.", "p0_opt_money_t": "Мої гроші", "p0_opt_money_d": "Скільки надходить і скільки залишається?", "p0_opt_extra_t": "Додаткова робота", "p0_opt_extra_d": "Скільки насправді дає додаткова робота після податків і субсидій?", "p0_opt_change_t": "Зміна ситуації", "p0_opt_change_d": "Що станеться з моїми грошима при іншому доході?", "p1_eyebrow": "Дохід", "p1_title": "Як ви заробляєте гроші?", "p1_sub": "Оберіть вашу ситуацію та вкажіть орієнтовну суму.", "p1_banner": "<b>Зверніть увагу: вкажіть суму брутто.</b> Брутто — це заробіток до вирахування податків. Vooruit автоматично розрахує суму нетто та субсидії.", "p1_opt_employee": "Я найманий працівник", "p1_opt_benefit": "Я отримую переважно допомогу/виплати", "p1_opt_both": "Я працюю та отримую виплати", "p1_opt_zzp": "Я самозайнятий (ZZP) / підприємець", "p1_lbl_income": "Брутто-дохід на місяць (€)", "p1_hint_income": "Вкажіть суму брутто (до сплати податків).", "p1_ph_income": "напр. 3.000", "p1_lbl_zzp": "Очікуваний прибуток бізнесу на рік (€)", "p1_ph_zzp": "напр. 36.000", "p1_lbl_holiday": "Відпускні (%)", "p1_lbl_bonus": "13-та зарплата / річний бонус", "p1_ph_bonus": "напр. 2.500", "p1_err_income": "Введіть брутто-дохід або прибуток.", "p2_eyebrow": "Робота", "p2_title": "Години та погодинна ставка", "p2_sub": "Це дозволить програмі швидко розрахувати вигоду від додаткової праці.", "p2_lbl_hours": "Годин на тиждень", "p2_ph_hours": "напр. 28", "p2_lbl_hourly": "Брутто погодинна ставка (€)", "p2_ph_hourly": "напр. 22,50", "p3_eyebrow": "Житло", "p3_title": "Які ваші житлові умови?", "p3_sub": "Важливо для перевірки права на житлову субсидію.", "p3_opt_rent_t": "Я орендую житло", "p3_opt_rent_d": "Ми запитуємо лише чисту орендну плату", "p3_opt_buy_t": "У мене власне житло", "p3_opt_buy_d": "З іпотекою або виплачене", "p3_opt_other_t": "Інше", "p3_opt_other_d": "У родичів або тимчасове", "p3_lbl_rent": "Базова орендна плата на місяць (€)", "p3_hint_rent": "Без комунальних послуг.", "p3_ph_rent": "напр. 750", "p3_lbl_woz": "Оціночна вартість нерухомості WOZ (€)", "p3_ph_woz": "напр. 375.000", "p4_eyebrow": "Домогосподарство", "p4_title": "Чи є у вас партнер?", "p4_sub": "Для субсидій враховується дохід партнера.", "p4_opt_yes_t": "Так", "p4_opt_yes_d": "У шлюбі або зареєстровані партнери", "p4_opt_no_t": "Ні", "p4_opt_no_d": "Одинак / самотній", "p4_lbl_partner_income": "Брутто-дохід партнера на місяць (€)", "p4_ph_partner_income": "напр. 2.200", "p5_eyebrow": "Сім'я та виплати", "p5_title": "Діти та вік", "p5_sub": "Потрібно для податкових пільг і дитячого бюджету.", "p5_lbl_age": "Ваш вік", "p5_ph_age": "напр. 32", "p5_lbl_wealth": "Заощадження (€)", "p5_ph_wealth": "напр. 8.000", "p5_lbl_kids": "Чи є діти віком до 18 років?", "p5_opt_kids_yes": "Так", "p5_opt_kids_no": "Ні", "p5_lbl_child_count": "Кількість дітей", "p5_ph_child_count": "напр. 2", "p6_eyebrow": "Витрати", "p6_title": "Які ваші постійні витрати?", "p6_sub": "Усе, що ви витрачаєте щомісяця. Приблизної оцінки достатньо.", "p6_lbl_costs": "Постійні витрати на місяць (€)", "p6_hint_costs": "Оренда/іпотека, комунальні, медична страховка, підписки.", "p6_ph_costs": "напр. 1.850", "p7_eyebrow": "Виплати", "p7_title": "Яку допомогу ви отримуєте?", "p7_sub": "Vooruit застосовує актуальні правила 2026 року.", "p7_lbl_type": "Тип допомоги", "p7_opt_none": "Не отримую", "p7_opt_ww": "WW (по безробіттю)", "p7_opt_bijstand": "Bijstand (соціальна допомога)", "p7_opt_wia": "WIA (по інвалідності)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Лікарняні (ZW)", "p7_opt_aow": "AOW / Пенсія", "p7_opt_other": "Інша допомога", "p7_lbl_gross": "Сума допомоги брутто на місяць (€)", "p7_ph_gross": "напр. 1.800", "p8_eyebrow": "Ваш результат • 2026", "p8_title": "Ось стан ваших фінансів", "p8_sub": "Миттєве розуміння надходжень, витрат та залишку.", "p8_hero_title": "Ось стан ваших фінансів", "per_month_left": "залишається на місяць", "per_month_deficit": "дефіцит на місяць", "lbl_net_wage": "На рахунку після податків", "lbl_support": "Субсидії та виплати", "lbl_costs": "Постійні витрати", "lbl_left_after_costs": "Залишок після витрат", "support_breakdown_title": "Субсидії, що враховуються", "zorgtoeslag": "Медична субсидія", "huurtoeslag": "Житлова субсидія", "kgb": "Бюджет на дітей", "p8_teaser_title": "Що буде, якщо працювати більше?", "p8_teaser_text": "Vooruit враховує податки, знижки та зміни у субсидіях, щоб показати реальний чистий результат.", "cta_more_work": "Переглянути результат →", "banner_deficit_prefix": "Увага:", "banner_deficit_text": "Постійні витрати на <b>{amount} на місяць перевищують</b> дохід. Перегляньте витрати або перевірте право на субсидії.", "banner_warn_prefix": "Невеликий резерв:", "banner_warn_text": "Залишається приблизно <b>{amount} на місяць</b>. Непередбачені витрати можуть створити труднощі.", "banner_good_prefix": "Стабільно:", "banner_good_text": "Після всіх витрат і субсидій орієнтовно залишається <b>{amount} на місяць</b>.", "warnings_title": "Зверніть увагу:", "p9_eyebrow": "Вибір зайнятості • 2026", "p9_title": "Що буде, якщо працювати більше?", "p9_sub": "Подивіться, скільки вам реально принесе додаткова праця після податків і субсидій.", "conclusion_kicker": "Висновок", "conclusion_sentence": "1 додаткова година роботи дає вам приблизно <b>{amount} на місяць</b> додатково.", "col_hours": "Годин на тиждень", "col_extra_income": "Додатковий дохід", "col_support": "Субсидії", "col_really_extra": "Реально додатково", "disclaimer_text": "“Vooruit враховує зміни в податках і виплатах. Фактична сума може дещо відрізнятися.”", "accordion_summary": "Деталі розрахунку та обґрунтування", "p9_details_intro": "Деталі розрахунку для 1 додаткової години (+ {amount} брутто/міс):", "p9_details_net": "Додаткова чиста зарплата від роботодавця:", "p9_details_support": "Зміна субсидій:", "p9_details_tax": "Вплив податків та знижок:", "p9_details_total": "Реально чистого залишку:", "p9_per_month": "/ міс", "toast_downloaded": "Додаток завантажено як автономний HTML-файл!", "toast_json": "Звіт JSON успішно завантажено!", "toast_csv": "Огляд CSV успішно завантажено!"}, "es": {"app_title": "Vooruit — Prevención Financiera", "brand_sub": "• prevención financiera", "download_btn": "Descargar HTML", "download_app_btn": "Descargar app (.html)", "step_0": "Inicio", "step_1": "Ingresos", "step_2": "Trabajo", "step_3": "Vivienda", "step_4": "Hogar", "step_5": "Familia y ayudas", "step_6": "Gastos", "step_7": "Prestaciones", "step_8": "Resumen", "step_9": "Trabajo extra", "btn_prev": "← Anterior", "btn_next": "Continuar →", "btn_view_overview": "Ver resumen →", "btn_adjust": "← Ajustar", "btn_restart": "Reiniciar", "btn_back_overview": "← Volver al resumen", "btn_export_json": "Exportar JSON", "btn_export_csv": "Exportar CSV", "btn_print": "Imprimir / PDF", "btn_back_aria": "Atrás", "unit_hours": "h", "badge_now": "Ahora", "p0_eyebrow": "Inicio", "p0_title": "¿Sobre qué deseas tener una visión clara y rápida?", "p0_sub": "Unas breves preguntas. Una estimación está bien.", "p0_opt_money_t": "Mi dinero", "p0_opt_money_d": "¿Cuánto entra y cuánto me queda?", "p0_opt_extra_t": "Trabajo extra", "p0_opt_extra_d": "¿Cuánto me reporta realmente trabajar más tras impuestos y ayudas?", "p0_opt_change_t": "Un cambio", "p0_opt_change_d": "¿Qué ocurre con mi dinero con unos ingresos diferentes?", "p1_eyebrow": "Ingresos", "p1_title": "¿De dónde provienen tus ingresos?", "p1_sub": "Elige tu situación e introduce una cantidad estimada.", "p1_banner": "<b>Nota: introduce tu importe bruto.</b> Bruto es lo que ganas antes de impuestos y deducciones. Vooruit calcula el neto y las ayudas automáticamente.", "p1_opt_employee": "Trabajo por cuenta ajena", "p1_opt_benefit": "Percibo principalmente una prestación", "p1_opt_both": "Trabajo y percibo una prestación", "p1_opt_zzp": "Soy autónomo / profesional independiente (ZZP)", "p1_lbl_income": "Ingresos brutos mensuales (€)", "p1_hint_income": "Introduce tu cantidad bruta (antes de impuestos).", "p1_ph_income": "ej. 3.000", "p1_lbl_zzp": "Beneficio empresarial previsto anual (€)", "p1_ph_zzp": "ej. 36.000", "p1_lbl_holiday": "Paga de vacaciones (%)", "p1_lbl_bonus": "Paga 13 / bono anual", "p1_ph_bonus": "ej. 2.500", "p1_err_income": "Introduce unos ingresos brutos o beneficio.", "p2_eyebrow": "Trabajo", "p2_title": "Horas y salario por hora", "p2_sub": "Esto permite a Vooruit calcular cuánto te reportará trabajar más.", "p2_lbl_hours": "Horas semanales", "p2_ph_hours": "ej. 28", "p2_lbl_hourly": "Salario bruto por hora (€)", "p2_ph_hourly": "ej. 22,50", "p3_eyebrow": "Vivienda", "p3_title": "¿Cuál es tu situación de vivienda?", "p3_sub": "Importante para determinar el derecho a subsidio de alquiler.", "p3_opt_rent_t": "Vivo de alquiler", "p3_opt_rent_d": "Solo preguntamos por el alquiler base", "p3_opt_buy_t": "Tengo vivienda en propiedad", "p3_opt_buy_d": "Con hipoteca o pagada", "p3_opt_other_t": "Otra", "p3_opt_other_d": "Con familiares o temporal", "p3_lbl_rent": "Alquiler base mensual (€)", "p3_hint_rent": "Sin gastos de comunidad.", "p3_ph_rent": "ej. 750", "p3_lbl_woz": "Valor catastral WOZ (€)", "p3_ph_woz": "ej. 375.000", "p4_eyebrow": "Hogar", "p4_title": "¿Tienes pareja / cónyuge?", "p4_sub": "Para las ayudas se tienen en cuenta los ingresos de la pareja fiscal.", "p4_opt_yes_t": "Sí", "p4_opt_yes_d": "Casado o pareja fiscal conviviente", "p4_opt_no_t": "No", "p4_opt_no_d": "Soltero/a", "p4_lbl_partner_income": "Ingresos brutos mensuales de tu pareja (€)", "p4_ph_partner_income": "ej. 2.200", "p5_eyebrow": "Familia y ayudas", "p5_title": "Hijos y edad", "p5_sub": "Necesario para deducciones fiscales y presupuesto familiar.", "p5_lbl_age": "Tu edad", "p5_ph_age": "ej. 32", "p5_lbl_wealth": "Ahorros (€)", "p5_ph_wealth": "ej. 8.000", "p5_lbl_kids": "¿Tienes hijos menores de 18 años?", "p5_opt_kids_yes": "Sí", "p5_opt_kids_no": "No", "p5_lbl_child_count": "Número de hijos", "p5_ph_child_count": "ej. 2", "p6_eyebrow": "Gastos", "p6_title": "¿Cuáles son tus gastos fijos?", "p6_sub": "Todo lo que pagas cada mes. Una estimación es suficiente.", "p6_lbl_costs": "Gastos fijos mensuales (€)", "p6_hint_costs": "Alquiler/hipoteca, suministros, seguro médico y suscripciones.", "p6_ph_costs": "ej. 1.850", "p7_eyebrow": "Prestaciones", "p7_title": "¿Qué prestación recibes?", "p7_sub": "Vooruit aplica las normas holandesas oficiales para 2026.", "p7_lbl_type": "Tipo de prestación", "p7_opt_none": "Ninguna", "p7_opt_ww": "WW (Desempleo)", "p7_opt_bijstand": "Bijstand (Ayuda social)", "p7_opt_wia": "WIA (Incapacidad)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Baja por enfermedad (ZW)", "p7_opt_aow": "AOW / Jubilación", "p7_opt_other": "Otra prestación", "p7_lbl_gross": "Importe bruto mensual de la prestación (€)", "p7_ph_gross": "ej. 1.800", "p8_eyebrow": "Tu resultado • 2026", "p8_title": "Así están tus finanzas", "p8_sub": "Visión inmediata de ingresos, gastos y lo que te queda disponible.", "p8_hero_title": "Así están tus finanzas", "per_month_left": "al mes disponible", "per_month_deficit": "al mes de déficit", "lbl_net_wage": "En tu cuenta tras impuestos", "lbl_support": "Subsidios y ayudas", "lbl_costs": "Gastos fijos", "lbl_left_after_costs": "Libre tras gastos fijos", "support_breakdown_title": "Subsidios incluidos", "zorgtoeslag": "Subsidio de salud", "huurtoeslag": "Subsidio de alquiler", "kgb": "Presupuesto para hijos", "p8_teaser_title": "¿Qué pasa si trabajas más horas?", "p8_teaser_text": "Vooruit calcula impuestos, deducciones y variaciones en las ayudas para mostrarte el neto real.", "cta_more_work": "Ver beneficio de trabajar más →", "banner_deficit_prefix": "Atención:", "banner_deficit_text": "Tus gastos fijos superan a tus ingresos en <b>{amount} al mes</b>. Considera reducir gastos o solicitar ayudas adicionales.", "banner_warn_prefix": "Margen ajustado:", "banner_warn_text": "Te quedan aproximadamente <b>{amount} al mes</b>. Un gasto imprevisto podría causar presión.", "banner_good_prefix": "Estable:", "banner_good_text": "Se estima que te quedan <b>{amount} al mes</b> tras gastos fijos y ayudas.", "warnings_title": "Aspectos a tener en cuenta:", "p9_eyebrow": "Decisión laboral • 2026", "p9_title": "¿Qué pasa si trabajas más horas?", "p9_sub": "Comprueba directamente cuánto te queda tras impuestos y ayudas.", "conclusion_kicker": "Conclusión", "conclusion_sentence": "Trabajar 1 hora extra te deja aproximadamente <b>{amount} al mes</b> más.", "col_hours": "Horas por semana", "col_extra_income": "Ingreso extra", "col_support": "Ayudas", "col_really_extra": "Realmente extra libre", "disclaimer_text": "“Vooruit tiene en cuenta los cambios en impuestos y subsidios. La cantidad final puede variar levemente en la práctica.”", "accordion_summary": "Detalles del cálculo y fundamentación", "p9_details_intro": "Detalles del cálculo para 1 hora extra (+ {amount} bruto/mes):", "p9_details_net": "Salario neto adicional del empleador:", "p9_details_support": "Variación en subsidios:", "p9_details_tax": "Impacto de impuestos y deducciones:", "p9_details_total": "Ganancia neta real restante:", "p9_per_month": "/ mes", "toast_downloaded": "¡Aplicación descargada como archivo HTML autónomo!", "toast_json": "¡Informe JSON descargado con éxito!", "toast_csv": "¡Resumen CSV descargado con éxito!"}, "fr": {"app_title": "Vooruit — Prévention Financière", "brand_sub": "• prévention financière", "download_btn": "Télécharger HTML", "download_app_btn": "Télécharger l'app (.html)", "step_0": "Début", "step_1": "Revenus", "step_2": "Travail", "step_3": "Logement", "step_4": "Ménage", "step_5": "Famille & aides", "step_6": "Frais", "step_7": "Allocations", "step_8": "Aperçu", "step_9": "Travailler plus", "btn_prev": "← Précédent", "btn_next": "Suivant →", "btn_view_overview": "Voir l'aperçu →", "btn_adjust": "← Modifier", "btn_restart": "Recommencer", "btn_back_overview": "← Retour à l'aperçu", "btn_export_json": "Exporter JSON", "btn_export_csv": "Exporter CSV", "btn_print": "Imprimer / PDF", "btn_back_aria": "Retour", "unit_hours": "h", "badge_now": "Actuel", "p0_eyebrow": "Début", "p0_title": "Sur quoi souhaitez-vous un aperçu rapide ?", "p0_sub": "Quelques courtes questions. Une estimation suffit.", "p0_opt_money_t": "Mon argent", "p0_opt_money_d": "Combien rentre et combien me reste-t-il ?", "p0_opt_extra_t": "Travailler plus", "p0_opt_extra_d": "Combien me rapporte réellement le travail en plus après impôts et aides ?", "p0_opt_change_t": "Un changement", "p0_opt_change_d": "Qu'advient-il de mon argent avec un revenu différent ?", "p1_eyebrow": "Revenus", "p1_title": "Comment percevez-vous vos revenus ?", "p1_sub": "Choisissez votre situation et indiquez un montant approximatif.", "p1_banner": "<b>Attention : indiquez le montant brut.</b> Le brut correspond à vos gains avant impôts. Vooruit calcule automatiquement le net et les aides.", "p1_opt_employee": "Je suis salarié", "p1_opt_benefit": "Je perçois principalement une allocation", "p1_opt_both": "Je travaille et perçois une allocation", "p1_opt_zzp": "Je suis indépendant / freelance (ZZP)", "p1_lbl_income": "Revenu brut par mois (€)", "p1_hint_income": "Indiquez votre montant brut (avant impôts).", "p1_ph_income": "ex. 3 000", "p1_lbl_zzp": "Bénéfice annuel attendu (€)", "p1_ph_zzp": "ex. 36 000", "p1_lbl_holiday": "Pécule de vacances (%)", "p1_lbl_bonus": "13e mois / prime annuelle", "p1_ph_bonus": "ex. 2 500", "p1_err_income": "Veuillez indiquer un revenu brut ou un bénéfice.", "p2_eyebrow": "Travail", "p2_title": "Heures et salaire horaire", "p2_sub": "Permet à Vooruit de calculer directement le gain d'heures supplémentaires.", "p2_lbl_hours": "Heures par semaine", "p2_ph_hours": "ex. 28", "p2_lbl_hourly": "Salaire horaire brut (€)", "p2_ph_hourly": "ex. 22,50", "p3_eyebrow": "Logement", "p3_title": "Quel est votre logement ?", "p3_sub": "Important pour vérifier le droit à l'aide au logement.", "p3_opt_rent_t": "Je suis locataire", "p3_opt_rent_d": "Nous demandons uniquement le loyer de base", "p3_opt_buy_t": "Je suis propriétaire", "p3_opt_buy_d": "Avec hypothèque ou payé", "p3_opt_other_t": "Autre", "p3_opt_other_d": "Hébergé ou temporaire", "p3_lbl_rent": "Loyer de base par mois (€)", "p3_hint_rent": "Hors charges.", "p3_ph_rent": "ex. 750", "p3_lbl_woz": "Valeur cadastrale WOZ (€)", "p3_ph_woz": "ex. 375 000", "p4_eyebrow": "Ménage", "p4_title": "Avez-vous un partenaire ?", "p4_sub": "Les revenus du partenaire fiscal comptent pour les allocations.", "p4_opt_yes_t": "Oui", "p4_opt_yes_d": "Marié ou partenaire fiscal cohabitant", "p4_opt_no_t": "Non", "p4_opt_no_d": "Célibataire", "p4_lbl_partner_income": "Revenu brut du partenaire par mois (€)", "p4_ph_partner_income": "ex. 2 200", "p5_eyebrow": "Famille & aides", "p5_title": "Enfants et âge", "p5_sub": "Requis pour les déductions fiscales et le budget pour enfants.", "p5_lbl_age": "Votre âge", "p5_ph_age": "ex. 32", "p5_lbl_wealth": "Épargne (€)", "p5_ph_wealth": "ex. 8 000", "p5_lbl_kids": "Avez-vous des enfants de moins de 18 ans ?", "p5_opt_kids_yes": "Oui", "p5_opt_kids_no": "Non", "p5_lbl_child_count": "Nombre d'enfants", "p5_ph_child_count": "ex. 2", "p6_eyebrow": "Frais", "p6_title": "Quels sont vos frais fixes ?", "p6_sub": "Tout ce que vous dépensez chaque mois. Une estimation suffit.", "p6_lbl_costs": "Frais fixes par mois (€)", "p6_hint_costs": "Loyer/crédit, énergie, eau, assurance maladie et abonnements.", "p6_ph_costs": "ex. 1 850", "p7_eyebrow": "Allocations", "p7_title": "Quelle allocation percevez-vous ?", "p7_sub": "Vooruit intègre les règles d'ajustement 2026 aux Pays-Bas.", "p7_lbl_type": "Type d'allocation", "p7_opt_none": "Aucune", "p7_opt_ww": "WW (Chômage)", "p7_opt_bijstand": "Bijstand (Aide sociale)", "p7_opt_wia": "WIA (Invalidité)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Maladie (ZW)", "p7_opt_aow": "AOW / Retraite", "p7_opt_other": "Autre allocation", "p7_lbl_gross": "Montant brut de l'allocation (€)", "p7_ph_gross": "ex. 1 800", "p8_eyebrow": "Votre résultat • 2026", "p8_title": "Votre situation financière", "p8_sub": "Aperçu clair des entrées, sorties et de votre solde restant.", "p8_hero_title": "Votre situation financière", "per_month_left": "par mois de reste", "per_month_deficit": "déficit par mois", "lbl_net_wage": "Sur votre compte après impôt", "lbl_support": "Allocations", "lbl_costs": "Frais fixes", "lbl_left_after_costs": "Reste après frais fixes", "support_breakdown_title": "Allocations prises en compte", "zorgtoeslag": "Allocation santé", "huurtoeslag": "Allocation logement", "kgb": "Complément familial pour enfants", "p8_teaser_title": "Que se passe-t-il si vous travaillez plus ?", "p8_teaser_text": "Vooruit calcule l'impact sur les impôts, déductions et allocations pour afficher le gain net réel.", "cta_more_work": "Voir ce que rapporte le travail en plus →", "banner_deficit_prefix": "Attention :", "banner_deficit_text": "Vos frais fixes dépassent vos revenus de <b>{amount} par mois</b>. Vérifiez vos dépenses ou demandez des aides.", "banner_warn_prefix": "Marge faible :", "banner_warn_text": "Il vous reste environ <b>{amount} par mois</b>. Un imprévu peut créer une tension budgétaire.", "banner_good_prefix": "Stable :", "banner_good_text": "Il vous reste environ <b>{amount} par mois</b> après tous vos frais fixes et aides.", "warnings_title": "Points de vigilance :", "p9_eyebrow": "Choix d'activité • 2026", "p9_title": "Que se passe-t-il si vous travaillez plus ?", "p9_sub": "Voyez ce que travailler plus vous rapporte réellement après impôts et allocations.", "conclusion_kicker": "Conclusion", "conclusion_sentence": "1 heure supplémentaire de travail vous rapporte environ <b>{amount} par mois</b> en plus.", "col_hours": "Heures par semaine", "col_extra_income": "Revenu supplémentaire", "col_support": "Allocations", "col_really_extra": "Réellement en plus", "disclaimer_text": "“Vooruit prend en compte l'impact sur les impôts et les allocations. Le montant final peut légèrement différer.”", "accordion_summary": "Détails et méthode du calcul", "p9_details_intro": "Détails du calcul pour 1 heure supplémentaire (+ {amount} brut/mois) :", "p9_details_net": "Salaire net supplémentaire de l'employeur :", "p9_details_support": "Évolution des allocations :", "p9_details_tax": "Impact des impôts et crédits d'impôt :", "p9_details_total": "Gain net réellement conservé :", "p9_per_month": "/ mois", "toast_downloaded": "Application téléchargée sous forme de fichier HTML autonome !", "toast_json": "Rapport JSON téléchargé avec succès !", "toast_csv": "Fichier CSV téléchargé avec succès !"}, "pt": {"app_title": "Vooruit — Prevenção Financeira", "brand_sub": "• prevenção financeira", "download_btn": "Descarregar HTML", "download_app_btn": "Descarregar app (.html)", "step_0": "Início", "step_1": "Rendimentos", "step_2": "Trabalho", "step_3": "Habitação", "step_4": "Agregado familiar", "step_5": "Família e apoios", "step_6": "Despesas", "step_7": "Subsídios", "step_8": "Visão geral", "step_9": "Trabalho extra", "btn_prev": "← Anterior", "btn_next": "Seguinte →", "btn_view_overview": "Ver visão geral →", "btn_adjust": "← Ajustar", "btn_restart": "Recomeçar", "btn_back_overview": "← Voltar à visão geral", "btn_export_json": "Exportar JSON", "btn_export_csv": "Exportar CSV", "btn_print": "Imprimir / PDF", "btn_back_aria": "Voltar", "unit_hours": "h", "badge_now": "Agora", "p0_eyebrow": "Início", "p0_title": "Sobre o que deseja ter uma visão rápida?", "p0_sub": "Algumas perguntas curtas. Uma estimativa é suficiente.", "p0_opt_money_t": "O meu dinheiro", "p0_opt_money_d": "Quanto entra e quanto me sobra?", "p0_opt_extra_t": "Trabalho extra", "p0_opt_extra_d": "Quanto rende realmente trabalhar mais após impostos e subsídios?", "p0_opt_change_t": "Uma mudança", "p0_opt_change_d": "O que acontece ao meu dinheiro com outro rendimento?", "p1_eyebrow": "Rendimentos", "p1_title": "De onde provêm os seus rendimentos?", "p1_sub": "Escolha a sua situação e insira um valor indicativo.", "p1_banner": "<b>Atenção: insira o valor bruto.</b> Bruto é o que ganha antes de impostos e deduções. O Vooruit calcula o valor líquido e os subsídios automaticamente.", "p1_opt_employee": "Trabalho por conta de outrem", "p1_opt_benefit": "Recebo sobretudo um subsídio", "p1_opt_both": "Trabalho e recebo um subsídio", "p1_opt_zzp": "Sou trabalhador independente / empresário (ZZP)", "p1_lbl_income": "Rendimento bruto mensal (€)", "p1_hint_income": "Insira o valor bruto (antes de impostos).", "p1_ph_income": "ex. 3.000", "p1_lbl_zzp": "Lucro anual previsto da empresa (€)", "p1_ph_zzp": "ex. 36.000", "p1_lbl_holiday": "Subsídio de férias (%)", "p1_lbl_bonus": "13.º mês / bónus anual", "p1_ph_bonus": "ex. 2.500", "p1_err_income": "Insira um rendimento bruto ou lucro.", "p2_eyebrow": "Trabalho", "p2_title": "Horas e salário por hora", "p2_sub": "Isto permite ao Vooruit calcular o benefício de trabalhar mais.", "p2_lbl_hours": "Horas por semana", "p2_ph_hours": "ex. 28", "p2_lbl_hourly": "Salário horário bruto (€)", "p2_ph_hourly": "ex. 22,50", "p3_eyebrow": "Habitação", "p3_title": "Qual é a sua situação de habitação?", "p3_sub": "Importante para saber se tem direito a subsídio de renda.", "p3_opt_rent_t": "Vivo em casa arrendada", "p3_opt_rent_d": "Perguntamos apenas a renda base", "p3_opt_buy_t": "Tenho casa própria", "p3_opt_buy_d": "Com hipoteca ou quitada", "p3_opt_other_t": "Outro", "p3_opt_other_d": "Em casa de familiares ou temporário", "p3_lbl_rent": "Renda base mensal (€)", "p3_hint_rent": "Sem despesas de condomínio/serviços.", "p3_ph_rent": "ex. 750", "p3_lbl_woz": "Valor patrimonial WOZ (€)", "p3_ph_woz": "ex. 375.000", "p4_eyebrow": "Agregado familiar", "p4_title": "Tem cônjuge / parceiro?", "p4_sub": "Para subsídios, o rendimento do parceiro fiscal é considerado.", "p4_opt_yes_t": "Sim", "p4_opt_yes_d": "Casado ou em união de facto fiscal", "p4_opt_no_t": "Não", "p4_opt_no_d": "Solteiro", "p4_lbl_partner_income": "Rendimento bruto mensal do parceiro (€)", "p4_ph_partner_income": "ex. 2.200", "p5_eyebrow": "Família e apoios", "p5_title": "Filhos e idade", "p5_sub": "Necessário para deduções fiscais e orçamento para filhos.", "p5_lbl_age": "A sua idade", "p5_ph_age": "ex. 32", "p5_lbl_wealth": "Poupanças (€)", "p5_ph_wealth": "ex. 8.000", "p5_lbl_kids": "Tem filhos com menos de 18 anos?", "p5_opt_kids_yes": "Sim", "p5_opt_kids_no": "Não", "p5_lbl_child_count": "Número de filhos", "p5_ph_child_count": "ex. 2", "p6_eyebrow": "Despesas", "p6_title": "Quais são as suas despesas fixas?", "p6_sub": "Tudo o que gasta todos os meses. Uma estimativa é suficiente.", "p6_lbl_costs": "Despesas fixas mensais (€)", "p6_hint_costs": "Renda/crédito, energia, água, seguro de saúde e subscrições.", "p6_ph_costs": "ex. 1.850", "p7_eyebrow": "Subsídios", "p7_title": "Que subsídio recebe?", "p7_sub": "O Vooruit calcula de acordo com as regras de 2026 nos Países Baixos.", "p7_lbl_type": "Tipo de subsídio", "p7_opt_none": "Nenhum subsídio", "p7_opt_ww": "WW (Desemprego)", "p7_opt_bijstand": "Bijstand (Apoio social)", "p7_opt_wia": "WIA (Invalidez)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Baixa médica (ZW)", "p7_opt_aow": "AOW / Reforma", "p7_opt_other": "Outro subsídio", "p7_lbl_gross": "Subsídio bruto mensal (€)", "p7_ph_gross": "ex. 1.800", "p8_eyebrow": "O seu resultado • 2026", "p8_title": "A situação do seu dinheiro", "p8_sub": "Visão imediata do que entra, do que sai e do que sobra.", "p8_hero_title": "A situação do seu dinheiro", "per_month_left": "por mês disponível", "per_month_deficit": "défice por mês", "lbl_net_wage": "Na conta após impostos", "lbl_support": "Apoios e subsídios", "lbl_costs": "Despesas fixas", "lbl_left_after_costs": "Livre após despesas fixas", "support_breakdown_title": "Apoios incluídos", "zorgtoeslag": "Subsídio de saúde", "huurtoeslag": "Subsídio de habitação", "kgb": "Orçamento para filhos", "p8_teaser_title": "O que acontece se trabalhar mais?", "p8_teaser_text": "O Vooruit calcula impostos, deduções e alterações nos apoios para mostrar o ganho líquido real.", "cta_more_work": "Ver o que rende trabalhar mais →", "banner_deficit_prefix": "Atenção:", "banner_deficit_text": "As suas despesas fixas são <b>{amount} por mês superiores</b> aos rendimentos. Considere reduzir custos ou verificar apoios.", "banner_warn_prefix": "Margem reduzida:", "banner_warn_text": "Sobram-lhe cerca de <b>{amount} por mês</b>. Um gasto imprevisto poderá causar pressão financeira.", "banner_good_prefix": "Estável:", "banner_good_text": "Estima-se que lhe sobrem cerca de <b>{amount} por mês</b> após todas as despesas e subsídios.", "warnings_title": "Pontos de atenção:", "p9_eyebrow": "Escolha de trabalho • 2026", "p9_title": "O que acontece se trabalhar mais?", "p9_sub": "Veja diretamente o que trabalhar mais lhe rende após impostos e apoios.", "conclusion_kicker": "Conclusão", "conclusion_sentence": "Trabalhar 1 hora extra rende-lhe cerca de <b>{amount} por mês</b> a mais.", "col_hours": "Horas por semana", "col_extra_income": "Rendimento extra", "col_support": "Apoios", "col_really_extra": "Realmente extra no bolso", "disclaimer_text": "“Vooruit tem em conta alterações fiscais e de subsídios. O valor final pode variar ligeiramente.”", "accordion_summary": "Detalhes e base do cálculo", "p9_details_intro": "Detalhes do cálculo para 1 hora extra (+ {amount} bruto/mês):", "p9_details_net": "Salário líquido extra do empregador:", "p9_details_support": "Alteração nos subsídios:", "p9_details_tax": "Impacto de impostos e deduções:", "p9_details_total": "Ganho líquido verdadeiramente extra:", "p9_per_month": "/ mês", "toast_downloaded": "Aplicação descarregada como ficheiro HTML autónomo!", "toast_json": "Relatório JSON descarregado com sucesso!", "toast_csv": "Resumo CSV descarregado com sucesso!"}, "ro": {"app_title": "Vooruit — Prevenție Financiară", "brand_sub": "• prevenție financiară", "download_btn": "Descarcă HTML", "download_app_btn": "Descarcă aplicația (.html)", "step_0": "Start", "step_1": "Venituri", "step_2": "Muncă", "step_3": "Locuință", "step_4": "Gospodărie", "step_5": "Familie și ajutoare", "step_6": "Cheltuieli", "step_7": "Indemnizație", "step_8": "Prezentare generală", "step_9": "Muncă suplimentară", "btn_prev": "← Înapoi", "btn_next": "Continuă →", "btn_view_overview": "Vezi prezentarea generală →", "btn_adjust": "← Modifică", "btn_restart": "Ia-o de la capăt", "btn_back_overview": "← Înapoi la prezentare", "btn_export_json": "Exportă JSON", "btn_export_csv": "Exportă CSV", "btn_print": "Tipărește / PDF", "btn_back_aria": "Înapoi", "unit_hours": "ore", "badge_now": "Acum", "p0_eyebrow": "Start", "p0_title": "Despre ce dorești o perspectivă rapidă?", "p0_sub": "Câteva întrebări scurte. O estimare este suficientă.", "p0_opt_money_t": "Banii mei", "p0_opt_money_d": "Câți bani intră și cât îmi rămâne?", "p0_opt_extra_t": "Muncă suplimentară", "p0_opt_extra_d": "Cât îți aduce cu adevărat munca suplimentară după taxe și alocații?", "p0_opt_change_t": "O schimbare", "p0_opt_change_d": "Ce se întâmplă cu banii mei la un alt venit?", "p1_eyebrow": "Venituri", "p1_title": "Cum îți câștigi banii?", "p1_sub": "Alege situația ta și introdu o sumă orientativă.", "p1_banner": "<b>Notă: introdu suma brută.</b> Brutul este venitul înainte de impozite și rețineri. Vooruit calculează automat netul și alocațiile.", "p1_opt_employee": "Sunt angajat", "p1_opt_benefit": "Primesc în principal o indemnizație", "p1_opt_both": "Lucrez și primesc și indemnizație", "p1_opt_zzp": "Sunt liber profesionist / antreprenor (ZZP)", "p1_lbl_income": "Venit brut pe lună (€)", "p1_hint_income": "Introdu venitul brut (înainte de taxe).", "p1_ph_income": "de ex. 3.000", "p1_lbl_zzp": "Profit anual estimat din afacere (€)", "p1_ph_zzp": "de ex. 36.000", "p1_lbl_holiday": "Bani de concediu (%)", "p1_lbl_bonus": "Al 13-lea salariu / bonus anual", "p1_ph_bonus": "de ex. 2.500", "p1_err_income": "Introdu un venit brut sau profit.", "p2_eyebrow": "Muncă", "p2_title": "Ore și tarif orar", "p2_sub": "Permite aplicației Vooruit să calculeze ce îți aduc orele suplimentare.", "p2_lbl_hours": "Ore pe săptămână", "p2_ph_hours": "de ex. 28", "p2_lbl_hourly": "Tarif orar brut (€)", "p2_ph_hourly": "de ex. 22,50", "p3_eyebrow": "Locuință", "p3_title": "Care este situația locativă?", "p3_sub": "Important pentru a stabili dreptul la alocația pentru chirie.", "p3_opt_rent_t": "Locuiesc cu chirie", "p3_opt_rent_d": "Întrebăm doar chiria de bază", "p3_opt_buy_t": "Am locuință proprietate personală", "p3_opt_buy_d": "Cu ipotecă sau achitată", "p3_opt_other_t": "Altceva", "p3_opt_other_d": "La familie sau temporar", "p3_lbl_rent": "Chirie de bază pe lună (€)", "p3_hint_rent": "Fără cheltuieli de întreținere.", "p3_ph_rent": "de ex. 750", "p3_lbl_woz": "Valoare impozabilă WOZ (€)", "p3_ph_woz": "de ex. 375.000", "p4_eyebrow": "Gospodărie", "p4_title": "Ai un partener?", "p4_sub": "Pentru alocații se ia în considerare venitul partenerului fiscal.", "p4_opt_yes_t": "Da", "p4_opt_yes_d": "Căsătorit sau partener fiscal coabitant", "p4_opt_no_t": "Nu", "p4_opt_no_d": "Persoană singură", "p4_lbl_partner_income": "Venit brut lunar al partenerului (€)", "p4_ph_partner_income": "de ex. 2.200", "p5_eyebrow": "Familie și ajutoare", "p5_title": "Copii și vârstă", "p5_sub": "Necesar pentru deduceri fiscale și alocația pentru copii.", "p5_lbl_age": "Vârsta ta", "p5_ph_age": "de ex. 32", "p5_lbl_wealth": "Economii (€)", "p5_ph_wealth": "de ex. 8.000", "p5_lbl_kids": "Ai copii sub 18 ani?", "p5_opt_kids_yes": "Da", "p5_opt_kids_no": "Nu", "p5_lbl_child_count": "Număr de copii", "p5_ph_child_count": "de ex. 2", "p6_eyebrow": "Cheltuieli", "p6_title": "Care sunt cheltuielile tale fixe?", "p6_sub": "Tot ce plătești în fiecare lună. O estimare este suficientă.", "p6_lbl_costs": "Cheltuieli fixe pe lună (€)", "p6_hint_costs": "Chirie/ipotecă, energie, apă, asigurare de sănătate și abonamente.", "p6_ph_costs": "de ex. 1.850", "p7_eyebrow": "Indemnizație", "p7_title": "Ce indemnizație primești?", "p7_sub": "Vooruit calculează conform regulilor oficiale olandeze din 2026.", "p7_lbl_type": "Tipul indemnizației", "p7_opt_none": "Nicio indemnizație", "p7_opt_ww": "WW (Șomaj)", "p7_opt_bijstand": "Bijstand (Ajutor social)", "p7_opt_wia": "WIA (Invaliditate)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Medical (ZW)", "p7_opt_aow": "AOW / Pensie", "p7_opt_other": "Altă indemnizație", "p7_lbl_gross": "Indemnizație brută pe lună (€)", "p7_ph_gross": "de ex. 1.800", "p8_eyebrow": "Rezultatul tău • 2026", "p8_title": "Situația banilor tăi", "p8_sub": "Perspectivă clară asupra veniturilor, cheltuielilor și banilor rămași.", "p8_hero_title": "Situația banilor tăi", "per_month_left": "rămași pe lună", "per_month_deficit": "deficit pe lună", "lbl_net_wage": "În cont după taxe", "lbl_support": "Ajutoare și alocații", "lbl_costs": "Cheltuieli fixe", "lbl_left_after_costs": "Rămași după cheltuieli fixe", "support_breakdown_title": "Alocații incluse", "zorgtoeslag": "Alocație pentru sănătate", "huurtoeslag": "Alocație pentru chirie", "kgb": "Alocație pentru copii", "p8_teaser_title": "Ce se întâmplă dacă muncești mai mult?", "p8_teaser_text": "Vooruit calculează impozitele, deducerile și modificările alocațiilor pentru a arăta câștigul net real.", "cta_more_work": "Vezi ce câștigi din ore în plus →", "banner_deficit_prefix": "Atenție:", "banner_deficit_text": "Cheltuielile fixe depășesc veniturile cu <b>{amount} pe lună</b>. Verifică reducerea cheltuielilor sau solicitarea de ajutoare.", "banner_warn_prefix": "Marjă redusă:", "banner_warn_text": "Îți rămân aproximativ <b>{amount} pe lună</b>. O cheltuială neprevăzută poate crea presiune.", "banner_good_prefix": "Stabil:", "banner_good_text": "Îți rămân estimativ <b>{amount} pe lună</b> după toate cheltuielile fixe și alocațiile.", "warnings_title": "Puncte de atenție:", "p9_eyebrow": "Opțiune de muncă • 2026", "p9_title": "Ce se întâmplă dacă muncești mai mult?", "p9_sub": "Vezi direct cât îți aduce munca în plus după taxe și alocații.", "conclusion_kicker": "Concluzie", "conclusion_sentence": "1 oră suplimentară de muncă îți aduce aproximativ <b>{amount} pe lună</b> în plus.", "col_hours": "Ore pe săptămână", "col_extra_income": "Venit suplimentar", "col_support": "Alocații", "col_really_extra": "Cu adevărat în plus", "disclaimer_text": "“Vooruit ține cont de impozite și alocații. Suma finală poate diferi ușor în practică.”", "accordion_summary": "Detalii de calcul și fundamente", "p9_details_intro": "Detalii de calcul pentru 1 oră suplimentară (+ {amount} brut/lună):", "p9_details_net": "Salariu net suplimentar de la angajator:", "p9_details_support": "Modificarea alocațiilor:", "p9_details_tax": "Impactul taxelor și deducerilor:", "p9_details_total": "Câștig net suplimentar cu adevărat rămas:", "p9_per_month": "/ lună", "toast_downloaded": "Aplicație descărcată ca fișier HTML de sine stătător!", "toast_json": "Raportul JSON a fost descărcat cu succes!", "toast_csv": "Fișierul CSV a fost descărcat cu succes!"}, "bg": {"app_title": "Vooruit — Финансова Превенция", "brand_sub": "• финансова превенция", "download_btn": "Изтегли HTML", "download_app_btn": "Изтегли приложението (.html)", "step_0": "Начало", "step_1": "Доход", "step_2": "Работа", "step_3": "Жилище", "step_4": "Домакинство", "step_5": "Семейство и помощи", "step_6": "Разходи", "step_7": "Обезщетение", "step_8": "Преглед", "step_9": "Допълнителна работа", "btn_prev": "← Назад", "btn_next": "Напред →", "btn_view_overview": "Към прегледа →", "btn_adjust": "← Коригирай", "btn_restart": "Започни отначало", "btn_back_overview": "← Обратно към прегледа", "btn_export_json": "Експорт JSON", "btn_export_csv": "Експорт CSV", "btn_print": "Печат / PDF", "btn_back_aria": "Назад", "unit_hours": "ч.", "badge_now": "Сега", "p0_eyebrow": "Начало", "p0_title": "В какво искате бърза яснота?", "p0_sub": "Няколко кратки въпроса. Приблизителната оценка е достатъчна.", "p0_opt_money_t": "Парите ми", "p0_opt_money_d": "Колко влиза и колко ми остава?", "p0_opt_extra_t": "Допълнителна работа", "p0_opt_extra_d": "Какво наистина носи повече работа след данъци и помощи?", "p0_opt_change_t": "Промяна", "p0_opt_change_d": "Какво става с парите ми при различен доход?", "p1_eyebrow": "Доход", "p1_title": "Как получавате парите си?", "p1_sub": "Изберете ситуацията си и въведете ориентировъчна сума.", "p1_banner": "<b>Внимание: въведете брутната сума.</b> Бруто е сумата преди данъци и удръжки. Vooruit изчислява нетното и добавките автоматично.", "p1_opt_employee": "Работя на трудов договор", "p1_opt_benefit": "Получавам предимно обезщетение/помощ", "p1_opt_both": "Работя и получавам помощ", "p1_opt_zzp": "Самоосигуряващ се (ZZP) / предприемач", "p1_lbl_income": "Брутен месечен доход (€)", "p1_hint_income": "Въведете брутната сума (преди данъци).", "p1_ph_income": "напр. 3.000", "p1_lbl_zzp": "Очаквана годишна печалба от бизнес (€)", "p1_ph_zzp": "напр. 36.000", "p1_lbl_holiday": "Пари за отпуск (%)", "p1_lbl_bonus": "13-та заплата / годишен бонус", "p1_ph_bonus": "напр. 2.500", "p1_err_income": "Моля, въведете брутен доход или печалба.", "p2_eyebrow": "Работа", "p2_title": "Часове и почасово заплащане", "p2_sub": "Позволява на Vooruit да изчисли какво ще ви донесе повече работа.", "p2_lbl_hours": "Часове на седмица", "p2_ph_hours": "напр. 28", "p2_lbl_hourly": "Брутно заплащане на час (€)", "p2_ph_hourly": "напр. 22,50", "p3_eyebrow": "Жилище", "p3_title": "Какви са жилищните ви условия?", "p3_sub": "Важно за определяне на правото на жилищна помощ.", "p3_opt_rent_t": "Живея под наем", "p3_opt_rent_d": "Питаме само за чистия наем", "p3_opt_buy_t": "Имам собствено жилище", "p3_opt_buy_d": "С ипотека или изплатено", "p3_opt_other_t": "Друго", "p3_opt_other_d": "При роднини или временно", "p3_lbl_rent": "Базов наем на месец (€)", "p3_hint_rent": "Без такси за поддръжка.", "p3_ph_rent": "напр. 750", "p3_lbl_woz": "Данъчна стойност на имота WOZ (€)", "p3_ph_woz": "напр. 375.000", "p4_eyebrow": "Домакинство", "p4_title": "Имате ли партньор?", "p4_sub": "За помощите се отчита доходът на фискалния партньор.", "p4_opt_yes_t": "Да", "p4_opt_yes_d": "Брак или съвместно живеещ фискален партньор", "p4_opt_no_t": "Не", "p4_opt_no_d": "Несемеен", "p4_lbl_partner_income": "Брутен доход на партньора на месец (€)", "p4_ph_partner_income": "напр. 2.200", "p5_eyebrow": "Семейство и помощи", "p5_title": "Деца и възраст", "p5_sub": "Необходимо за данъчни облекчения и бюджет за деца.", "p5_lbl_age": "Вашата възраст", "p5_ph_age": "напр. 32", "p5_lbl_wealth": "Спестявания (€)", "p5_ph_wealth": "напр. 8.000", "p5_lbl_kids": "Имате ли деца под 18 години?", "p5_opt_kids_yes": "Да", "p5_opt_kids_no": "Не", "p5_lbl_child_count": "Брой деца", "p5_ph_child_count": "напр. 2", "p6_eyebrow": "Разходи", "p6_title": "Какви са постоянните ви разходи?", "p6_sub": "Всичко, което харчите всеки месец. Приблизителна оценка е достатъчна.", "p6_lbl_costs": "Постоянни разходи на месец (€)", "p6_hint_costs": "Наем/ипотека, комунални, здравна осигуровка и абонаменти.", "p6_ph_costs": "напр. 1.850", "p7_eyebrow": "Обезщетение", "p7_title": "Какво обезщетение получавате?", "p7_sub": "Vooruit прилага актуалните правила в Нидерландия за 2026 г.", "p7_lbl_type": "Вид обезщетение", "p7_opt_none": "Няма обезщетение", "p7_opt_ww": "WW (За безработица)", "p7_opt_bijstand": "Bijstand (Социална помощ)", "p7_opt_wia": "WIA (Инвалидност)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Болнични (ZW)", "p7_opt_aow": "AOW / Пенсия", "p7_opt_other": "Друго обезщетение", "p7_lbl_gross": "Брутно обезщетение на месец (€)", "p7_ph_gross": "напр. 1.800", "p8_eyebrow": "Вашият резултат • 2026", "p8_title": "Ето как стоят вашите финанси", "p8_sub": "Ясна картина на приходите, разходите и остатъка.", "p8_hero_title": "Ето как стоят вашите финанси", "per_month_left": "остават на месец", "per_month_deficit": "дефицит на месец", "lbl_net_wage": "По сметката след данъци", "lbl_support": "Помощи и добавки", "lbl_costs": "Постоянни разходи", "lbl_left_after_costs": "Остават след разходите", "support_breakdown_title": "Включени помощи", "zorgtoeslag": "Здравна добавка", "huurtoeslag": "Жилищна добавка", "kgb": "Бюджет за деца", "p8_teaser_title": "Какво става, ако работите повече?", "p8_teaser_text": "Vooruit изчислява данъци, облекчения и промени в помощите, за да видите реалния чист плюс.", "cta_more_work": "Вижте резултата от повече работа →", "banner_deficit_prefix": "Внимание:", "banner_deficit_text": "Постоянните ви разходи са с <b>{amount} на месец по-високи</b> от дохода. Помислете за намаляване на разходите.", "banner_warn_prefix": "Малък буфер:", "banner_warn_text": "Остават ви около <b>{amount} на месец</b>. Непредвиден разход може да създаде затруднение.", "banner_good_prefix": "Стабилно:", "banner_good_text": "След постоянните разходи и помощи остават приблизително <b>{amount} на месец</b>.", "warnings_title": "Важни бележки:", "p9_eyebrow": "Трудов избор • 2026", "p9_title": "Какво става, ако работите повече?", "p9_sub": "Вижте директно какво ви остава чисто след данъци и добавки.", "conclusion_kicker": "Заключение", "conclusion_sentence": "1 допълнителен час работа ви носи около <b>{amount} на месец</b> допълнително.", "col_hours": "Часове на седмица", "col_extra_income": "Допълнителен доход", "col_support": "Помощи", "col_really_extra": "Реално оставащи допълнително", "disclaimer_text": "“Vooruit отчита данъци и помощи. Окончателната сума на практика може леко да варира.”", "accordion_summary": "Детайли за изчислението и основа", "p9_details_intro": "Детайли при 1 допълнителен час работа (+ {amount} бруто/месец):", "p9_details_net": "Допълнителна нетна заплата от работодателя:", "p9_details_support": "Промяна в помощите:", "p9_details_tax": "Ефект от данъци и облекчения:", "p9_details_total": "Реално оставащ чист доход:", "p9_per_month": "/ мес", "toast_downloaded": "Приложението е изтеглено като самостоятелен HTML файл!", "toast_json": "JSON отчетът е изтеглен успешно!", "toast_csv": "CSV файлът е изтеглен успешно!"}, "ru": {"app_title": "Vooruit — Финансовая Профилактика", "brand_sub": "• финансовая профилактика", "download_btn": "Скачать HTML", "download_app_btn": "Скачать приложение (.html)", "step_0": "Начало", "step_1": "Доход", "step_2": "Работа", "step_3": "Жилье", "step_4": "Домохозяйство", "step_5": "Семья и льготы", "step_6": "Расходы", "step_7": "Пособия", "step_8": "Обзор", "step_9": "Дополнительная работа", "btn_prev": "← Назад", "btn_next": "Далее →", "btn_view_overview": "Перейти к обзору →", "btn_adjust": "← Изменить", "btn_restart": "Начать заново", "btn_back_overview": "← Назад к обзору", "btn_export_json": "Экспорт JSON", "btn_export_csv": "Экспорт CSV", "btn_print": "Печать / PDF", "btn_back_aria": "Назад", "unit_hours": "ч", "badge_now": "Сейчас", "p0_eyebrow": "Начало", "p0_title": "В чем вы хотите быстро разобраться?", "p0_sub": "Несколько коротких вопросов. Достаточно примерной оценки.", "p0_opt_money_t": "Мои деньги", "p0_opt_money_d": "Сколько поступает и сколько у меня остается?", "p0_opt_extra_t": "Дополнительная работа", "p0_opt_extra_d": "Сколько на самом деле дает дополнительная работа после налогов и пособий?", "p0_opt_change_t": "Изменение", "p0_opt_change_d": "Что произойдет с моими деньгами при другом доходе?", "p1_eyebrow": "Доход", "p1_title": "Как формируется ваш доход?", "p1_sub": "Выберите вашу ситуацию и укажите примерную сумму.", "p1_banner": "<b>Внимание: укажите сумму брутто.</b> Брутто — это заработок до вычета налогов. Vooruit автоматически рассчитает сумму нетто и положенные пособия.", "p1_opt_employee": "Работаю по найму", "p1_opt_benefit": "Получаю в основном пособие", "p1_opt_both": "Работаю и получаю пособие", "p1_opt_zzp": "Самозанятый (ZZP) / предприниматель", "p1_lbl_income": "Брутто-доход в месяц (€)", "p1_hint_income": "Укажите сумму брутто (до вычета налогов).", "p1_ph_income": "напр. 3.000", "p1_lbl_zzp": "Ожидаемая годовая прибыль бизнеса (€)", "p1_ph_zzp": "напр. 36.000", "p1_lbl_holiday": "Отпускные (%)", "p1_lbl_bonus": "13-я зарплата / годовой бонус", "p1_ph_bonus": "напр. 2.500", "p1_err_income": "Введите сумму брутто-дохода или прибыли.", "p2_eyebrow": "Работа", "p2_title": "Часы и почасовая ставка", "p2_sub": "Позволяет Vooruit рассчитать выгоду от дополнительных часов работы.", "p2_lbl_hours": "Часов в неделю", "p2_ph_hours": "напр. 28", "p2_lbl_hourly": "Брутто-ставка в час (€)", "p2_ph_hourly": "напр. 22,50", "p3_eyebrow": "Жилье", "p3_title": "Каковы ваши жилищные условия?", "p3_sub": "Важно для проверки права на жилищное пособие.", "p3_opt_rent_t": "Арендую жилье", "p3_opt_rent_d": "Мы спрашиваем только базовую арендную плату", "p3_opt_buy_t": "Собственное жилье", "p3_opt_buy_d": "С ипотекой или выплаченное", "p3_opt_other_t": "Другое", "p3_opt_other_d": "У родственников или временное", "p3_lbl_rent": "Базовая арендная плата в месяц (€)", "p3_hint_rent": "Без сервисных сборов.", "p3_ph_rent": "напр. 750", "p3_lbl_woz": "Оценочная стоимость жилья WOZ (€)", "p3_ph_woz": "напр. 375.000", "p4_eyebrow": "Домохозяйство", "p4_title": "Есть ли у вас партнер?", "p4_sub": "Для пособий учитывается доход налогового партнера.", "p4_opt_yes_t": "Да", "p4_opt_yes_d": "В браке или сожительствующий налоговый партнер", "p4_opt_no_t": "Нет", "p4_opt_no_d": "Одинок(а)", "p4_lbl_partner_income": "Брутто-доход партнера в месяц (€)", "p4_ph_partner_income": "напр. 2.200", "p5_eyebrow": "Семья и льготы", "p5_title": "Дети и возраст", "p5_sub": "Необходимо для налоговых вычетов и детского бюджета.", "p5_lbl_age": "Ваш возраст", "p5_ph_age": "напр. 32", "p5_lbl_wealth": "Сбережения (€)", "p5_ph_wealth": "напр. 8.000", "p5_lbl_kids": "Есть ли дети младше 18 лет?", "p5_opt_kids_yes": "Да", "p5_opt_kids_no": "Нет", "p5_lbl_child_count": "Количество детей", "p5_ph_child_count": "напр. 2", "p6_eyebrow": "Расходы", "p6_title": "Каковы ваши постоянные расходы?", "p6_sub": "Все, что вы тратите ежемесячно. Достаточно примерной оценки.", "p6_lbl_costs": "Постоянные расходы в месяц (€)", "p6_hint_costs": "Аренда/ипотека, коммунальные услуги, медстраховка и подписки.", "p6_ph_costs": "напр. 1.850", "p7_eyebrow": "Пособия", "p7_title": "Какое пособие вы получаете?", "p7_sub": "Vooruit учитывает официальные правила Нидерландов на 2026 год.", "p7_lbl_type": "Тип пособия", "p7_opt_none": "Не получаю пособие", "p7_opt_ww": "WW (По безработице)", "p7_opt_bijstand": "Bijstand (Социальная помощь)", "p7_opt_wia": "WIA (По нетрудоспособности)", "p7_opt_wajong": "Wajong", "p7_opt_zw": "Больничные (ZW)", "p7_opt_aow": "AOW / Пенсия", "p7_opt_other": "Другое пособие", "p7_lbl_gross": "Сумма пособия брутто в месяц (€)", "p7_ph_gross": "напр. 1.800", "p8_eyebrow": "Ваш результат • 2026", "p8_title": "Вот как обстоят ваши финансы", "p8_sub": "Мгновенное понимание доходов, расходов и остатка средств.", "p8_hero_title": "Вот как обстоят ваши финансы", "per_month_left": "остается в месяц", "per_month_deficit": "дефицит в месяц", "lbl_net_wage": "На руки после налогов", "lbl_support": "Пособия и субсидии", "lbl_costs": "Постоянные расходы", "lbl_left_after_costs": "Остаток после постоянных расходов", "support_breakdown_title": "Учитываемые пособия", "zorgtoeslag": "Медицинская субсидия", "huurtoeslag": "Жилищная субсидия", "kgb": "Детский бюджет", "p8_teaser_title": "Что будет, если работать больше?", "p8_teaser_text": "Vooruit рассчитывает налоги, льготы и изменения в субсидиях, показывая чистую выгоду.", "cta_more_work": "Посмотреть эффект от переработок →", "banner_deficit_prefix": "Внимание:", "banner_deficit_text": "Постоянные расходы на <b>{amount} в месяц выше</b> доходов. Рекомендуется оптимизировать расходы.", "banner_warn_prefix": "Небольшой запас:", "banner_warn_text": "Остается около <b>{amount} в месяц</b>. Непредвиденные траты могут создать нагрузку.", "banner_good_prefix": "Стабильно:", "banner_good_text": "После расходов и пособий остается ориентировочно <b>{amount} в месяц</b>.", "warnings_title": "Важные моменты:", "p9_eyebrow": "Выбор занятости • 2026", "p9_title": "Что будет, если работать больше?", "p9_sub": "Узнайте, сколько реально остается на руках после налогов и изменения пособий.", "conclusion_kicker": "Вывод", "conclusion_sentence": "1 дополнительный час работы приносит вам около <b>{amount} в месяц</b> дополнительно.", "col_hours": "Часов в неделю", "col_extra_income": "Дополнительный доход", "col_support": "Субсидии", "col_really_extra": "Реально дополнительно на руки", "disclaimer_text": "“Vooruit учитывает налоги и пособия. Итоговая сумма на практике может незначительно отличаться.”", "accordion_summary": "Детали и обоснование расчета", "p9_details_intro": "Детали расчета при 1 дополнительном часе (+ {amount} брутто/мес):", "p9_details_net": "Дополнительная чистая зарплата от работодателя:", "p9_details_support": "Изменение в пособиях:", "p9_details_tax": "Влияние налогов и вычетов:", "p9_details_total": "Реальная чистая прибавка на руки:", "p9_per_month": "/ мес", "toast_downloaded": "Приложение скачано в виде автономного HTML-файла!", "toast_json": "Отчет JSON успешно скачан!", "toast_csv": "Сводка CSV успешно скачана!"}};
+
+function r(key, lang = 'nl') {
+  return (n[lang] || n.nl)[key] || (n.nl && n.nl[key]) || key;
+}
+
+var a = 0, o = 10, s = 'nl', c = !1, l = 'employee', u = 'rent', d = !1, f = !1;
+var p = e => document.getElementById(e);
+
+function m(e) {
+  let t = p(e);
+  if (!t || !t.value) return 0;
+  let n = String(t.value).trim().replace(/\s/g, '').replace(',', '.'), r = Number(n);
+  return Number.isFinite(r) && r >= 0 ? r : 0;
+}
+
+function h(e) {
+  return Math.max(0, Math.min(20, Math.round(m(e))));
+}
+
+function g(e) {
+  return new Intl.NumberFormat('nl-NL', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0
+  }).format(Number.isFinite(e) ? e : 0);
+}
+
+function _(e, t = !1) {
+  let n = p('appToast');
+  n || (n = document.createElement('div'), n.id = 'appToast', n.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0f172a;color:#ffffff;padding:12px 22px;border-radius:12px;font-size:14px;font-weight:600;z-index:9999;box-shadow:0 10px 25px rgba(0,0,0,0.25);transition:opacity 0.25s,transform 0.25s;pointer-events:none;max-width:90%;text-align:center;', document.body.appendChild(n));
+  n.textContent = e;
+  n.style.background = t ? '#dc2626' : '#0f172a';
+  n.style.opacity = '1';
+  n.style.transform = 'translateX(-50%) translateY(0)';
+  setTimeout(() => {
+    n && (n.style.opacity = '0', n.style.transform = 'translateX(-50%) translateY(10px)');
+  }, 3200);
+}
+
+function v() {
+  let e = h('childCount');
+  return Array.from(document.querySelectorAll('.childAge')).map(e => Math.max(0, Math.min(17, parseInt(e.value || '0', 10) || 0))).slice(0, e);
+}
+
+function y() {
+  return {
+    workType: l,
+    employmentMonthly: l === 'employee' || l === 'both' ? m('income') : 0,
+    zzpProfit: l === 'zzp' ? m('zzpProfit') || m('income') * 12 : 0,
+    zzpHourCheck: p('zzpHourCheck')?.checked ?? !0,
+    holidayPct: m('holidayPct') || 8,
+    bonusAnnual: m('bonusAnnual'),
+    withheldAnnual: m('withheldAnnual'),
+    hours: m('hours'),
+    hourly: m('hourly'),
+    weekend: p('weekend')?.checked ?? !1,
+    evening: p('evening')?.checked ?? !1,
+    house: u,
+    rent: u === 'rent' ? m('rent') : 0,
+    woz: u === 'buy' ? m('woz') : 0,
+    mortgageInterest: u === 'buy' ? m('mortgageInterest') : 0,
+    mortgageDebt: u === 'buy' ? m('mortgageDebt') : 0,
+    hasPartner: d,
+    partnerIncome: d ? m('partnerIncome') : 0,
+    isInsured: p('health')?.checked ?? !0,
+    age: m('age') || 30,
+    wealth: m('wealth'),
+    childCount: f ? h('childCount') : 0,
+    childAges: f ? v() : [],
+    costs: m('costs'),
+    benefitType: p('benefitType')?.value || 'none',
+    benefitGross: l === 'benefit' || l === 'both' ? m('benefitGross') || (l === 'benefit' ? m('income') : 0) : 0,
+    benefitDuration: h('benefitDuration')
+  };
+}
+
+function applyTranslations(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    let k = el.getAttribute('data-i18n');
+    let text = r(k, lang);
+    if (text) el.textContent = text;
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    let k = el.getAttribute('data-i18n-html');
+    let html = r(k, lang);
+    if (html) el.innerHTML = html;
+  });
+
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    let k = el.getAttribute('data-i18n-ph');
+    let ph = r(k, lang);
+    if (ph) el.placeholder = ph;
+  });
+
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    let k = el.getAttribute('data-i18n-title');
+    let title = r(k, lang);
+    if (title) el.title = title;
+  });
+
+  let btnBack = p('btnBack');
+  if (btnBack) btnBack.setAttribute('aria-label', r('btn_back_aria', lang));
+
+  let stepTitles = [
+    r('step_0', lang), r('step_1', lang), r('step_2', lang), r('step_3', lang), r('step_4', lang),
+    r('step_5', lang), r('step_6', lang), r('step_7', lang), r('step_8', lang), r('step_9', lang)
+  ];
+  let stepCounter = p('stepCounter');
+  if (stepCounter) {
+    stepCounter.textContent = stepTitles[a] || r('app_title', lang);
+  }
+
+  if (a === 8) x();
+  if (a === 9) S();
+}
+
+function b(pageIdx) {
+  a = Math.max(0, Math.min(9, pageIdx));
+  document.querySelectorAll('.page-view').forEach((el, idx) => {
+    el.classList.toggle('active', idx === a);
+  });
+
+  let stepTitles = [
+    r('step_0', s), r('step_1', s), r('step_2', s), r('step_3', s), r('step_4', s),
+    r('step_5', s), r('step_6', s), r('step_7', s), r('step_8', s), r('step_9', s)
+  ];
+  let stepCounter = p('stepCounter');
+  if (stepCounter) stepCounter.textContent = stepTitles[a] || 'Vooruit';
+
+  let progressFill = p('progressFill');
+  if (progressFill) progressFill.style.width = ((a + 1) / o * 100) + '%';
+
+  let btnBack = p('btnBack');
+  if (btnBack) btnBack.style.visibility = a > 0 ? 'visible' : 'hidden';
+
+  if (a === 8) x();
+  if (a === 9) S();
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  E();
+}
+
+function x() {
+  let householdInput = y();
+  let result = e.buildHousehold(householdInput);
+  let heroAmount = p('heroOverviewAmount');
+  let heroSub = p('heroOverviewSubtitle');
+  let netWage = p('overviewNetWage');
+  let support = p('overviewSupport');
+  let costs = p('overviewCosts');
+  let leftAfter = p('overviewLeftAfterCosts');
+  let room = result.financialRoomMonthly;
+  let isDeficit = room < 0;
+
+  if (heroAmount) {
+    heroAmount.textContent = g(Math.abs(room));
+    heroAmount.classList.toggle('deficit', isDeficit);
+  }
+  if (heroSub) {
+    heroSub.textContent = r(isDeficit ? 'per_month_deficit' : 'per_month_left', s);
+  }
+  if (netWage) netWage.textContent = '+ ' + g(result.totalNetMonthly);
+  if (support) support.textContent = '+ ' + g(result.totalSupportMonthly);
+  if (costs) costs.textContent = '− ' + g(result.costs);
+  if (leftAfter) {
+    leftAfter.textContent = (isDeficit ? '− ' : '') + g(Math.abs(room));
+    leftAfter.className = 'money-summary-val ' + (isDeficit ? 'neg' : 'pos');
+  }
+
+  let zorg = p('overviewZorgtoeslag');
+  let huur = p('overviewHuurtoeslag');
+  let kgb = p('overviewKgb');
+  if (zorg) zorg.textContent = g(result.zorgMonthly);
+  if (huur) huur.textContent = g(result.huurMonthly);
+  if (kgb) kgb.textContent = g(result.kgbMonthly);
+
+  let banner = p('overviewStatusBanner');
+  if (banner) {
+    if (isDeficit) {
+      banner.className = 'banner banner-bad';
+      banner.innerHTML = '<b>' + r('banner_deficit_prefix', s) + '</b> ' + r('banner_deficit_text', s).replace('{amount}', g(Math.abs(room)));
+    } else if (room < 250) {
+      banner.className = 'banner banner-warn';
+      banner.innerHTML = '<b>' + r('banner_warn_prefix', s) + '</b> ' + r('banner_warn_text', s).replace('{amount}', g(room));
+    } else {
+      banner.className = 'banner banner-good';
+      banner.innerHTML = '<b>' + r('banner_good_prefix', s) + '</b> ' + r('banner_good_text', s).replace('{amount}', g(room));
+    }
+  }
+
+  let warningsBox = p('overviewWarningsBox');
+  if (warningsBox) {
+    if (result.warnings.length > 0) {
+      warningsBox.style.display = 'block';
+      warningsBox.innerHTML = '<b>' + r('warnings_title', s) + '</b><ul style="margin:6px 0 0;padding-left:18px">' + result.warnings.map(item => '<li>' + item + '</li>').join('') + '</ul>';
+    } else {
+      warningsBox.style.display = 'none';
+    }
+  }
+}
+
+function S() {
+  let householdInput = y();
+  let baseH = e.buildHousehold(householdInput);
+  let baseHours = householdInput.hours > 0 ? householdInput.hours : 0;
+  let baseHourly = householdInput.hourly > 0 ? householdInput.hourly : 0;
+
+  if (baseHours <= 0 && baseHourly > 0 && householdInput.employmentMonthly > 0) {
+    baseHours = Math.round(householdInput.employmentMonthly / (52 / 12 * baseHourly) * 10) / 10;
+  }
+  if (baseHourly <= 0 && baseHours > 0 && householdInput.employmentMonthly > 0) {
+    baseHourly = Math.round(householdInput.employmentMonthly / (52 / 12 * baseHours) * 100) / 100;
+  }
+  if (baseHours <= 0) baseHours = 28;
+  if (baseHourly <= 0) baseHourly = 22.5;
+
+  let hourSteps = [baseHours, baseHours + 1, baseHours + 4, baseHours + 8]
+    .filter((v, idx, arr) => v <= 45 && arr.indexOf(v) === idx)
+    .sort((a, b) => a - b);
+
+  let plus1Gain = 0;
+  let rows = [];
+
+  hourSteps.forEach(hVal => {
+    let diff = hVal - baseHours;
+    let extraGross = Math.round(diff * baseHourly * (52 / 12));
+    let sc = e.scenario(baseH, extraGross, 'self', { hourlyRate: baseHourly, extraHoursPerWeek: diff });
+    if (diff === 1) plus1Gain = sc.disposableChangeMonthly;
+
+    let isCurrent = diff === 0;
+    let grossLabel = isCurrent ? '—' : '+ ' + g(extraGross);
+    let suppVal = sc.supportChangeMonthly;
+    let suppLabel = isCurrent ? '—' : suppVal === 0 ? '€ 0' : suppVal < 0 ? '− ' + g(Math.abs(suppVal)) : '+ ' + g(suppVal);
+    let dispVal = sc.disposableChangeMonthly;
+    let dispLabel = isCurrent ? '—' : (dispVal >= 0 ? '+ ' : '− ') + g(Math.abs(dispVal));
+
+    rows.push(
+      '<tr class="' + (isCurrent ? 'current-row' : '') + '">' +
+        '<td>' +
+          '<b>' + hVal + ' ' + r('unit_hours', s) + '</b>' +
+          (isCurrent ? '<span class="badge-now">' + r('badge_now', s) + '</span>' : '<small style="display:block;color:#64748b">+' + diff + ' ' + r('unit_hours', s) + '</small>') +
+        '</td>' +
+        '<td>' + grossLabel + '</td>' +
+        '<td>' + suppLabel + '</td>' +
+        '<td class="col-gain">' + dispLabel + '</td>' +
+      '</tr>'
+    );
+  });
+
+  let conclusionBox = p('extraWorkConclusion');
+  if (conclusionBox) {
+    conclusionBox.innerHTML =
+      '<div class="conclusion-kicker">' + r('conclusion_kicker', s) + '</div>' +
+      '<div class="conclusion-amount">' + (plus1Gain >= 0 ? '+ ' : '− ') + g(Math.abs(plus1Gain)) + '</div>' +
+      '<p class="conclusion-sentence">' + r('conclusion_sentence', s).replace('{amount}', g(Math.abs(plus1Gain))) + '</p>';
+  }
+
+  let tableBody = p('extraWorkTableBody');
+  if (tableBody) {
+    tableBody.innerHTML = rows.join('');
+  }
+
+  let techDetails = p('extraWorkTechDetails');
+  if (techDetails) {
+    let gross1h = Math.round(1 * baseHourly * (52 / 12));
+    let sc1 = e.scenario(baseH, gross1h, 'self');
+    techDetails.innerHTML =
+      '<p><b>' + r('p9_details_intro', s).replace('{amount}', g(gross1h)) + '</b></p>' +
+      '<ul>' +
+        '<li>' + r('p9_details_net', s) + ' <b>+ ' + g(sc1.netWageChangeMonthly) + ' ' + r('p9_per_month', s) + '</b></li>' +
+        '<li>' + r('p9_details_support', s) + ' <b>' + (sc1.supportChangeMonthly < 0 ? '− ' : '+ ') + g(Math.abs(sc1.supportChangeMonthly)) + ' ' + r('p9_per_month', s) + '</b></li>' +
+        '<li>' + r('p9_details_tax', s) + ' <b>' + g(Math.round(sc1.taxChangeAnnual / 12)) + ' ' + r('p9_per_month', s) + '</b></li>' +
+        '<li><b>' + r('p9_details_total', s) + '</b> <b>+ ' + g(sc1.disposableChangeMonthly) + ' ' + r('p9_per_month', s) + '</b></li>' +
+      '</ul>';
+  }
+}
+
+function C() {
+  try {
+    let htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    let blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+    let url = URL.createObjectURL(blob);
+    let aEl = document.createElement('a');
+    aEl.href = url;
+    aEl.download = 'Vooruit_Financiele_Preventie_2026_V29.3.html';
+    document.body.appendChild(aEl);
+    aEl.click();
+    setTimeout(() => {
+      document.body.removeChild(aEl);
+      URL.revokeObjectURL(url);
+    }, 300);
+    _(r('toast_downloaded', s));
+  } catch (err) {
+    _('Fout bij downloaden: ' + err.message, !0);
+  }
+}
+
+function w() {
+  try {
+    let cur = y();
+    let house = e.buildHousehold(cur);
+    let sc = e.scenario(house, 250, 'self');
+    let exportObj = {
+      app: r('app_title', s),
+      version: '2026 • V29.3 Final',
+      language: s,
+      exportedAt: new Date().toISOString(),
+      invoer: cur,
+      overzicht: {
+        toetsingsinkomenJaar: Math.round(house.householdGrossAnnual),
+        nettoInkomenMaand: Math.round(house.totalNetMonthly),
+        vasteLastenMaand: Math.round(house.costs),
+        toeslagenMaand: Math.round(house.totalSupportMonthly),
+        overNaVasteLasten: Math.round(house.financialRoomMonthly),
+        zorgtoeslag: house.zorgMonthly,
+        huurtoeslag: house.huurMonthly,
+        kindgebondenBudget: house.kgbMonthly
+      },
+      extraWerken: {
+        brutoVerschil: 250,
+        extraNetto: Math.round(sc.netWageChangeMonthly),
+        toeslagenVerschil: Math.round(sc.supportChangeMonthly),
+        echtExtraOver: Math.round(sc.disposableChangeMonthly)
+      }
+    };
+    let blob = new Blob([JSON.stringify(exportObj, null, 2)], { type: 'application/json;charset=utf-8' });
+    let url = URL.createObjectURL(blob);
+    let aEl = document.createElement('a');
+    aEl.href = url;
+    aEl.download = 'Vooruit_Financieel_Overzicht_2026_V29.3.json';
+    document.body.appendChild(aEl);
+    aEl.click();
+    setTimeout(() => {
+      document.body.removeChild(aEl);
+      URL.revokeObjectURL(url);
+    }, 300);
+    _(r('toast_json', s));
+  } catch (err) {
+    _('Fout bij exporteren: ' + err.message, !0);
+  }
+}
+
+function T() {
+  try {
+    let cur = y();
+    let house = e.buildHousehold(cur);
+    let rows = '\uFEFF' + [
+      [r('lbl_net_wage', s), Math.round(house.totalNetMonthly), r('p9_per_month', s)],
+      [r('lbl_support', s), Math.round(house.totalSupportMonthly), r('p9_per_month', s)],
+      [r('lbl_costs', s), Math.round(house.costs), r('p9_per_month', s)],
+      [r('lbl_left_after_costs', s), Math.round(house.financialRoomMonthly), r('p9_per_month', s)],
+      [r('zorgtoeslag', s), house.zorgMonthly, r('p9_per_month', s)],
+      [r('huurtoeslag', s), house.huurMonthly, r('p9_per_month', s)],
+      [r('kgb', s), house.kgbMonthly, r('p9_per_month', s)]
+    ].map(line => line.map(item => '"' + item + '"').join(';')).join('\r\n');
+
+    let blob = new Blob([rows], { type: 'text/csv;charset=utf-8' });
+    let url = URL.createObjectURL(blob);
+    let aEl = document.createElement('a');
+    aEl.href = url;
+    aEl.download = 'Vooruit_Financieel_Overzicht_2026_V29.3.csv';
+    document.body.appendChild(aEl);
+    aEl.click();
+    setTimeout(() => {
+      document.body.removeChild(aEl);
+      URL.revokeObjectURL(url);
+    }, 300);
+    _(r('toast_csv', s));
+  } catch (err) {
+    _('Fout bij exporteren: ' + err.message, !0);
+  }
+}
+
+function E() {
+  try {
+    let data = {
+      inputs: y(),
+      currentPage: a,
+      currentLanguage: s,
+      isSimpleLanguage: c
+    };
+    localStorage.setItem('vooruit_financial_profile', JSON.stringify(data));
+    localStorage.setItem('vooruit_selected_lang', s);
+  } catch (err) {
+    console.warn('LocalStorage save failed', err);
+  }
+}
+
+function D() {
+  try {
+    localStorage.removeItem('vooruit_financial_profile');
+    localStorage.removeItem('vooruit_selected_lang');
+  } catch (err) {}
+  window.location.reload();
+}
+
+function O(newLang) {
+  if (!n[newLang]) newLang = 'nl';
+  s = newLang;
+  document.documentElement.lang = newLang;
+  document.documentElement.dir = t.has(newLang) ? 'rtl' : 'ltr';
+
+  let selectEl = p('languageSelect');
+  if (selectEl && selectEl.value !== newLang) {
+    selectEl.value = newLang;
+  }
+
+  applyTranslations(newLang);
+  E();
+}
+
+function k() {
+  p('btnBack')?.addEventListener('click', () => {
+    if (a === 8) return b(l === 'benefit' || l === 'both' ? 7 : 6);
+    if (a === 9) return b(8);
+    if (a > 0) b(a - 1);
+  });
+
+  document.querySelectorAll('.btn-step-prev').forEach(btn => {
+    btn.addEventListener('click', () => {
+      p('btnBack')?.click();
+    });
+  });
+
+  document.querySelectorAll('.btn-step-go').forEach(btn => {
+    btn.addEventListener('click', () => {
+      let pageNum = parseInt(btn.getAttribute('data-next-page'), 10);
+      if (Number.isFinite(pageNum)) b(pageNum);
+    });
+  });
+
+  let langSelect = p('languageSelect');
+  if (langSelect) {
+    langSelect.addEventListener('change', evt => {
+      O(evt.target.value);
+    });
+  }
+
+  document.querySelectorAll('[data-goal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-goal]').forEach(e => e.classList.remove('selected'));
+      btn.classList.add('selected');
+      b(1);
+    });
+  });
+
+  document.querySelectorAll('[data-work]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      l = btn.dataset.work;
+      document.querySelectorAll('[data-work]').forEach(e => e.classList.remove('selected'));
+      btn.classList.add('selected');
+      let isZzp = l === 'zzp';
+      let zBox = p('zzpBox');
+      if (zBox) zBox.style.display = isZzp ? 'block' : 'none';
+    });
+  });
+
+  document.querySelectorAll('[data-house]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      u = btn.dataset.house;
+      document.querySelectorAll('[data-house]').forEach(e => e.classList.remove('selected'));
+      btn.classList.add('selected');
+      let rentBox = p('rentBox');
+      let buyBox = p('buyBox');
+      if (rentBox) rentBox.style.display = u === 'rent' ? 'block' : 'none';
+      if (buyBox) buyBox.style.display = u === 'buy' ? 'block' : 'none';
+    });
+  });
+
+  document.querySelectorAll('[data-partner]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      d = btn.dataset.partner === 'yes';
+      document.querySelectorAll('[data-partner]').forEach(e => e.classList.remove('selected'));
+      btn.classList.add('selected');
+      let partBox = p('partnerBox');
+      if (partBox) partBox.style.display = d ? 'block' : 'none';
+    });
+  });
+
+  document.querySelectorAll('[data-kids]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      f = btn.dataset.kids === 'yes';
+      document.querySelectorAll('[data-kids]').forEach(e => e.classList.remove('selected'));
+      btn.classList.add('selected');
+      let childBox = p('childBox');
+      if (childBox) childBox.style.display = f ? 'block' : 'none';
+    });
+  });
+
+  p('btnStep1Next')?.addEventListener('click', () => {
+    let inc = m('income');
+    let zzp = m('zzpProfit');
+    let errEl = p('e1');
+    if (inc <= 0 && zzp <= 0) {
+      if (errEl) errEl.textContent = r('p1_err_income', s);
+      return;
+    }
+    if (errEl) errEl.textContent = '';
+    b(2);
+  });
+
+  p('btnStep6Next')?.addEventListener('click', () => {
+    b(l === 'benefit' || l === 'both' ? 7 : 8);
+  });
+
+  p('btnStep7Next')?.addEventListener('click', () => {
+    b(8);
+  });
+
+  p('btnToScenario')?.addEventListener('click', () => {
+    b(9);
+  });
+
+  p('btnBackToOverview')?.addEventListener('click', () => {
+    b(8);
+  });
+
+  p('btnDownloadHtml')?.addEventListener('click', C);
+  p('btnDownloadFromOverview')?.addEventListener('click', C);
+  p('btnDownloadFromExtra')?.addEventListener('click', C);
+  p('btnExportJson')?.addEventListener('click', w);
+  p('btnExportCsv')?.addEventListener('click', T);
+  p('btnRestart')?.addEventListener('click', D);
+
+  let savedLang = 'nl';
+  try {
+    let langSaved = localStorage.getItem('vooruit_selected_lang');
+    if (langSaved && n[langSaved]) {
+      savedLang = langSaved;
+    } else {
+      let prof = localStorage.getItem('vooruit_financial_profile');
+      if (prof) {
+        let parsed = JSON.parse(prof);
+        if (parsed && parsed.currentLanguage && n[parsed.currentLanguage]) {
+          savedLang = parsed.currentLanguage;
+        }
+      }
+    }
+  } catch (err) {}
+
+  window._vooruitGo = b;
+  window._vooruitSetLang = O;
+
+  O(savedLang);
+  b(0);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  k();
+});
+</script>
+
+</body></html>
